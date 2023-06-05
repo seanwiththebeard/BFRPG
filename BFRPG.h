@@ -70,7 +70,7 @@ Roll 1D20 + Ability Bonus/Penalty + Situational Bonus/Penalty >= Target number *
 struct{
   char Name[8];
   //Classes
-  bool Cleric, MagicUser, Fighter, Thief;
+  bool Cleric, MagicUser, Fighter, Thief, FighterMagicUser;
   //Min Ability Restriction
   ability MinAbilityRestriction;
   byte MinAbilityMinimum;
@@ -95,6 +95,7 @@ struct{
     false,			//Magic-User
     true,			//Fighter
     true,			//Thief
+    false,			//Fighter Magic-User
     
     //Min Ability Restriction
     CON, 9,
@@ -131,7 +132,46 @@ struct{
     4				//SavingThrowSpells
   },
   {
-    //Human
+    "Human@",
+    //Classes Allowed
+    true,		 	//Cleric
+    true,			//Magic-User
+    true,			//Fighter
+    true,			//Thief
+    
+    //Min Ability Restriction
+    STR, 0,
+    //Max Ability Restriction
+    STR, 20,
+    
+    //Hit Dice
+    20,
+    
+    //Weapon Restrictions
+    false,			//WeaponsMediumTwoHands
+    true,			//WeaponsLarge
+    true,			//WeaponsTwoHandedSwords
+    true,			//WeaponsPolearms
+    true,			//WeaponsLongbows
+      				
+    //Special Abilities
+    false,			//Darkvision
+    false, 			//DetectArchitecture
+    false,			//DetectDoors
+    false,			//ImmuneGhoulParalysis;
+    10,				//ExpBonus in %
+    0, 				//RangedAttackBonus
+    0, 				//ACBonusMeleeVSLarge
+    0,				//InitiativeBonus
+    0,				//ChanceDetectedOutdoors
+    0,				//ChanceDetectedIndoors
+    0,				//SurpriseCheckRangeReduction
+    //Saving Throws Bonus
+    0,				//SavingThrowDeathRayPoison
+    0,				//SavingThrowMagicWands
+    0,				//SavingTrowParalysisPetrify
+    0,				//SavingThrowDragonBreath
+    0				//SavingThrowSpells
   },
   {
     //Halfling
