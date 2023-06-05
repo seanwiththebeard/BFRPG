@@ -1,11 +1,12 @@
 #include <stdint.h>
+#include <stdlib.h>
 typedef uint8_t byte;	// 8-bit unsigned
 typedef int8_t sbyte;	// 8-bit signed
 typedef uint16_t word;	// 16-bit unsigned
 typedef enum { false, true } bool; // boolean
 
-//"BFRPG-Charts-and-Tables-by-Simone-Felli-R3.pdf
-// Page 1 - Character Creation
+//https://basicfantasy.org/downloads/BFRPG-Charts-and-Tables-by-Simone-Felli-r3.pdf
+//Page 1 - Character Creation
 typedef enum 
 {
   STR, //Strength
@@ -184,16 +185,16 @@ struct{
     false,			//Fighter Magic-User
     
     //Min Ability Restriction
-    STR, 0,
+    DEX, 9,
     //Max Ability Restriction
-    STR, 20,
+    STR, 17,
     
     //Hit Dice
-    20,
+    6,
     
     //Weapon Restrictions
-    false,			//WeaponsMediumTwoHands
-    true,			//WeaponsLarge
+    true,			//WeaponsMediumTwoHands
+    false,			//WeaponsLarge
     true,			//WeaponsTwoHandedSwords
     true,			//WeaponsPolearms
     true,			//WeaponsLongbows
@@ -203,19 +204,19 @@ struct{
     false, 			//DetectArchitecture
     false,			//DetectDoors
     false,			//ImmuneGhoulParalysis;
-    10,				//ExpBonus in %
-    0, 				//RangedAttackBonus
-    0, 				//ACBonusMeleeVSLarge
-    0,				//InitiativeBonus
-    0,				//ChanceDetectedOutdoors
-    0,				//ChanceDetectedIndoors
+    0,				//ExpBonus in %
+    1, 				//RangedAttackBonus
+    2, 				//ACBonusMeleeVSLarge
+    1,				//InitiativeBonus
+    10,				//ChanceDetectedOutdoors
+    30,				//ChanceDetectedIndoors
     0,				//SurpriseCheckRangeReduction
     //Saving Throws Bonus
-    0,				//SavingThrowDeathRayPoison
-    0,				//SavingThrowMagicWands
-    0,				//SavingTrowParalysisPetrify
-    0,				//SavingThrowDragonBreath
-    0				//SavingThrowSpells
+    4,				//SavingThrowDeathRayPoison
+    4,				//SavingThrowMagicWands
+    4,				//SavingTrowParalysisPetrify
+    3,				//SavingThrowDragonBreath
+    4				//SavingThrowSpells
   },
   {
     "Elf@",
@@ -227,12 +228,12 @@ struct{
     true,			//Fighter Magic-User
     
     //Min Ability Restriction
-    STR, 0,
+    INT, 9,
     //Max Ability Restriction
-    STR, 20,
+    CON, 17,
     
     //Hit Dice
-    20,
+    6,
     
     //Weapon Restrictions
     false,			//WeaponsMediumTwoHands
@@ -242,11 +243,11 @@ struct{
     true,			//WeaponsLongbows
       				
     //Special Abilities
-    false,			//Darkvision
+    true,			//Darkvision
     false, 			//DetectArchitecture
-    false,			//DetectDoors
-    false,			//ImmuneGhoulParalysis;
-    10,				//ExpBonus in %
+    true,			//DetectDoors
+    true,			//ImmuneGhoulParalysis;
+    0,				//ExpBonus in %
     0, 				//RangedAttackBonus
     0, 				//ACBonusMeleeVSLarge
     0,				//InitiativeBonus
@@ -255,9 +256,223 @@ struct{
     0,				//SurpriseCheckRangeReduction
     //Saving Throws Bonus
     0,				//SavingThrowDeathRayPoison
-    0,				//SavingThrowMagicWands
-    0,				//SavingTrowParalysisPetrify
+    2,				//SavingThrowMagicWands
+    1,				//SavingTrowParalysisPetrify
     0,				//SavingThrowDragonBreath
-    0				//SavingThrowSpells
+    2				//SavingThrowSpells
   }
 }; 
+
+//Page 3 - Class Advancement Tables
+//Page 4 - Class Notes, Saving Throws
+//Index = Level
+struct
+{
+  char Name[11];
+  uint16_t ExpRequired[20];
+  byte HitDiceQuantity[20], HitDiceSize, HitDiceBonus[20],
+  SpellsLevel1[20], SpellsLevel2[20], SpellsLevel3[20], SpellsLevel4[20], SpellsLevel5[20], SpellsLevel6[20];
+}ClassDescription[4] = 
+{
+  {
+    "Cleric@",
+    
+    //Exp Points
+    0,			//Level 1
+    1500,		//Level 2
+    1500,		//Level 3
+    3000,		//Level 4
+    6000,		//Level 5
+    12000,		//Level 6
+    24000,		//Level 7
+    (90000 / 2 - 3000),	//Level 8 (why does this throw an error if it's just 42000?)
+    90000,		//Level 9
+    90000,		//Level 10
+    90000,		//Level 11
+    90000,		//Level 12
+    90000,		//Level 13
+    90000,		//Level 14
+    90000,		//Level 15
+    90000,		//Level 16
+    90000,		//Level 17
+    90000,		//Level 18
+    90000,		//Level 19
+    90000,		//Level 20
+    
+    //Hit Dice Quantity
+    1,			//Level 1
+    2,		//Level 2
+    3,		//Level 3
+    4,		//Level 4
+    5,		//Level 5
+    6,		//Level 6
+    7,		//Level 7
+    8,		//Level 8
+    9,		//Level 9
+    9,		//Level 10
+    9,		//Level 11
+    9,		//Level 12
+    9,		//Level 13
+    9,		//Level 14
+    9,		//Level 15
+    9,		//Level 16
+    9,		//Level 17
+    9,		//Level 18
+    9,		//Level 19
+    9,		//Level 20
+    //Hit Dice Size
+    6,
+    //Hit Dice Bonus
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    0,		//Level 4
+    0,		//Level 5
+    0,		//Level 6
+    0,		//Level 7
+    0,		//Level 8
+    0,		//Level 9
+    1,		//Level 10
+    2,		//Level 11
+    3,		//Level 12
+    4,		//Level 13
+    5,		//Level 14
+    6,		//Level 15
+    7,		//Level 16
+    8,		//Level 17
+    9,		//Level 18
+    10,		//Level 19
+    11,		//Level 20
+    
+    //Spells
+    //Level 1
+    0,		//Level 1
+    1,		//Level 2
+    2,		//Level 3
+    2,		//Level 4
+    2,		//Level 5
+    2,		//Level 6
+    3,		//Level 7
+    3,		//Level 8
+    3,		//Level 9
+    3,		//Level 10
+    4,		//Level 11
+    4,		//Level 12
+    4,		//Level 13
+    4,		//Level 14
+    4,		//Level 15
+    5,		//Level 16
+    5,		//Level 17
+    5,		//Level 18
+    6,		//Level 19
+    6,		//Level 20
+    //Level 2
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    1,		//Level 4
+    2,		//Level 5
+    2,		//Level 6
+    2,		//Level 7
+    2,		//Level 8
+    3,		//Level 9
+    3,		//Level 10
+    3,		//Level 11
+    4,		//Level 12
+    4,		//Level 13
+    4,		//Level 14
+    4,		//Level 15
+    4,		//Level 16
+    5,		//Level 17
+    5,		//Level 18
+    5,		//Level 19
+    5,		//Level 20
+    //Level 3
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    0,		//Level 4
+    0,		//Level 5
+    1,		//Level 6
+    2,		//Level 7
+    2,		//Level 8
+    2,		//Level 9
+    2,		//Level 10
+    3,		//Level 11
+    3,		//Level 12
+    3,		//Level 13
+    4,		//Level 14
+    4,		//Level 15
+    4,		//Level 16
+    4,		//Level 17
+    4,		//Level 18
+    4,		//Level 19
+    5,		//Level 20
+    //Level 4
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    0,		//Level 4
+    0,		//Level 5
+    0,		//Level 6
+    0,		//Level 7
+    1,		//Level 8
+    2,		//Level 9
+    2,		//Level 10
+    2,		//Level 11
+    2,		//Level 12
+    3,		//Level 13
+    3,		//Level 14
+    3,		//Level 15
+    3,		//Level 16
+    3,		//Level 17
+    4,		//Level 18
+    4,		//Level 19
+    4,		//Level 20
+    //Level 5
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    0,		//Level 4
+    0,		//Level 5
+    0,		//Level 6
+    0,		//Level 7
+    0,		//Level 8
+    0,		//Level 9
+    1,		//Level 10
+    2,		//Level 11
+    2,		//Level 12
+    2,		//Level 13
+    2,		//Level 14
+    3,		//Level 15
+    3,		//Level 16
+    3,		//Level 17
+    3,		//Level 18
+    3,		//Level 19
+    3,		//Level 20
+    //Level 6
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    0,		//Level 4
+    0,		//Level 5
+    0,		//Level 6
+    0,		//Level 7
+    0,		//Level 8
+    0,		//Level 9
+    0,		//Level 10
+    1,		//Level 11
+    2,		//Level 12
+    2,		//Level 13
+    2,		//Level 14
+    2,		//Level 15
+    2,		//Level 16
+    2,		//Level 17
+    3,		//Level 18
+    3,		//Level 19
+    3,		//Level 20
+  },
+  {},
+  {},
+  {}
+};
