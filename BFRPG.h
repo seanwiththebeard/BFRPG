@@ -138,6 +138,7 @@ struct{
     true,			//Magic-User
     true,			//Fighter
     true,			//Thief
+    false,			//Fighter Magic-User
     
     //Min Ability Restriction
     STR, 0,
@@ -174,9 +175,89 @@ struct{
     0				//SavingThrowSpells
   },
   {
-    //Halfling
+    "Halfling@",
+    //Classes Allowed
+    true,		 	//Cleric
+    false,			//Magic-User
+    true,			//Fighter
+    true,			//Thief
+    false,			//Fighter Magic-User
+    
+    //Min Ability Restriction
+    STR, 0,
+    //Max Ability Restriction
+    STR, 20,
+    
+    //Hit Dice
+    20,
+    
+    //Weapon Restrictions
+    false,			//WeaponsMediumTwoHands
+    true,			//WeaponsLarge
+    true,			//WeaponsTwoHandedSwords
+    true,			//WeaponsPolearms
+    true,			//WeaponsLongbows
+      				
+    //Special Abilities
+    false,			//Darkvision
+    false, 			//DetectArchitecture
+    false,			//DetectDoors
+    false,			//ImmuneGhoulParalysis;
+    10,				//ExpBonus in %
+    0, 				//RangedAttackBonus
+    0, 				//ACBonusMeleeVSLarge
+    0,				//InitiativeBonus
+    0,				//ChanceDetectedOutdoors
+    0,				//ChanceDetectedIndoors
+    0,				//SurpriseCheckRangeReduction
+    //Saving Throws Bonus
+    0,				//SavingThrowDeathRayPoison
+    0,				//SavingThrowMagicWands
+    0,				//SavingTrowParalysisPetrify
+    0,				//SavingThrowDragonBreath
+    0				//SavingThrowSpells
   },
   {
-    //Elf
+    "Elf@",
+    //Classes Allowed
+    true,		 	//Cleric
+    true,			//Magic-User
+    true,			//Fighter
+    true,			//Thief
+    true,			//Fighter Magic-User
+    
+    //Min Ability Restriction
+    STR, 0,
+    //Max Ability Restriction
+    STR, 20,
+    
+    //Hit Dice
+    20,
+    
+    //Weapon Restrictions
+    false,			//WeaponsMediumTwoHands
+    true,			//WeaponsLarge
+    true,			//WeaponsTwoHandedSwords
+    true,			//WeaponsPolearms
+    true,			//WeaponsLongbows
+      				
+    //Special Abilities
+    false,			//Darkvision
+    false, 			//DetectArchitecture
+    false,			//DetectDoors
+    false,			//ImmuneGhoulParalysis;
+    10,				//ExpBonus in %
+    0, 				//RangedAttackBonus
+    0, 				//ACBonusMeleeVSLarge
+    0,				//InitiativeBonus
+    0,				//ChanceDetectedOutdoors
+    0,				//ChanceDetectedIndoors
+    0,				//SurpriseCheckRangeReduction
+    //Saving Throws Bonus
+    0,				//SavingThrowDeathRayPoison
+    0,				//SavingThrowMagicWands
+    0,				//SavingTrowParalysisPetrify
+    0,				//SavingThrowDragonBreath
+    0				//SavingThrowSpells
   }
 }; 

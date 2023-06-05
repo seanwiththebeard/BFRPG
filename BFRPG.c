@@ -8,7 +8,7 @@
 #include <cbm_petscii_charmap.h>
 
 void main(void) {
-  clrscr();
-  printf("\nHello World!\n");
-  getchar();
+  //clrscr();
+  //printf("\nHello World!\n");
+  //getchar();
 }
