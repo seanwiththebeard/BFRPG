@@ -89,7 +89,7 @@ struct{
 }RaceDescription[4] =
 {
   {
-    {"Dwarf@"},
+    "Dwarf@",
     //Classes Allowed
     true,		 	//Cleric
     false,			//Magic-User
@@ -115,7 +115,7 @@ struct{
     true,			//Darkvision
     true, 			//DetectArchitecture
     false,			//DetectDoors
-    false			//ImmuneGhoulParalysis;
+    false,			//ImmuneGhoulParalysis;
     0,				//ExpBonus
     0, 				//RangedAttackBonus
     0, 				//ACBonusMeleeVSLarge
