@@ -68,8 +68,9 @@ Roll 1D20 + Ability Bonus/Penalty + Situational Bonus/Penalty >= Target number *
 
 //Page 2 - Race Notes
 struct{
+  char Name[8];
   //Classes
-  bool Fighter, Cleric, Thief, MagicUser;
+  bool Cleric, MagicUser, Fighter, Thief;
   //Min Ability Restriction
   ability MinAbilityRestriction;
   byte MinAbilityMinimum;
@@ -85,9 +86,49 @@ struct{
   byte ExpBonus, RangedAttackBonus, ACBonusMeleeVSLarge, InitiativeBonus, ChanceDetectedOutdoors, ChanceDetectedIndoors, SurpriseCheckRangeReduction;
   //Saving Throws Bonus
   byte SavingThrowDeathRayPoison, SavingThrowMagicWands, SavingTrowParalysisPetrify, SavingThrowDragonBreath, SavingThrowSpells;
-}RaceDescription[4] ={
+}RaceDescription[4] =
+{
   {
-    //Dwarf
+    {"Dwarf@"},
+    //Classes Allowed
+    true,		 	//Cleric
+    false,			//Magic-User
+    true,			//Fighter
+    true,			//Thief
+    
+    //Min Ability Restriction
+    CON, 9,
+    //Max Ability Restriction
+    CHA, 17,
+    
+    //Hit Dice
+    20,
+    
+    //Weapon Restrictions
+    false,			//WeaponsMediumTwoHands
+    true,			//WeaponsLarge
+    false,			//WeaponsTwoHandedSwords
+    false,			//WeaponsPolearms
+    false,			//WeaponsLongbows
+      				
+    //Special Abilities
+    true,			//Darkvision
+    true, 			//DetectArchitecture
+    false,			//DetectDoors
+    false			//ImmuneGhoulParalysis;
+    0,				//ExpBonus
+    0, 				//RangedAttackBonus
+    0, 				//ACBonusMeleeVSLarge
+    0,				//InitiativeBonus
+    0,				//ChanceDetectedOutdoors
+    0,				//ChanceDetectedIndoors
+    0,				//SurpriseCheckRangeReduction
+    //Saving Throws Bonus
+    4,				//SavingThrowDeathRayPoison
+    4,				//SavingThrowMagicWands
+    4,				//SavingTrowParalysisPetrify
+    3,				//SavingThrowDragonBreath
+    4				//SavingThrowSpells
   },
   {
     //Human
