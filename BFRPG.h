@@ -82,19 +82,19 @@ struct{
   bool WeaponsMediumTwoHands, WeaponsLarge, WeaponsTwoHandedSwords, WeaponsPolearms, WeaponsLongbows;
   //Special Abilities
   bool Darkvision, DetectArchitecture, DetectDoors, ImmuneGhoulParalysis;
-  byte ExpBonus, RangedAttackBonus, byte ACBonusMeleeVSLarge, InitiativeBonus, ChanceDetectedOutdoors, ChanceDetectedIndoors, SurpriseCheckRangeReduction;
+  byte ExpBonus, RangedAttackBonus, ACBonusMeleeVSLarge, InitiativeBonus, ChanceDetectedOutdoors, ChanceDetectedIndoors, SurpriseCheckRangeReduction;
   //Saving Throws Bonus
   byte SavingThrowDeathRayPoison, SavingThrowMagicWands, SavingTrowParalysisPetrify, SavingThrowDragonBreath, SavingThrowSpells;
 }RaceDescription[4] ={
   {
     //Dwarf
-  }
+  },
   {
     //Human
-  }
+  },
   {
     //Halfling
-  }
+  },
   {
     //Elf
   }
