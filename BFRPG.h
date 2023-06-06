@@ -765,7 +765,7 @@ struct
     5000,		//Level 5
     10000,		//Level 6
     20000,		//Level 7
-    35000,		//Level 8
+    (70000 / 2),	//Level 8
     75000,		//Level 9
     75000,		//Level 10
     75000,		//Level 11
