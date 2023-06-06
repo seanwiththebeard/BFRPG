@@ -472,7 +472,204 @@ struct
     3,		//Level 19
     3,		//Level 20
   },
-  {},
+  {
+    "Magic User@",
+    
+    //Exp Points
+    0,			//Level 1
+    2500,		//Level 2
+    5000,		//Level 3
+    10000,		//Level 4
+    20000,		//Level 5
+    (80000 / 2),	//Level 6
+    70000,		//Level 7
+    150000,		//Level 8
+    150000,		//Level 9
+    150000,		//Level 10
+    150000,		//Level 11
+    150000,		//Level 12
+    150000,		//Level 13
+    150000,		//Level 14
+    150000,		//Level 15
+    150000,		//Level 16
+    150000,		//Level 17
+    150000,		//Level 18
+    150000,		//Level 19
+    150000,		//Level 20
+    
+    //Hit Dice Quantity
+    1,			//Level 1
+    2,		//Level 2
+    3,		//Level 3
+    4,		//Level 4
+    5,		//Level 5
+    6,		//Level 6
+    7,		//Level 7
+    8,		//Level 8
+    9,		//Level 9
+    9,		//Level 10
+    9,		//Level 11
+    9,		//Level 12
+    9,		//Level 13
+    9,		//Level 14
+    9,		//Level 15
+    9,		//Level 16
+    9,		//Level 17
+    9,		//Level 18
+    9,		//Level 19
+    9,		//Level 20
+    //Hit Dice Size
+    4,
+    //Hit Dice Bonus
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    0,		//Level 4
+    0,		//Level 5
+    0,		//Level 6
+    0,		//Level 7
+    0,		//Level 8
+    0,		//Level 9
+    1,		//Level 10
+    2,		//Level 11
+    3,		//Level 12
+    4,		//Level 13
+    5,		//Level 14
+    6,		//Level 15
+    7,		//Level 16
+    8,		//Level 17
+    9,		//Level 18
+    10,		//Level 19
+    11,		//Level 20
+    
+    //Spells
+    //Level 1
+    1,		//Level 1
+    2,		//Level 2
+    2,		//Level 3
+    2,		//Level 4
+    2,		//Level 5
+    3,		//Level 6
+    3,		//Level 7
+    3,		//Level 8
+    3,		//Level 9
+    4,		//Level 10
+    4,		//Level 11
+    4,		//Level 12
+    4,		//Level 13
+    4,		//Level 14
+    5,		//Level 15
+    5,		//Level 16
+    5,		//Level 17
+    6,		//Level 18
+    6,		//Level 19
+    6,		//Level 20
+    //Level 2
+    0,		//Level 1
+    0,		//Level 2
+    1,		//Level 3
+    2,		//Level 4
+    2,		//Level 5
+    2,		//Level 6
+    2,		//Level 7
+    3,		//Level 8
+    3,		//Level 9
+    3,		//Level 10
+    4,		//Level 11
+    4,		//Level 12
+    4,		//Level 13
+    4,		//Level 14
+    4,		//Level 15
+    5,		//Level 16
+    5,		//Level 17
+    5,		//Level 18
+    5,		//Level 19
+    5,		//Level 20
+    //Level 3
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    0,		//Level 4
+    1,		//Level 5
+    2,		//Level 6
+    2,		//Level 7
+    2,		//Level 8
+    2,		//Level 9
+    3,		//Level 10
+    3,		//Level 11
+    3,		//Level 12
+    4,		//Level 13
+    4,		//Level 14
+    4,		//Level 15
+    4,		//Level 16
+    4,		//Level 17
+    4,		//Level 18
+    5,		//Level 19
+    5,		//Level 20
+    //Level 4
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    0,		//Level 4
+    0,		//Level 5
+    0,		//Level 6
+    1,		//Level 7
+    2,		//Level 8
+    2,		//Level 9
+    2,		//Level 10
+    2,		//Level 11
+    3,		//Level 12
+    3,		//Level 13
+    3,		//Level 14
+    3,		//Level 15
+    3,		//Level 16
+    4,		//Level 17
+    4,		//Level 18
+    4,		//Level 19
+    4,		//Level 20
+    //Level 5
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    0,		//Level 4
+    0,		//Level 5
+    0,		//Level 6
+    0,		//Level 7
+    0,		//Level 8
+    1,		//Level 9
+    2,		//Level 10
+    2,		//Level 11
+    2,		//Level 12
+    2,		//Level 13
+    3,		//Level 14
+    3,		//Level 15
+    3,		//Level 16
+    3,		//Level 17
+    3,		//Level 18
+    3,		//Level 19
+    4,		//Level 20
+    //Level 6
+    0,		//Level 1
+    0,		//Level 2
+    0,		//Level 3
+    0,		//Level 4
+    0,		//Level 5
+    0,		//Level 6
+    0,		//Level 7
+    0,		//Level 8
+    0,		//Level 9
+    0,		//Level 10
+    1,		//Level 11
+    2,		//Level 12
+    2,		//Level 13
+    2,		//Level 14
+    2,		//Level 15
+    2,		//Level 16
+    3,		//Level 17
+    3,		//Level 18
+    3,		//Level 19
+    3,		//Level 20
+  },
   {},
   {}
 };
