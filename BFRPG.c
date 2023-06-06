@@ -23,6 +23,9 @@ void main(void) {
   for (x = 0; x < 4; ++x)
   {
     printf("%s\n", ClassName[x].Value);
+    for (y = 0; y < 20; ++y)
+      printf("%i\n", ClassExpRequired[x].Value[y]);
+      
   }
   //getchar();
 }
