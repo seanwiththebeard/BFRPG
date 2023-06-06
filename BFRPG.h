@@ -498,7 +498,7 @@ struct
     150000,		//Level 20
     
     //Hit Dice Quantity
-    1,			//Level 1
+    1,		//Level 1
     2,		//Level 2
     3,		//Level 3
     4,		//Level 4
@@ -676,27 +676,27 @@ struct
     //Exp Points
     0,			//Level 1
     2000,		//Level 2
-    4000,		//Level 3
-    8000,		//Level 4
-    16000,		//Level 5
-    32000,		//Level 6
-    (32000 * 2),	//Level 7
-    120000,		//Level 8
-    240000,		//Level 9
-    360000,		//Level 10
-    480000,		//Level 11
-    600000,		//Level 12
-    720000,		//Level 13
-    840000,		//Level 14
-    960000,		//Level 15
-    1080000,		//Level 16
-    1200000,		//Level 17
-    1320000,		//Level 18
-    1440000,		//Level 19
-    1560000,		//Level 20
+    2000,		//Level 3
+    4000,		//Level 4
+    8000,		//Level 5
+    16000,		//Level 6
+    32000,		//Level 7
+    (28000*2),		//Level 8
+    120000,		//Level 9
+    120000,		//Level 10
+    120000,		//Level 11
+    120000,		//Level 12
+    120000,		//Level 13
+    120000,		//Level 14
+    120000,		//Level 15
+    120000,		//Level 16
+    120000,		//Level 17
+    120000,		//Level 18
+    120000,		//Level 19
+    120000,		//Level 20
     
     //Hit Dice Quantity
-    1,			//Level 1
+    1,		//Level 1
     2,		//Level 2
     3,		//Level 3
     4,		//Level 4
@@ -717,7 +717,7 @@ struct
     9,		//Level 19
     9,		//Level 20
     //Hit Dice Size
-    4,
+    8,
     //Hit Dice Bonus
     0,		//Level 1
     0,		//Level 2
@@ -728,17 +728,17 @@ struct
     0,		//Level 7
     0,		//Level 8
     0,		//Level 9
-    1,		//Level 10
-    2,		//Level 11
-    3,		//Level 12
-    4,		//Level 13
-    5,		//Level 14
-    6,		//Level 15
-    7,		//Level 16
-    8,		//Level 17
-    9,		//Level 18
-    10,		//Level 19
-    11,		//Level 20
+    2,		//Level 10
+    4,		//Level 11
+    6,		//Level 12
+    8,		//Level 13
+    10,		//Level 14
+    12,		//Level 15
+    14,		//Level 16
+    16,		//Level 17
+    18,		//Level 18
+    20,		//Level 19
+    22,		//Level 20
     
     //Spells
     //Level 1
