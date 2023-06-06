@@ -25,11 +25,15 @@ typedef enum
   WIS, //Wisdom
   //•Some saving throws vs. magical attacks
   CHA //Charisma
-  //•Reaction rolls
-  //•Number of retainers a character may hire
+    //•Reaction rolls
+    //•Number of retainers a character may hire
   }ability; //This can be used for passing an ability type in a function
 
-struct {sbyte Modifier[19];}AbilityBonus = {{
+struct 
+{
+  sbyte Modifier[19];
+}AbilityBonus = 
+{
   -3, // 0 - Not possble, use these for "Lord British" stats?
   -3, // 1
   -3, // 2
@@ -39,17 +43,17 @@ struct {sbyte Modifier[19];}AbilityBonus = {{
   -1, // 6
   -1, // 7
   -1, // 8
-   0, // 9
-   0, // 10
-   0, // 11
-   0, // 12
-   1, // 13
-   1, // 14
-   1, // 15
-   2, // 16
-   2, // 17
-   3, // 18
-}}; //Index = Level
+  0, // 9
+  0, // 10
+  0, // 11
+  0, // 12
+  1, // 13
+  1, // 14
+  1, // 15
+  2, // 16
+  2, // 17
+  3, // 18
+}; //Index = Level
 
 /*Optional Skill Rolls
 Level
@@ -97,22 +101,22 @@ struct{
     true,			//Fighter
     true,			//Thief
     false,			//Fighter Magic-User
-    
+
     //Min Ability Restriction
     CON, 9,
     //Max Ability Restriction
     CHA, 17,
-    
+
     //Hit Dice
     20,
-    
+
     //Weapon Restrictions
     false,			//WeaponsMediumTwoHands
     true,			//WeaponsLarge
     false,			//WeaponsTwoHandedSwords
     false,			//WeaponsPolearms
     false,			//WeaponsLongbows
-      				
+
     //Special Abilities
     true,			//Darkvision
     true, 			//DetectArchitecture
@@ -131,7 +135,7 @@ struct{
     4,				//SavingTrowParalysisPetrify
     3,				//SavingThrowDragonBreath
     4				//SavingThrowSpells
-  },
+    },
   {
     "Human@",
     //Classes Allowed
@@ -140,22 +144,22 @@ struct{
     true,			//Fighter
     true,			//Thief
     false,			//Fighter Magic-User
-    
+
     //Min Ability Restriction
     STR, 0,
     //Max Ability Restriction
     STR, 20,
-    
+
     //Hit Dice
     20,
-    
+
     //Weapon Restrictions
     false,			//WeaponsMediumTwoHands
     true,			//WeaponsLarge
     true,			//WeaponsTwoHandedSwords
     true,			//WeaponsPolearms
     true,			//WeaponsLongbows
-      				
+
     //Special Abilities
     false,			//Darkvision
     false, 			//DetectArchitecture
@@ -174,7 +178,7 @@ struct{
     0,				//SavingTrowParalysisPetrify
     0,				//SavingThrowDragonBreath
     0				//SavingThrowSpells
-  },
+    },
   {
     "Halfling@",
     //Classes Allowed
@@ -183,22 +187,22 @@ struct{
     true,			//Fighter
     true,			//Thief
     false,			//Fighter Magic-User
-    
+
     //Min Ability Restriction
     DEX, 9,
     //Max Ability Restriction
     STR, 17,
-    
+
     //Hit Dice
     6,
-    
+
     //Weapon Restrictions
     true,			//WeaponsMediumTwoHands
     false,			//WeaponsLarge
     true,			//WeaponsTwoHandedSwords
     true,			//WeaponsPolearms
     true,			//WeaponsLongbows
-      				
+
     //Special Abilities
     false,			//Darkvision
     false, 			//DetectArchitecture
@@ -217,7 +221,7 @@ struct{
     4,				//SavingTrowParalysisPetrify
     3,				//SavingThrowDragonBreath
     4				//SavingThrowSpells
-  },
+    },
   {
     "Elf@",
     //Classes Allowed
@@ -226,22 +230,22 @@ struct{
     true,			//Fighter
     true,			//Thief
     true,			//Fighter Magic-User
-    
+
     //Min Ability Restriction
     INT, 9,
     //Max Ability Restriction
     CON, 17,
-    
+
     //Hit Dice
     6,
-    
+
     //Weapon Restrictions
     false,			//WeaponsMediumTwoHands
     true,			//WeaponsLarge
     true,			//WeaponsTwoHandedSwords
     true,			//WeaponsPolearms
     true,			//WeaponsLongbows
-      				
+
     //Special Abilities
     true,			//Darkvision
     false, 			//DetectArchitecture
@@ -260,23 +264,23 @@ struct{
     1,				//SavingTrowParalysisPetrify
     0,				//SavingThrowDragonBreath
     2				//SavingThrowSpells
-  }
+    }
 }; 
 
 //Page 3 - Class Advancement Tables
 //Page 4 - Class Notes, Saving Throws
 //Index = Level
+
+struct{char Value[11];}ClassName[4] = {{"Cleric"}, {"Magic-User"},{"Fighter"},{"Thief"}};
+
 struct
 {
-  char Name[11];
-  uint16_t ExpRequired[20];
+  int ExpRequired[20];
   byte HitDiceQuantity[20], HitDiceSize, HitDiceBonus[20],
   SpellsLevel1[20], SpellsLevel2[20], SpellsLevel3[20], SpellsLevel4[20], SpellsLevel5[20], SpellsLevel6[20];
 }ClassDescription[4] = 
 {
   {
-    "Cleric@",
-    
     //Exp Points
     0,			//Level 1
     1500,		//Level 2
@@ -298,7 +302,7 @@ struct
     90000,		//Level 18
     90000,		//Level 19
     90000,		//Level 20
-    
+
     //Hit Dice Quantity
     1,			//Level 1
     2,		//Level 2
@@ -343,7 +347,7 @@ struct
     9,		//Level 18
     10,		//Level 19
     11,		//Level 20
-    
+
     //Spells
     //Level 1
     0,		//Level 1
@@ -472,9 +476,7 @@ struct
     3,		//Level 19
     3,		//Level 20
   },
-  {
-    "Magic User@",
-    
+  {//Magic-User
     //Exp Points
     0,			//Level 1
     2500,		//Level 2
@@ -496,7 +498,7 @@ struct
     150000,		//Level 18
     150000,		//Level 19
     150000,		//Level 20
-    
+
     //Hit Dice Quantity
     1,		//Level 1
     2,		//Level 2
@@ -541,7 +543,7 @@ struct
     9,		//Level 18
     10,		//Level 19
     11,		//Level 20
-    
+
     //Spells
     //Level 1
     1,		//Level 1
@@ -670,9 +672,7 @@ struct
     3,		//Level 19
     3,		//Level 20
   },
-  {
-    "Fighter@",
-    
+  {//Fighter
     //Exp Points
     0,			//Level 1
     2000,		//Level 2
@@ -694,7 +694,7 @@ struct
     120000,		//Level 18
     120000,		//Level 19
     120000,		//Level 20
-    
+
     //Hit Dice Quantity
     1,		//Level 1
     2,		//Level 2
@@ -739,7 +739,7 @@ struct
     18,		//Level 18
     20,		//Level 19
     22,		//Level 20
-    
+
     //Spells
     //Level 1
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -753,10 +753,9 @@ struct
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     //Level 6
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-  },
-  {
-    "Thief@",
-    
+    },
+  {//Thief
+
     //Exp Points
     0,			//Level 1
     1250,		//Level 2
@@ -778,7 +777,7 @@ struct
     75000,		//Level 18
     75000,		//Level 19
     75000,		//Level 20
-    
+
     //Hit Dice Quantity
     1,		//Level 1
     2,		//Level 2
@@ -823,7 +822,7 @@ struct
     18,		//Level 18
     20,		//Level 19
     22,		//Level 20
-    
+
     //Spells
     //Level 1
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -837,5 +836,5 @@ struct
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     //Level 6
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-  }
+    }
 };

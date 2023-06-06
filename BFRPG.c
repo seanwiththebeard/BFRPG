@@ -7,8 +7,22 @@
 #include <c64.h>
 #include <cbm_petscii_charmap.h>
 
+byte x, y;
 void main(void) {
   //clrscr();
-  //printf("\nHello World!\n");
+  for (x = 0; x < 19; ++x)
+  {
+  printf("Ability Modifier Score %d:  %d\n", x, AbilityBonus.Modifier[x]);
+  }
+  
+  for (x = 0; x < 4; ++x)
+  {
+    printf("%s\n", RaceDescription[x].Name);    
+  }
+  
+  for (x = 0; x < 4; ++x)
+  {
+    printf("%s\n", ClassName[x].Value);
+  }
   //getchar();
 }
