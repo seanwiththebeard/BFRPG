@@ -271,495 +271,105 @@ struct{
 //Page 4 - Class Notes, Saving Throws
 //Index = Level
 
-struct{char Value[11];}ClassName[4] = {{"Cleric"}, {"Magic-User"},{"Fighter"},{"Thief"}};
-
 byte ExpMultiplier[20] = {1, 1, 2, 4, 8, 16, 28, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60};
+byte HitDiceQuantity[20] = { 1, 2,3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9};
+byte SpellsLevel[2][6][20] = 
+{
+  //Cleric Spells
+  0, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 6,	//Level 1
+  0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5,	//Level 2
+  0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5,	//Level 3
+  0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4,	//Level 4
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3,	//Level 5
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3,	//Level 6
+
+  //Magic-User Spells
+  //Level 1
+  1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6,	//Level 1
+  0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5,	//Level 2
+  0, 0,	0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4,	5, 5,	//Level 3
+  0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4,	//Level 4
+  0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4,	//Level 5
+  0, 0,	0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3	//Level 6
+  };
 
 struct
 {
-  byte ExpBase, HitDiceSize, HitDiceBonus[20],
-  SpellsLevel1[20], SpellsLevel2[20], SpellsLevel3[20], SpellsLevel4[20], SpellsLevel5[20], SpellsLevel6[20];
+  char Name[12];
+  int ExpBase;
+  byte HitDiceSize;
+  byte HitDiceBonus[20];
 }ClassDescription[4] = 
 {
-  {
+  {"Cleric",
     //Exp Base
     1500,
-
-    //Hit Dice Quantity
-    1,		//Level 1
-    2,		//Level 2
-    3,		//Level 3
-    4,		//Level 4
-    5,		//Level 5
-    6,		//Level 6
-    7,		//Level 7
-    8,		//Level 8
-    9,		//Level 9
-    9,		//Level 10
-    9,		//Level 11
-    9,		//Level 12
-    9,		//Level 13
-    9,		//Level 14
-    9,		//Level 15
-    9,		//Level 16
-    9,		//Level 17
-    9,		//Level 18
-    9,		//Level 19
-    9,		//Level 20
     //Hit Dice Size
     6,
     //Hit Dice Bonus
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    0,		//Level 6
-    0,		//Level 7
-    0,		//Level 8
-    0,		//Level 9
-    1,		//Level 10
-    2,		//Level 11
-    3,		//Level 12
-    4,		//Level 13
-    5,		//Level 14
-    6,		//Level 15
-    7,		//Level 16
-    8,		//Level 17
-    9,		//Level 18
-    10,		//Level 19
-    11,		//Level 20
-
-    //Spells
-    //Level 1
-    0,		//Level 1
-    1,		//Level 2
-    2,		//Level 3
-    2,		//Level 4
-    2,		//Level 5
-    2,		//Level 6
-    3,		//Level 7
-    3,		//Level 8
-    3,		//Level 9
-    3,		//Level 10
-    4,		//Level 11
-    4,		//Level 12
-    4,		//Level 13
-    4,		//Level 14
-    4,		//Level 15
-    5,		//Level 16
-    5,		//Level 17
-    5,		//Level 18
-    6,		//Level 19
-    6,		//Level 20
-    //Level 2
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    1,		//Level 4
-    2,		//Level 5
-    2,		//Level 6
-    2,		//Level 7
-    2,		//Level 8
-    3,		//Level 9
-    3,		//Level 10
-    3,		//Level 11
-    4,		//Level 12
-    4,		//Level 13
-    4,		//Level 14
-    4,		//Level 15
-    4,		//Level 16
-    5,		//Level 17
-    5,		//Level 18
-    5,		//Level 19
-    5,		//Level 20
-    //Level 3
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    1,		//Level 6
-    2,		//Level 7
-    2,		//Level 8
-    2,		//Level 9
-    2,		//Level 10
-    3,		//Level 11
-    3,		//Level 12
-    3,		//Level 13
-    4,		//Level 14
-    4,		//Level 15
-    4,		//Level 16
-    4,		//Level 17
-    4,		//Level 18
-    4,		//Level 19
-    5,		//Level 20
-    //Level 4
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    0,		//Level 6
-    0,		//Level 7
-    1,		//Level 8
-    2,		//Level 9
-    2,		//Level 10
-    2,		//Level 11
-    2,		//Level 12
-    3,		//Level 13
-    3,		//Level 14
-    3,		//Level 15
-    3,		//Level 16
-    3,		//Level 17
-    4,		//Level 18
-    4,		//Level 19
-    4,		//Level 20
-    //Level 5
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    0,		//Level 6
-    0,		//Level 7
-    0,		//Level 8
-    0,		//Level 9
-    1,		//Level 10
-    2,		//Level 11
-    2,		//Level 12
-    2,		//Level 13
-    2,		//Level 14
-    3,		//Level 15
-    3,		//Level 16
-    3,		//Level 17
-    3,		//Level 18
-    3,		//Level 19
-    3,		//Level 20
-    //Level 6
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    0,		//Level 6
-    0,		//Level 7
-    0,		//Level 8
-    0,		//Level 9
-    0,		//Level 10
-    1,		//Level 11
-    2,		//Level 12
-    2,		//Level 13
-    2,		//Level 14
-    2,		//Level 15
-    2,		//Level 16
-    2,		//Level 17
-    3,		//Level 18
-    3,		//Level 19
-    3,		//Level 20
-  },
-  {//Magic-User
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+    },
+  {
+    "Magic-User",
     //Exp Base
     2500,
-
-    //Hit Dice Quantity
-    1,		//Level 1
-    2,		//Level 2
-    3,		//Level 3
-    4,		//Level 4
-    5,		//Level 5
-    6,		//Level 6
-    7,		//Level 7
-    8,		//Level 8
-    9,		//Level 9
-    9,		//Level 10
-    9,		//Level 11
-    9,		//Level 12
-    9,		//Level 13
-    9,		//Level 14
-    9,		//Level 15
-    9,		//Level 16
-    9,		//Level 17
-    9,		//Level 18
-    9,		//Level 19
-    9,		//Level 20
     //Hit Dice Size
     4,
     //Hit Dice Bonus
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    0,		//Level 6
-    0,		//Level 7
-    0,		//Level 8
-    0,		//Level 9
-    1,		//Level 10
-    2,		//Level 11
-    3,		//Level 12
-    4,		//Level 13
-    5,		//Level 14
-    6,		//Level 15
-    7,		//Level 16
-    8,		//Level 17
-    9,		//Level 18
-    10,		//Level 19
-    11,		//Level 20
-
-    //Spells
-    //Level 1
-    1,		//Level 1
-    2,		//Level 2
-    2,		//Level 3
-    2,		//Level 4
-    2,		//Level 5
-    3,		//Level 6
-    3,		//Level 7
-    3,		//Level 8
-    3,		//Level 9
-    4,		//Level 10
-    4,		//Level 11
-    4,		//Level 12
-    4,		//Level 13
-    4,		//Level 14
-    5,		//Level 15
-    5,		//Level 16
-    5,		//Level 17
-    6,		//Level 18
-    6,		//Level 19
-    6,		//Level 20
-    //Level 2
-    0,		//Level 1
-    0,		//Level 2
-    1,		//Level 3
-    2,		//Level 4
-    2,		//Level 5
-    2,		//Level 6
-    2,		//Level 7
-    3,		//Level 8
-    3,		//Level 9
-    3,		//Level 10
-    4,		//Level 11
-    4,		//Level 12
-    4,		//Level 13
-    4,		//Level 14
-    4,		//Level 15
-    5,		//Level 16
-    5,		//Level 17
-    5,		//Level 18
-    5,		//Level 19
-    5,		//Level 20
-    //Level 3
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    1,		//Level 5
-    2,		//Level 6
-    2,		//Level 7
-    2,		//Level 8
-    2,		//Level 9
-    3,		//Level 10
-    3,		//Level 11
-    3,		//Level 12
-    4,		//Level 13
-    4,		//Level 14
-    4,		//Level 15
-    4,		//Level 16
-    4,		//Level 17
-    4,		//Level 18
-    5,		//Level 19
-    5,		//Level 20
-    //Level 4
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    0,		//Level 6
-    1,		//Level 7
-    2,		//Level 8
-    2,		//Level 9
-    2,		//Level 10
-    2,		//Level 11
-    3,		//Level 12
-    3,		//Level 13
-    3,		//Level 14
-    3,		//Level 15
-    3,		//Level 16
-    4,		//Level 17
-    4,		//Level 18
-    4,		//Level 19
-    4,		//Level 20
-    //Level 5
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    0,		//Level 6
-    0,		//Level 7
-    0,		//Level 8
-    1,		//Level 9
-    2,		//Level 10
-    2,		//Level 11
-    2,		//Level 12
-    2,		//Level 13
-    3,		//Level 14
-    3,		//Level 15
-    3,		//Level 16
-    3,		//Level 17
-    3,		//Level 18
-    3,		//Level 19
-    4,		//Level 20
-    //Level 6
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    0,		//Level 6
-    0,		//Level 7
-    0,		//Level 8
-    0,		//Level 9
-    0,		//Level 10
-    1,		//Level 11
-    2,		//Level 12
-    2,		//Level 13
-    2,		//Level 14
-    2,		//Level 15
-    2,		//Level 16
-    3,		//Level 17
-    3,		//Level 18
-    3,		//Level 19
-    3,		//Level 20
-  },
-  {//Fighter
-    //Exp Base
-    2000,
-    
-    //Hit Dice Quantity
-    1,		//Level 1
-    2,		//Level 2
-    3,		//Level 3
-    4,		//Level 4
-    5,		//Level 5
-    6,		//Level 6
-    7,		//Level 7
-    8,		//Level 8
-    9,		//Level 9
-    9,		//Level 10
-    9,		//Level 11
-    9,		//Level 12
-    9,		//Level 13
-    9,		//Level 14
-    9,		//Level 15
-    9,		//Level 16
-    9,		//Level 17
-    9,		//Level 18
-    9,		//Level 19
-    9,		//Level 20
-    //Hit Dice Size
-    8,
-    //Hit Dice Bonus
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    0,		//Level 6
-    0,		//Level 7
-    0,		//Level 8
-    0,		//Level 9
-    2,		//Level 10
-    4,		//Level 11
-    6,		//Level 12
-    8,		//Level 13
-    10,		//Level 14
-    12,		//Level 15
-    14,		//Level 16
-    16,		//Level 17
-    18,		//Level 18
-    20,		//Level 19
-    22,		//Level 20
-
-    //Spells
-    //Level 1
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //Level 2
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //Level 3
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //Level 4
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //Level 5
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //Level 6
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
     },
-  {//Thief
-
-    //Exp Base
-    1250,
-    
-    //Hit Dice Quantity
-    1,		//Level 1
-    2,		//Level 2
-    3,		//Level 3
-    4,		//Level 4
-    5,		//Level 5
-    6,		//Level 6
-    7,		//Level 7
-    8,		//Level 8
-    9,		//Level 9
-    9,		//Level 10
-    9,		//Level 11
-    9,		//Level 12
-    9,		//Level 13
-    9,		//Level 14
-    9,		//Level 15
-    9,		//Level 16
-    9,		//Level 17
-    9,		//Level 18
-    9,		//Level 19
-    9,		//Level 20
-    //Hit Dice Size
-    4,
-    //Hit Dice Bonus
-    0,		//Level 1
-    0,		//Level 2
-    0,		//Level 3
-    0,		//Level 4
-    0,		//Level 5
-    0,		//Level 6
-    0,		//Level 7
-    0,		//Level 8
-    0,		//Level 9
-    2,		//Level 10
-    4,		//Level 11
-    6,		//Level 12
-    8,		//Level 13
-    10,		//Level 14
-    12,		//Level 15
-    14,		//Level 16
-    16,		//Level 17
-    18,		//Level 18
-    20,		//Level 19
-    22,		//Level 20
-
-    //Spells
-    //Level 1
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //Level 2
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //Level 3
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //Level 4
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //Level 5
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //Level 6
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-    }
+  {"Fighter",//Fighter
+   //Exp Base
+   2000,
+   //Hit Dice Size
+   8,
+   //Hit Dice Bonus
+   0,		//Level 1
+   0,		//Level 2
+   0,		//Level 3
+   0,		//Level 4
+   0,		//Level 5
+   0,		//Level 6
+   0,		//Level 7
+   0,		//Level 8
+   0,		//Level 9
+   2,		//Level 10
+   4,		//Level 11
+   6,		//Level 12
+   8,		//Level 13
+   10,		//Level 14
+   12,		//Level 15
+   14,		//Level 16
+   16,		//Level 17
+   18,		//Level 18
+   20,		//Level 19
+   22		//Level 20
+   },
+  {"Thief",//Thief
+   //Exp Base
+   1250,
+   //Hit Dice Size
+   4,
+   //Hit Dice Bonus
+   0,		//Level 1
+   0,		//Level 2
+   0,		//Level 3
+   0,		//Level 4
+   0,		//Level 5
+   0,		//Level 6
+   0,		//Level 7
+   0,		//Level 8
+   0,		//Level 9
+   2,		//Level 10
+   4,		//Level 11
+   6,		//Level 12
+   8,		//Level 13
+   10,		//Level 14
+   12,		//Level 15
+   14,		//Level 16
+   16,		//Level 17
+   18,		//Level 18
+   20,		//Level 19
+   22		//Level 20
+   }
 };
