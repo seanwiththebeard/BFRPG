@@ -364,38 +364,21 @@ struct{uint16_t Value[20];}ClassExpRequired[4] =
   }
 };
 
+byte ExpMultiplier[20] = {1, 1, 2, 4, 8, 16, 28, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60};
+
+
 struct
 {
-  uint16_t ExpRequired[20];
-  byte HitDiceQuantity[20], HitDiceSize, HitDiceBonus[20],
+  byte ExpBase, HitDiceQuantity[20], HitDiceSize, HitDiceBonus[20],
   SpellsLevel1[20], SpellsLevel2[20], SpellsLevel3[20], SpellsLevel4[20], SpellsLevel5[20], SpellsLevel6[20];
 }ClassDescription[4] = 
 {
   {
-    //Exp Points
-    0,			//Level 1
-    1500,		//Level 2
-    1500,		//Level 3
-    3000,		//Level 4
-    6000,		//Level 5
-    12000,		//Level 6
-    24000,		//Level 7
-    (90000 / 2 - 3000),	//Level 8 (why does this throw an error if it's just 42000?)
-    90000,		//Level 9
-    90000,		//Level 10
-    90000,		//Level 11
-    90000,		//Level 12
-    90000,		//Level 13
-    90000,		//Level 14
-    90000,		//Level 15
-    90000,		//Level 16
-    90000,		//Level 17
-    90000,		//Level 18
-    90000,		//Level 19
-    90000,		//Level 20
+    //Exp Base
+    1500,
 
     //Hit Dice Quantity
-    1,			//Level 1
+    1,		//Level 1
     2,		//Level 2
     3,		//Level 3
     4,		//Level 4
