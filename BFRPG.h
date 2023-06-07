@@ -324,18 +324,7 @@ struct
    //Hit Dice Size
    8,
    //Hit Dice Bonus
-   0,		//Level 1
-   0,		//Level 2
-   0,		//Level 3
-   0,		//Level 4
-   0,		//Level 5
-   0,		//Level 6
-   0,		//Level 7
-   0,		//Level 8
-   0,		//Level 9
-   2,		//Level 10
-   4,		//Level 11
-   6,		//Level 12
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 6,		//Level 12
    8,		//Level 13
    10,		//Level 14
    12,		//Level 15
