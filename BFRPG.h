@@ -272,104 +272,12 @@ struct{
 //Index = Level
 
 struct{char Value[11];}ClassName[4] = {{"Cleric"}, {"Magic-User"},{"Fighter"},{"Thief"}};
-struct{uint16_t Value[20];}ClassExpRequired[4] = 
-{
-  {
-    0,			//Level 1
-    1500,		//Level 2
-    1500,		//Level 3
-    3000,		//Level 4
-    6000,		//Level 5
-    12000,		//Level 6
-    24000,		//Level 7
-    (90000 / 2 - 3000),	//Level 8 (why does this throw an error if it's just 42000?)
-    90000,		//Level 9
-    90000,		//Level 10
-    90000,		//Level 11
-    90000,		//Level 12
-    90000,		//Level 13
-    90000,		//Level 14
-    90000,		//Level 15
-    90000,		//Level 16
-    90000,		//Level 17
-    90000,		//Level 18
-    90000,		//Level 19
-    90000,		//Level 20
-  },
-  {
-    0,			//Level 1
-    2500,		//Level 2
-    5000,		//Level 3
-    10000,		//Level 4
-    20000,		//Level 5
-    (80000 / 2),	//Level 6
-    70000,		//Level 7
-    150000,		//Level 8
-    150000,		//Level 9
-    150000,		//Level 10
-    150000,		//Level 11
-    150000,		//Level 12
-    150000,		//Level 13
-    150000,		//Level 14
-    150000,		//Level 15
-    150000,		//Level 16
-    150000,		//Level 17
-    150000,		//Level 18
-    150000,		//Level 19
-    150000,		//Level 20
-  },
-  {
-    0,			//Level 1
-    2000,		//Level 2
-    2000,		//Level 3
-    4000,		//Level 4
-    8000,		//Level 5
-    16000,		//Level 6
-    32000,		//Level 7
-    (28000*2),		//Level 8
-    120000,		//Level 9
-    120000,		//Level 10
-    120000,		//Level 11
-    120000,		//Level 12
-    120000,		//Level 13
-    120000,		//Level 14
-    120000,		//Level 15
-    120000,		//Level 16
-    120000,		//Level 17
-    120000,		//Level 18
-    120000,		//Level 19
-    120000,		//Level 20
-  },
-  {
-    0,			//Level 1
-    1250,		//Level 2
-    1250,		//Level 3
-    2500,		//Level 4
-    5000,		//Level 5
-    10000,		//Level 6
-    20000,		//Level 7
-    75000,		//Level 8
-    75000,		//Level 9
-    75000,		//Level 10
-    75000,		//Level 11
-    75000,		//Level 12
-    75000,		//Level 13
-    75000,		//Level 14
-    75000,		//Level 15
-    75000,		//Level 16
-    75000,		//Level 17
-    75000,		//Level 18
-    75000,		//Level 19
-    75000,		//Level 20
-  }
-};
 
 byte ExpMultiplier[20] = {1, 1, 2, 4, 8, 16, 28, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60};
 
-
 struct
 {
-  byte ExpBase, HitDiceQuantity[20], HitDiceSize, HitDiceBonus[20],
+  byte ExpBase, HitDiceSize, HitDiceBonus[20],
   SpellsLevel1[20], SpellsLevel2[20], SpellsLevel3[20], SpellsLevel4[20], SpellsLevel5[20], SpellsLevel6[20];
 }ClassDescription[4] = 
 {
@@ -551,27 +459,8 @@ struct
     3,		//Level 20
   },
   {//Magic-User
-    //Exp Points
-    0,			//Level 1
-    2500,		//Level 2
-    5000,		//Level 3
-    10000,		//Level 4
-    20000,		//Level 5
-    (80000 / 2),	//Level 6
-    70000,		//Level 7
-    150000,		//Level 8
-    150000,		//Level 9
-    150000,		//Level 10
-    150000,		//Level 11
-    150000,		//Level 12
-    150000,		//Level 13
-    150000,		//Level 14
-    150000,		//Level 15
-    150000,		//Level 16
-    150000,		//Level 17
-    150000,		//Level 18
-    150000,		//Level 19
-    150000,		//Level 20
+    //Exp Base
+    2500,
 
     //Hit Dice Quantity
     1,		//Level 1
@@ -747,28 +636,9 @@ struct
     3,		//Level 20
   },
   {//Fighter
-    //Exp Points
-    0,			//Level 1
-    2000,		//Level 2
-    2000,		//Level 3
-    4000,		//Level 4
-    8000,		//Level 5
-    16000,		//Level 6
-    32000,		//Level 7
-    (28000*2),		//Level 8
-    120000,		//Level 9
-    120000,		//Level 10
-    120000,		//Level 11
-    120000,		//Level 12
-    120000,		//Level 13
-    120000,		//Level 14
-    120000,		//Level 15
-    120000,		//Level 16
-    120000,		//Level 17
-    120000,		//Level 18
-    120000,		//Level 19
-    120000,		//Level 20
-
+    //Exp Base
+    2000,
+    
     //Hit Dice Quantity
     1,		//Level 1
     2,		//Level 2
@@ -830,28 +700,9 @@ struct
     },
   {//Thief
 
-    //Exp Points
-    0,			//Level 1
-    1250,		//Level 2
-    1250,		//Level 3
-    2500,		//Level 4
-    5000,		//Level 5
-    10000,		//Level 6
-    20000,		//Level 7
-    (70000 / 2),	//Level 8
-    75000,		//Level 9
-    75000,		//Level 10
-    75000,		//Level 11
-    75000,		//Level 12
-    75000,		//Level 13
-    75000,		//Level 14
-    75000,		//Level 15
-    75000,		//Level 16
-    75000,		//Level 17
-    75000,		//Level 18
-    75000,		//Level 19
-    75000,		//Level 20
-
+    //Exp Base
+    1250,
+    
     //Hit Dice Quantity
     1,		//Level 1
     2,		//Level 2
