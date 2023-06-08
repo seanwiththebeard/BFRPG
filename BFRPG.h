@@ -28,6 +28,8 @@ typedef enum
     //•Reaction rolls
     //•Number of retainers a character may hire
   }ability; //This can be used for passing an ability type in a function
+struct
+{char Value[4];}AbilityName[6] = {{"STR"}, {"DEX"}, {"CON"}, {"INT"}, {"WIS"}, {"CHA"}};
 
 struct 
 {
@@ -94,7 +96,7 @@ struct{
 }RaceDescription[4] =
 {
   {
-    "Dwarf@",
+    "Dwarf",
     //Classes Allowed
     true,		 	//Cleric
     false,			//Magic-User
@@ -137,7 +139,7 @@ struct{
     4				//SavingThrowSpells
     },
   {
-    "Human@",
+    "Human",
     //Classes Allowed
     true,		 	//Cleric
     true,			//Magic-User
@@ -180,7 +182,7 @@ struct{
     0				//SavingThrowSpells
     },
   {
-    "Halfling@",
+    "Halfling",
     //Classes Allowed
     true,		 	//Cleric
     false,			//Magic-User
@@ -223,7 +225,7 @@ struct{
     4				//SavingThrowSpells
     },
   {
-    "Elf@",
+    "Elf",
     //Classes Allowed
     true,		 	//Cleric
     true,			//Magic-User
@@ -284,7 +286,6 @@ byte SpellsLevel[2][6][20] =
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3,	//Level 6
 
   //Magic-User Spells
-  //Level 1
   1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6,	//Level 1
   0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5,	//Level 2
   0, 0,	0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4,	5, 5,	//Level 3
@@ -307,7 +308,7 @@ struct
     //Hit Dice Size
     6,
     //Hit Dice Bonus
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
     },
   {
     "Magic-User",

@@ -13,10 +13,10 @@ void PrintSpells();
 byte x, y, z;
 void main(void) 
 {
-  PrintAbilityModifiers();
+  //PrintAbilityModifiers();
   //PrintRaceDescriptions();
   //PrintClassDescriptions();
-  //PrintSpells();
+  PrintSpells();
 }
 
 void PrintAbilityModifiers()
@@ -37,7 +37,13 @@ void PrintAbilityModifiers()
 void PrintRaceDescriptions()
 {
   for (x = 0; x < 4; ++x)
-    printf("%s\n", RaceDescription[x].Name);    
+    printf("%s\n", RaceDescription[x].Name);
+  for (x = 0; x < 6; ++x)
+  {
+    printf("%s\n", AbilityName[x].Value);
+    
+  }
+  
 }
 
 void PrintClassDescriptions()
@@ -65,6 +71,7 @@ void PrintSpells()
       
       for(y = 0; y < 6; ++y)
       {
+        //printf("%d ", ClassDescription[z].SpellsLevel[y][x]);
         printf("%d ", SpellsLevel[z][y][x]);
       }
       printf("\n");
