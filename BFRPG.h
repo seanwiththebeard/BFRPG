@@ -10,27 +10,31 @@ typedef enum { false, true } bool; // boolean
 typedef enum 
 {
   STR, //Strength
+  #define STR 0
   //•Melee attack rolls.
   //•Damage rolls when using a melee weapon or a thrown weapon (including slings)
   DEX, //Dexterity
+  #define DEX 1
   //•Ranged attack rolls (bows, crossbows, throwing axes)
   //•Armor Class (AC)
   //•Initiative die roll
   CON, //Constitution
+  #define CON 2
   //•Hit Die
   //•Some saving throws vs. poison
   INT, //Intelligence
+  #define INT 3
   //•Number of languages the character knows
   //•Some saving throws vs. illusion
   WIS, //Wisdom
+  #define WIS 4
   //•Some saving throws vs. magical attacks
   CHA //Charisma
+    #define CHA 5
     //•Reaction rolls
     //•Number of retainers a character may hire
-  }ability; //This can be used for passing an ability type in a function
-struct
-{char Value[4];}AbilityName[6] = {{"STR"}, {"DEX"}, {"CON"}, {"INT"}, {"WIS"}, {"CHA"}};
-
+  }Ability; //This can be used for passing an ability type in a function
+struct {char Value[4];}AbilityName[6] = {{"STR"}, {"DEX"}, {"CON"}, {"INT"}, {"WIS"}, {"CHA"}};
 struct 
 {
   sbyte Modifier[19];
@@ -79,10 +83,10 @@ struct{
   //Classes
   bool Cleric, MagicUser, Fighter, Thief, FighterMagicUser;
   //Min Ability Restriction
-  ability MinAbilityRestriction;
+  Ability MinAbilityRestriction;
   byte MinAbilityMinimum;
   //Max Ability Restriction
-  ability MaxAbilityRestriction;
+  Ability MaxAbilityRestriction;
   byte MaxAbilityMinimum;
   //Hit Dice
   byte HitDiceMax;
@@ -273,7 +277,7 @@ struct{
 //Page 4 - Class Notes, Saving Throws
 //Index = Level
 
-byte ExpMultiplier[20] = {1, 1, 2, 4, 8, 16, 28, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60};
+byte ExpMultiplier[19] = {1, 1, 2, 4, 8, 16, 28, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60};
 byte HitDiceQuantity[20] = { 1, 2,3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9};
 byte SpellsLevel[2][6][20] = 
 {
@@ -294,72 +298,108 @@ byte SpellsLevel[2][6][20] =
   0, 0,	0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3	//Level 6
   };
 
+//typedef enum { ARMOR_NO, ARMOR_LEATHER, ARMOR_ANY } ArmorType;
+//typedef enum { SHIELD_NO, SHIELD_PENALTY, SHIELD_ANY } ShieldType;
+#define ARMOR_NO 0
+#define ARMOR_LEATHER 1
+#define ARMOR_ANY 2
+#define SHIELD_NO 0
+#define SHIELD_PENALTY 1
+#define SHIELD_ANY 2
+
+struct {char Value[9];}ArmorTypeName[3] = {"None", "Leather", "Any"};
+struct {char Value[9];}ShieldTypeName[3] = {"None", "Penalty", "Any"};
+
 struct
 {
   char Name[12];
   int ExpBase;
   byte HitDiceSize;
+  byte CountSpecialAbilities;
+  byte PrimeReq;
+  byte Armor;
+  byte Shield;
   byte HitDiceBonus[20];
 }ClassDescription[4] = 
 {
   {"Cleric",
-    //Exp Base
-    1500,
-    //Hit Dice Size
-    6,
-    //Hit Dice Bonus
+   //Exp Base
+   1500,
+   //Hit Dice Size
+   6,
+   //SpecialAbilities
+   2,
+   //Prime Req
+   WIS,
+   //ArmorType
+   ARMOR_ANY, SHIELD_ANY,
+   //Hit Dice Bonus
    0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
-    },
-  {
-    "Magic-User",
-    //Exp Base
-    2500,
-    //Hit Dice Size
-    4,
-    //Hit Dice Bonus
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
-    },
-  {"Fighter",//Fighter
+   },
+  {"Magic-User",
+   //Exp Base
+   2500,
+   //Hit Dice Size
+   4,
+   //SpecialAbilities
+   2,
+   //Prime Req
+   INT,
+   //ArmorType
+   ARMOR_NO, SHIELD_NO,
+   //Hit Dice Bonus
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+   },
+  {"Fighter",
    //Exp Base
    2000,
    //Hit Dice Size
    8,
+   //SpecialAbilities
+   0,
+   //Prime Req
+   STR,
+   //ArmorType
+   ARMOR_ANY, SHIELD_ANY,
    //Hit Dice Bonus
-   0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 6,		//Level 12
-   8,		//Level 13
-   10,		//Level 14
-   12,		//Level 15
-   14,		//Level 16
-   16,		//Level 17
-   18,		//Level 18
-   20,		//Level 19
-   22		//Level 20
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22
    },
-  {"Thief",//Thief
+  {"Thief",
    //Exp Base
    1250,
    //Hit Dice Size
    4,
+   //SpecialAbilities
+   8,
+   //Prime Req
+   DEX,
+   //ArmorType
+   ARMOR_LEATHER, SHIELD_PENALTY, //Metal armor and shields interfere with stealthy activities
    //Hit Dice Bonus
-   0,		//Level 1
-   0,		//Level 2
-   0,		//Level 3
-   0,		//Level 4
-   0,		//Level 5
-   0,		//Level 6
-   0,		//Level 7
-   0,		//Level 8
-   0,		//Level 9
-   2,		//Level 10
-   4,		//Level 11
-   6,		//Level 12
-   8,		//Level 13
-   10,		//Level 14
-   12,		//Level 15
-   14,		//Level 16
-   16,		//Level 17
-   18,		//Level 18
-   20,		//Level 19
-   22		//Level 20
+   0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22
    }
 };
+
+typedef enum 
+{
+  Ability_Null,
+  Ability_TurnUndead,
+  Ability_CastDivine,
+  Ability_OpenLock,
+  Ability_RemoveTrap,
+  Ability_PickPocket,
+  Ability_MoveSilently,
+  Ability_ClimbWall,
+  Ability_Hide,
+  Ability_Listen,
+  Ability_SneakAttack,
+  Ability_ReadMagic,
+  Ability_CastArcane
+  }SpecialAbility;
+
+struct{char Value[14];}SpecialAbilityName[13] = {"Null", "Turn Undead", "Cast Divine", "Open Lock", "Remove Trap", "Pick Pocket", "Move Silently", "Climb Wall", "Hide", "Listen", "Sneak Attack", "Read Magic", "Cast Arcane"};
+
+SpecialAbility SpecialAbilities_Cleric[2] = {Ability_TurnUndead, Ability_CastDivine};
+SpecialAbility SpecialAbilities_MagicUser[2] = {Ability_ReadMagic, Ability_CastArcane};
+SpecialAbility SpecialAbilities_Fighter[1] = {Ability_Null};
+SpecialAbility SpecialAbilities_Thief[8] = {Ability_OpenLock, Ability_RemoveTrap, Ability_PickPocket, Ability_MoveSilently, Ability_ClimbWall, Ability_Hide, Ability_Listen, Ability_SneakAttack};

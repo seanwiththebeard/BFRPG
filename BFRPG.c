@@ -10,13 +10,15 @@ void PrintAbilityModifiers();
 void PrintRaceDescriptions();
 void PrintClassDescriptions();
 void PrintSpells();
+void PrintSpecialAbilities();
 byte x, y, z;
 void main(void) 
 {
   //PrintAbilityModifiers();
   //PrintRaceDescriptions();
-  //PrintClassDescriptions();
-  PrintSpells();
+  PrintClassDescriptions();
+  //PrintSpells();
+  //PrintSpecialAbilities();
 }
 
 void PrintAbilityModifiers()
@@ -41,20 +43,26 @@ void PrintRaceDescriptions()
   for (x = 0; x < 6; ++x)
   {
     printf("%s\n", AbilityName[x].Value);
-    
+
   }
-  
 }
 
 void PrintClassDescriptions()
 {
   for (x = 0; x < 4; ++x)
   {
-    printf("%s\n", ClassDescription[x].Name);
-    for (y = 0; y < 20; ++y)
+    printf("\n%s EXP to reach\n", ClassDescription[x].Name);
+    printf("EXP Base: %d\n", ClassDescription[x].ExpBase);
+    printf("Hit Dice: %d\n", ClassDescription[x].HitDiceSize);
+    printf("Special Abilities: %d\n", ClassDescription[x].CountSpecialAbilities);
+    printf("Prime Req: %s\n", AbilityName[ClassDescription[x].PrimeReq].Value);
+    printf("Armor Type: %s\n", ArmorTypeName[ClassDescription[x].Armor].Value);
+    printf("Shield Type: %s\n", ShieldTypeName[ClassDescription[x].Shield].Value);
+    for (y = 0; y < 19; ++y)
     {
-      printf("%d\n", ClassDescription[x].HitDiceBonus[y]);
-      printf("%d %d %d\n", ExpMultiplier[y], ClassDescription[x].ExpBase, ExpMultiplier[y] * ClassDescription[x].ExpBase);
+      printf("Level %d ", y + 2);
+      //printf("Hit Dice Bonus: %d\n", ClassDescription[x].HitDiceBonus[y]);
+      printf("EXP %d x %d\n", ExpMultiplier[y], ClassDescription[x].ExpBase);
     } 
   }
   getchar();
@@ -68,7 +76,7 @@ void PrintSpells()
     for(x = 0; x < 20; ++x)
     {
       printf("%s Spells Level %d: ", ClassDescription[z].Name, y);
-      
+
       for(y = 0; y < 6; ++y)
       {
         //printf("%d ", ClassDescription[z].SpellsLevel[y][x]);
@@ -77,6 +85,21 @@ void PrintSpells()
       printf("\n");
     }
     printf("\n");
+  }
+  getchar();
+}
+
+void PrintSpecialAbilities()
+{
+  clrscr();
+  printf("Special Abilities\n");
+  for (y = 0; y < 4; ++y)
+  {
+    printf("%s\n", ClassDescription[y].Name);
+    for (x = 0; x < ClassDescription[y].CountSpecialAbilities; ++x)
+    {
+      printf("%s\n", SpecialAbilityName[x]);
+    }
   }
   getchar();
 }
