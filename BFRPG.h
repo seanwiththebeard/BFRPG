@@ -1,5 +1,8 @@
 #include <stdint.h>
 #include <stdlib.h>
+#if defined (__C64__)
+#include <cbm_petscii_charmap.h>
+#endif
 typedef uint8_t byte;	// 8-bit unsigned
 typedef int8_t sbyte;	// 8-bit signed
 typedef uint16_t word;	// 16-bit unsigned
@@ -315,6 +318,7 @@ struct
   char Name[12];
   int ExpBase;
   byte HitDiceSize;
+  byte FirstSpecialAbility;
   byte CountSpecialAbilities;
   byte PrimeReq;
   byte Armor;
@@ -328,7 +332,7 @@ struct
    //Hit Dice Size
    6,
    //SpecialAbilities
-   2,
+   1, 2,
    //Prime Req
    WIS,
    //ArmorType
@@ -342,7 +346,7 @@ struct
    //Hit Dice Size
    4,
    //SpecialAbilities
-   2,
+   3, 2,
    //Prime Req
    INT,
    //ArmorType
@@ -356,7 +360,7 @@ struct
    //Hit Dice Size
    8,
    //SpecialAbilities
-   0,
+   0, 1,
    //Prime Req
    STR,
    //ArmorType
@@ -370,7 +374,7 @@ struct
    //Hit Dice Size
    4,
    //SpecialAbilities
-   8,
+   5, 8,
    //Prime Req
    DEX,
    //ArmorType
@@ -385,6 +389,8 @@ typedef enum
   Ability_Null,
   Ability_TurnUndead,
   Ability_CastDivine,
+  Ability_ReadMagic,
+  Ability_CastArcane,
   Ability_OpenLock,
   Ability_RemoveTrap,
   Ability_PickPocket,
@@ -393,11 +399,9 @@ typedef enum
   Ability_Hide,
   Ability_Listen,
   Ability_SneakAttack,
-  Ability_ReadMagic,
-  Ability_CastArcane
   }SpecialAbility;
 
-struct{char Value[14];}SpecialAbilityName[13] = {"Null", "Turn Undead", "Cast Divine", "Open Lock", "Remove Trap", "Pick Pocket", "Move Silently", "Climb Wall", "Hide", "Listen", "Sneak Attack", "Read Magic", "Cast Arcane"};
+struct{char Value[14];}SpecialAbilityName[13] = {"Null", "Turn Undead", "Cast Divine", "Read Magic", "Cast Arcane", "Open Lock", "Remove Trap", "Pick Pocket", "Move Silently", "Climb Wall", "Hide", "Listen", "Sneak Attack"};
 
 SpecialAbility SpecialAbilities_Cleric[2] = {Ability_TurnUndead, Ability_CastDivine};
 SpecialAbility SpecialAbilities_MagicUser[2] = {Ability_ReadMagic, Ability_CastArcane};

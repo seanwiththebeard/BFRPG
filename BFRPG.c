@@ -60,10 +60,15 @@ void PrintClassDescriptions()
     printf("Shield Type: %s\n", ShieldTypeName[ClassDescription[x].Shield].Value);
     for (y = 0; y < 19; ++y)
     {
-      printf("Level %d ", y + 2);
+      //printf("Level %d ", y + 2);
       //printf("Hit Dice Bonus: %d\n", ClassDescription[x].HitDiceBonus[y]);
-      printf("EXP %d x %d\n", ExpMultiplier[y], ClassDescription[x].ExpBase);
-    } 
+      //printf("EXP %d x %d\n", ExpMultiplier[y], ClassDescription[x].ExpBase);
+    }
+    printf("\nSpecial Abilities: \n");
+    for (y = 0; y < ClassDescription[x].CountSpecialAbilities; ++y)
+    {
+      printf("%s\n", SpecialAbilityName[ClassDescription[x].FirstSpecialAbility + y].Value);
+    }
   }
   getchar();
 }
