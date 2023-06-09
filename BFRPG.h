@@ -407,3 +407,36 @@ SpecialAbility SpecialAbilities_Cleric[2] = {Ability_TurnUndead, Ability_CastDiv
 SpecialAbility SpecialAbilities_MagicUser[2] = {Ability_ReadMagic, Ability_CastArcane};
 SpecialAbility SpecialAbilities_Fighter[1] = {Ability_Null};
 SpecialAbility SpecialAbilities_Thief[8] = {Ability_OpenLock, Ability_RemoveTrap, Ability_PickPocket, Ability_MoveSilently, Ability_ClimbWall, Ability_Hide, Ability_Listen, Ability_SneakAttack};
+
+//Saving Throws (SavingThrow[Class][Type].Value[Level]
+struct{byte Value[20];}SavingThrow[4][5]=
+{
+  {//Cleric
+    {11, 10, 10, 9, 9, 9, 9, 8, 8, 8, 8, 7, 7, 7, 7, 6, 6, 6, 6, 5}, 				//Death Ray or Poison
+    {12, 11, 11, 10, 10, 10, 10, 9, 9, 9, 9, 8, 8, 8, 8, 7, 7, 7, 7, 6}, 			//Magic Wands
+    {14, 13, 13, 13, 13, 12, 12, 12, 12, 11, 11, 11, 11, 10, 10, 10, 10, 9, 9, 9, 9}, 		//Paralysis or Petrify
+    {16, 15, 15, 15, 15, 14, 14, 14, 14, 13, 13, 13, 13, 12, 12 ,12, 12, 11, 11, 11, 11}, 	//Dragon Breath
+    {15, 14, 14, 14, 14, 13, 13, 13, 13, 12, 12, 12, 12, 11, 11, 11, 11, 10, 10, 10, 10} 	//Spells
+  },
+  {//Magic-User
+    {}, 											//Death Ray or Poison
+    {}, 											//Magic Wands
+    {}, 											//Paralysis or Petrify
+    {},												//Dragon Breath
+    {} 												//Spells
+  },
+  {//Fighter
+    {}, 											//Death Ray or Poison
+    {}, 											//Magic Wands
+    {}, 											//Paralysis or Petrify
+    {}, 											//Dragon Breath
+    {} 												//Spells
+  },
+  {//Thief
+    {}, 											//Death Ray or Poison
+    {}, 											//Magic Wands
+    {}, 											//Paralysis or Petrify
+    {}, 											//Dragon Breath
+    {} 												//Spells
+  }
+};
