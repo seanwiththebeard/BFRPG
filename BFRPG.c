@@ -4,8 +4,10 @@
 #include <stdlib.h>
 #include <peekpoke.h>
 #include <string.h>
+#if defined (__C64__)
 #include <c64.h>
 #include <cbm_petscii_charmap.h>
+#endif
 void PrintAbilityModifiers();
 void PrintRaceDescriptions();
 void PrintClassDescriptions();
