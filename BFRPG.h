@@ -409,34 +409,36 @@ SpecialAbility SpecialAbilities_Fighter[1] = {Ability_Null};
 SpecialAbility SpecialAbilities_Thief[8] = {Ability_OpenLock, Ability_RemoveTrap, Ability_PickPocket, Ability_MoveSilently, Ability_ClimbWall, Ability_Hide, Ability_Listen, Ability_SneakAttack};
 
 //Saving Throws (SavingThrow[Class][Type].Value[Level]
-struct{byte Value[20];}SavingThrow[4][5]=
+//* Poison saving throws are always adjusted by the Constitution bonus of the character.
+//* Saving throws against illusions (such as phantasmal force) are always adjusted by the character's Intelligence.
+byte SavingThrow[4][5][20]=
 {
   {//Cleric
     {11, 10, 10, 9, 9, 9, 9, 8, 8, 8, 8, 7, 7, 7, 7, 6, 6, 6, 6, 5}, 				//Death Ray or Poison
     {12, 11, 11, 10, 10, 10, 10, 9, 9, 9, 9, 8, 8, 8, 8, 7, 7, 7, 7, 6}, 			//Magic Wands
-    {14, 13, 13, 13, 13, 12, 12, 12, 12, 11, 11, 11, 11, 10, 10, 10, 10, 9, 9, 9, 9}, 		//Paralysis or Petrify
-    {16, 15, 15, 15, 15, 14, 14, 14, 14, 13, 13, 13, 13, 12, 12 ,12, 12, 11, 11, 11, 11}, 	//Dragon Breath
-    {15, 14, 14, 14, 14, 13, 13, 13, 13, 12, 12, 12, 12, 11, 11, 11, 11, 10, 10, 10, 10} 	//Spells
+    {14, 13, 13, 13, 13, 12, 12, 12, 12, 11, 11, 11, 11, 10, 10, 10, 10, 9, 9, 9}, 		//Paralysis or Petrify
+    {16, 15, 15, 15, 15, 14, 14, 14, 14, 13, 13, 13, 13, 12, 12 ,12, 12, 11, 11, 11}, 		//Dragon Breath
+    {15, 14, 14, 14, 14, 13, 13, 13, 13, 12, 12, 12, 12, 11, 11, 11, 11, 10, 10, 10}, 		//Spells
   },
   {//Magic-User
-    {}, 											//Death Ray or Poison
-    {}, 											//Magic Wands
-    {}, 											//Paralysis or Petrify
-    {},												//Dragon Breath
-    {} 												//Spells
+    {13, 13, 13, 12, 12, 12, 12, 11, 11, 11, 11, 10, 10, 10, 10, 9, 9, 9, 9, 8}, 		//Death Ray or Poison
+    {14, 14, 14, 13, 13, 12, 12, 11, 11, 10, 10, 10, 10, 9, 9, 8, 8, 7, 7, 6},			//Magic Wands
+    {13, 13, 13, 12, 12, 11, 11, 10, 10, 9, 9, 9, 9, 8, 8, 7, 7, 6, 6, 5}, 			//Paralysis or Petrify
+    {16, 15, 15, 15, 15, 14, 14, 14, 14, 13, 13, 13, 13, 12, 12, 12, 12, 11, 11, 11},		//Dragon Breath
+    {15, 14, 14, 13, 13, 12, 12, 11, 11, 11, 11, 10, 10, 9, 9, 9, 9, 8}, 			//Spells
   },
   {//Fighter
-    {}, 											//Death Ray or Poison
-    {}, 											//Magic Wands
-    {}, 											//Paralysis or Petrify
-    {}, 											//Dragon Breath
-    {} 												//Spells
+    {13, 12, 12, 11, 11, 11, 11, 10, 10, 9, 9, 9, 9, 8, 7, 7, 7, 7, 6}, 			//Death Ray or Poison
+    {14, 13, 13, 12, 12, 11, 11, 11, 11, 10, 9, 9, 9, 9, 8, 8, 7, 7, 7}, 			//Magic Wands
+    {15, 14, 14, 14, 14, 13, 13, 12, 12, 12, 12, 11, 11, 10, 10, 10, 10, 9, 9, 8}, 		//Paralysis or Petrify
+    {16, 15, 15, 15, 15, 14, 14, 14, 14, 13, 13, 12, 12, 12, 12, 11, 10, 10, 10}, 		//Dragon Breath
+    {18, 17, 17, 16, 16, 15, 15, 14, 14, 13, 13, 13, 13, 12, 12, 11, 11, 11},			//Spells
   },
   {//Thief
-    {}, 											//Death Ray or Poison
-    {}, 											//Magic Wands
-    {}, 											//Paralysis or Petrify
-    {}, 											//Dragon Breath
-    {} 												//Spells
+    {13, 12, 12, 11, 11, 11, 11, 10, 10, 9, 9, 9, 9, 8, 8, 7, 7, 7, 7, 6}, 			//Death Ray or Poison
+    {14, 14, 14, 13, 13, 13, 13, 12, 12, 12, 12, 10, 10, 10, 10, 9, 9  9, 9, 8}, 		//Magic Wands
+    {13, 12, 12, 12, 12, 11, 11, 11, 11, 10, 10, 10, 10, 9, 9, 9, 9, 8, 8, 8}, 			//Paralysis or Petrify
+    {16, 15, 15, 14, 14, 13, 13, 12, 12, 11, 11, 10, 10, 9, 9, 8, 8, 7, 7, 6}, 			//Dragon Breath
+    {15, 14, 14, 13, 13, 13, 13, 12, 12, 11, 11, 11, 11, 10, 10, 9, 9, 9, 9, 8} 		//Spells
   }
 };
