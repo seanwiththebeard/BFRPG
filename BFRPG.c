@@ -13,14 +13,16 @@ void PrintRaceDescriptions();
 void PrintClassDescriptions();
 void PrintSpells();
 void PrintSpecialAbilities();
+void PrintSavingThrows();
 byte x, y, z;
 void main(void) 
 {
   //PrintAbilityModifiers();
   //PrintRaceDescriptions();
-  PrintClassDescriptions();
+  //PrintClassDescriptions();
   //PrintSpells();
   //PrintSpecialAbilities();
+  PrintSavingThrows();
 }
 
 void PrintAbilityModifiers()
@@ -106,6 +108,27 @@ void PrintSpecialAbilities()
     for (x = 0; x < ClassDescription[y].CountSpecialAbilities; ++x)
     {
       printf("%s\n", SpecialAbilityName[x]);
+    }
+  }
+  getchar();
+}
+
+void PrintSavingThrows()
+{
+  clrscr();
+  printf("Special Abilities\n");
+  for (y = 0; y < 4; ++y)
+  {
+    printf("\n%s\n", ClassDescription[y].Name);
+    for (x = 0; x < 20; ++x)
+    {
+      for (z = 0; z < 5; ++z)
+      {
+        if(SavingThrow[y][z][x] < 10)
+          printf(" ");
+        printf("%d ", SavingThrow[y][z][x]);
+      }
+      printf("\n");
     }
   }
   getchar();
