@@ -500,3 +500,151 @@ sbyte ClericVsUndead[9][20] =
         1d8 damage per level of the Cleric (roll once and apply
         the same damage to all undead monsters affected)
 */
+/*
+Magic-User Spells
+
+First Level
+1Charm Person
+2Detect Magic
+3Floating Disc
+4Hold Portal
+5Light*
+6Magic Missile
+7Magic Mouth
+8Protection from Evil*
+9Read Languages
+10Shield
+11Sleep
+12Ventriloquism
+
+Second Level
+1Continual Light*
+2Detect Evil*
+3Detect Invisible
+4ESP
+5Invisibility
+6Knock
+7Levitate
+8Locate Object
+9Mirror Image
+10Phantasmal Force
+11Web
+12Wizard Lock
+
+Third Level
+1Clairvoyance
+2Darkvision
+3Dispel Magic
+4Fireball
+5Fly
+6Haste*
+7Hold Person
+8Invisibility 10‘ radius
+9Lightning Bolt
+10Protection from Evil
+10’ radius*
+11Protection from Normal Missiles
+12Water Breathing
+
+Fourth Level
+1Charm Monster
+2Confusion
+3Dimension Door
+4Growth of Plants*
+5Hallucinatory Terrain
+6Ice Storm 7Massmorph
+8Polymorph Other
+9Polymorph Self
+10Remove Curse*
+11Wall of Fire
+12Wizard Eye
+
+Fifth Level
+1Animate Dead 
+2Cloudkill 
+3Conjure Elemental 
+4Feeblemind 
+5Hold Monster 
+6Magic Jar 
+7Passwall 
+8Telekinesis 
+9Teleport 
+10Wall of Stone
+
+Sixth Level
+1Anti-Magic
+Shell
+2Death Spell
+3Disintegrate
+4Flesh to Stone*
+5Geas*
+6Invisible Stalker
+7Lower Water
+8Projected Image
+9Reincarnate
+10Wall of Iron
+
+Clerical Spells
+
+First Level
+1Cure Light Wounds*
+2Detect Evil*
+3Detect Magic
+4Light*
+5Protection from Evil*
+6Purify Food and Water
+7Remove Fear*
+8Resist Cold
+
+Second Level
+1Bless*
+2Charm Animal
+3Find Traps
+4Hold Person
+5Resist Fire
+6Silence 15' radius
+7Speak with Animals
+8Spiritual Hammer
+
+Third Level
+1Continual Light*
+2Cure Blindness
+3Cure Disease*
+4Growth of Animals
+5Locate Object
+6Remove Curse*
+7Speak with Dead
+8Striking
+
+Fourth Level
+1Animate Dead
+2Create Water
+3Cure Serious Wounds*
+4Dispel Magic
+5Neutralize Poison*
+6Protection from Evil 10' radius*
+7Speak with Plants
+8Sticks to Snakes
+
+Fifth Level
+1Commune
+2Create Food
+3Dispel Evil
+4Insect Plague
+5Quest*
+6Raise Dead*
+7True Seeing
+8Wall of Fire
+
+Sixth Level
+1Animate Objects
+2Blade Barrier
+3Find the Path
+4Heal*
+5Regenerate
+6Restoration
+7Speak with Monsters
+8Word of Recall
+
+* Some spells are reversible; such spells are shown with an asterisk after the name
+*/
