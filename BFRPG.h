@@ -506,147 +506,145 @@ sbyte ClericVsUndead[9][20] =
 Magic-User Spells
 
 First Level
-1Charm Person
-2Detect Magic
-3Floating Disc
-4Hold Portal
-5Light*
-6Magic Missile
-7Magic Mouth
-8Protection from Evil*
-9Read Languages
-10Shield
-11Sleep
-12Ventriloquism
+1 Charm Person
+2 Detect Magic
+3 Floating Disc
+4 Hold Portal
+5 Light*
+6 Magic Missile
+7 Magic Mouth
+8 Protection from Evil*
+9 Read Languages
+10 Shield
+11 Sleep
+12 Ventriloquism
 
 Second Level
-1Continual Light*
-2Detect Evil*
-3Detect Invisible
-4ESP
-5Invisibility
-6Knock
-7Levitate
-8Locate Object
-9Mirror Image
-10Phantasmal Force
-11Web
-12Wizard Lock
+1 Continual Light*
+2 Detect Evil*
+3 Detect Invisible
+4 ESP
+5 Invisibility
+6 Knock
+7 Levitate
+8 Locate Object
+9 Mirror Image
+10 Phantasmal Force
+11 Web
+12 Wizard Lock
 
 Third Level
-1Clairvoyance
-2Darkvision
-3Dispel Magic
-4Fireball
-5Fly
-6Haste*
-7Hold Person
-8Invisibility 10‘ radius
-9Lightning Bolt
-10Protection from Evil
-10’ radius*
-11Protection from Normal Missiles
-12Water Breathing
+1 Clairvoyance
+2 Darkvision
+3 Dispel Magic
+4 Fireball
+5 Fly
+6 Haste*
+7 Hold Person
+8 Invisibility 10‘ radius
+9 Lightning Bolt
+10 Protection from Evil 10’ radius*
+11 Protection from Normal Missiles
+12 Water Breathing
 
 Fourth Level
-1Charm Monster
-2Confusion
-3Dimension Door
-4Growth of Plants*
-5Hallucinatory Terrain
-6Ice Storm 7Massmorph
-8Polymorph Other
-9Polymorph Self
-10Remove Curse*
-11Wall of Fire
-12Wizard Eye
+1 Charm Monster
+2 Confusion
+3 Dimension Door
+4 Growth of Plants*
+5 Hallucinatory Terrain
+6 Ice Storm 7Massmorph
+8 Polymorph Other
+9 Polymorph Self
+10 Remove Curse*
+11 Wall of Fire
+12 Wizard Eye
 
 Fifth Level
-1Animate Dead 
-2Cloudkill 
-3Conjure Elemental 
-4Feeblemind 
-5Hold Monster 
-6Magic Jar 
-7Passwall 
-8Telekinesis 
-9Teleport 
-10Wall of Stone
+1 Animate Dead 
+2 Cloudkill 
+3 Conjure Elemental 
+4 Feeblemind 
+5 Hold Monster 
+6 Magic Jar 
+7 Passwall 
+8 Telekinesis 
+9 Teleport 
+10 Wall of Stone
 
 Sixth Level
-1Anti-Magic
-Shell
-2Death Spell
-3Disintegrate
-4Flesh to Stone*
-5Geas*
-6Invisible Stalker
-7Lower Water
-8Projected Image
-9Reincarnate
-10Wall of Iron
+1 Anti-Magic Shell
+2 Death Spell
+3 Disintegrate
+4 Flesh to Stone*
+5 Geas*
+6 Invisible Stalker
+7 Lower Water
+8 Projected Image
+9 Reincarnate
+10 Wall of Iron
 
 Clerical Spells
 
 First Level
-1Cure Light Wounds*
-2Detect Evil*
-3Detect Magic
-4Light*
-5Protection from Evil*
-6Purify Food and Water
-7Remove Fear*
-8Resist Cold
+1 Cure Light Wounds*
+2 Detect Evil*
+3 Detect Magic
+4 Light*
+5 Protection from Evil*
+6 Purify Food and Water
+7 Remove Fear*
+8 Resist Cold
 
 Second Level
-1Bless*
-2Charm Animal
-3Find Traps
-4Hold Person
-5Resist Fire
-6Silence 15' radius
-7Speak with Animals
-8Spiritual Hammer
+1 Bless*
+2 Charm Animal
+3 Find Traps
+4 Hold Person
+5 Resist Fire
+6 Silence 15' radius
+7 Speak with Animals
+8 Spiritual Hammer
 
 Third Level
-1Continual Light*
-2Cure Blindness
-3Cure Disease*
-4Growth of Animals
-5Locate Object
-6Remove Curse*
-7Speak with Dead
-8Striking
+1 Continual Light*
+2 Cure Blindness
+3 Cure Disease*
+4 Growth of Animals
+5 Locate Object
+6 Remove Curse*
+7 Speak with Dead
+8 Striking
 
 Fourth Level
-1Animate Dead
-2Create Water
-3Cure Serious Wounds*
-4Dispel Magic
-5Neutralize Poison*
-6Protection from Evil 10' radius*
-7Speak with Plants
-8Sticks to Snakes
+1 Animate Dead
+2 Create Water
+3 Cure Serious Wounds*
+4 Dispel Magic
+5 Neutralize Poison*
+6 Protection from Evil 10' radius*
+7 Speak with Plants
+8 Sticks to Snakes
 
 Fifth Level
-1Commune
-2Create Food
-3Dispel Evil
-4Insect Plague
-5Quest*
-6Raise Dead*
-7True Seeing
-8Wall of Fire
+1 Commune
+2 Create Food
+3 Dispel Evil
+4 Insect Plague
+5 Quest*
+6 Raise Dead*
+7 True Seeing
+8 Wall of Fire
 
 Sixth Level
-1Animate Objects
-2Blade Barrier
-3Find the Path
-4Heal*
-5Regenerate
-6Restoration
-7Speak with Monsters
-8Word of Recall
+1 Animate Objects
+2 Blade Barrier
+3 Find the Path
+4 Heal*
+5 Regenerate
+6 Restoration
+7 Speak with Monsters
+8 Word of Recall
 
 * Some spells are reversible; such spells are shown with an asterisk after the name
 */
@@ -655,37 +653,37 @@ Sixth Level
 /*
 Equipment, Weapons, and Movement
 General Equipment (Item, Cost, Weight)
-Backpack 4 gp * 
-Candles, 12 1 gp *
-Chalk, small bag of pieces 2 gp * 
-Clothing, common outfit 4 gp 1 
-Glass bottle or vial 1 gp * 
-Grappling Hook2 gp4 
-Holy Symbol25 gp* 
-Holy Water, per vial10 gp* 
-Iron Spikes, 121 gp1 
-Ladder, 10 ft.1 gp20 
-Lantern, Hooded8 gp2 
-Map or scroll case1 gp½ 
-Mirror, small metal7 gp* 
-Oil (per flask)1 gp1 
-Paper (per sheet)1 gp** 
-Pole, 10' wooden1 gp10 
-Quiver or Bolt case1 gp1 
-Rations, Dry, one week10 gp14 
-Rope, Hemp (per 50 ft.)1 gp5 
-Rope, Silk (per 50 ft.)10 gp2 
-Sack, Large1 gp* Sack, 
-Small5 sp* 
-Tent, Large (ten men)25 gp20 
-Tent, Small (one man)5 gp10 
-Thieves' picks and tools25 gp1 
-Tinderbox, flint and steel3 gp1 
-Torches, 61 gp1 
-Whetstone1 gp1 
-Wineskin/Waterskin1 gp2 
-Winter blanket1 gp3 
-Writing ink (per vial)8 gp* 
+Backpack 4gp * 
+Candles, 12 1gp *
+Chalk, small bag of pieces 2gp * 
+Clothing, common outfit 4gp 1 
+Glass bottle or vial 1gp * 
+Grappling Hook 2gp 4 
+Holy Symbol 25gp * 
+Holy Water, per vial 10gp * 
+Iron Spikes, 12 1gp 1 
+Ladder, 10 ft. 1gp 20 
+Lantern, Hooded 8 gp2 
+Map or scroll case 1gp ½ 
+Mirror, small metal 7gp * 
+Oil (per flask) 1 gp1 
+Paper (per sheet) 1gp ** 
+Pole, 10' wooden 1gp 10 
+Quiver or Bolt case 1gp 1 
+Rations, Dry, one week 10gp 14 
+Rope, Hemp (per 50 ft.) 1gp 5 
+Rope, Silk (per 50 ft.) 10gp 2 
+Sack, Large 1gp *
+Sack, Small 5sp * 
+Tent, Large (ten men) 25gp 20 
+Tent, Small (one man) 5gp 10 
+Thieves' picks and tools 25gp 1 
+Tinderbox, flint and steel 3gp 1 
+Torches, 6 1gp 1 
+Whetstone 1gp 1 
+Wineskin/Waterskin 1gp 2 
+Winter blanket 1gp 3 
+Writing ink (per vial) 8gp * 
 
 * These items weigh little individually. Ten of these items weigh one pound. 
 ** These items have no appreciable weight and should not be considered for 
@@ -693,72 +691,80 @@ encumbrance unless hundreds are carried.
 
 Missile Weapon Ranges (Weapon, Short (+1), Medium (0), Long (-2))
 Longbow 70 140 210
-Shortbow50100150 
-Heavy Crossbow80160240 
-Light Crossbow60120180 
-Dagger102030 
-Hammer102030 
-Hand Axe102030 
-Oil or Holy Water103050 
-Sling306090 
-Spear102030 
+Shortbow 50 100 150 
+Heavy Crossbow 80 160 240 
+Light Crossbow 60 120 180 
+Dagger 10 20 30 
+Hammer 10 20 30 
+Hand Axe 10 20 30 
+Oil or Holy Water 10 30 50 
+Sling 30 60 90 
+Spear 10 20 30 
 
 * Missile weapon ranges are given in feet. 
 In the wilderness, substitute yards for feet 
 
 Weapons (Weapon, Cost, Size, Weight, Dmg.)
 //Axes
-Hand Axe4 gpS51d6 
+Hand Axe 4gp S 5 1d6 
 Battle Axe7 gpM71d8 
 Great Axe14 gpL151d10
-Bows Shortbow25 gpM2 
-Shortbow Arrow1 sp0.11d6 
-Silver*Shortbow Arrow2 gp0.11d6 
-Longbow60 gpL3 
-Longbow Arrow2 sp0.11d8 
-Silver*Longbow Arrow4 gp0.11d8
-Light Crossbow30 gpM7 
-Light Quarrel2 sp0.11d6 
-Silver*Light Quarrel5 gp0.11d6 
-Heavy Crossbow50 gpL14 
-Heavy Quarrel4 sp0.11d8 
-Silver*Heavy Quarrel10 gp0.11d8 
+
+//Bows
+Shortbow 25gp M 2 
+	Shortbow Arrow 1sp 0.1 1d6 
+	Silver*Shortbow Arrow 2gp 0.1 1d6 
+Longbow 60gp L 3 
+	Longbow Arrow 2sp 0.1 1d8 
+	Silver*Longbow Arrow 4gp 0.1 1d8
+Light Crossbow 30gp M 7 
+	Light Quarrel 2sp 0.1 1d6 
+	Silver*Light Quarre l 5gp 0.1 1d6 
+Heavy Crossbow 50gp L 14 
+	Heavy Quarrel 4sp 0.1 1d8 
+	Silver*Heavy Quarrel 10gp 0.1 1d8 
+
 //Daggers 
 Dagger2 gpS11d4 
 Silver* Dagger25 gpS11d4 
+
 //Swords 
-Shortsword6 gpS31d6 
-Longsword/Scimitar10 gpM41d8 
-Two-Handed Sword18 gpL101d10 
+Shortsword 6gp S 3 1d6 
+Longsword/Scimitar 10gp M 4 1d8 
+Two-Handed Sword 18 gp L 10 1d10 
+
 //Hammers and Maces 
-Warhammer4 gpS61d6 
-Mace6 gpM101d8 
-Maul10 gpL161d10 
+Warhammer 4gp S 6 1d6 
+Mace 6gp M 10 1d8 
+Maul 10gp L 16 1d10 
+
 //Other Weapons 
-Club/Cudgel/Walking Staff 2 spM11d4 
-Quarterstaff2 gpL41d6 
-Pole Arm9 gpL151d10 
-Sling1 gpS0.1 
-Bullet1 sp0.11d4 
-Stone n/a 0.11d3 
-Spear5 gpM5 
-Thrown (one handed)1d6 
-Melee (one handed)1d6 
-Melee (two handed)1d8 
+Club/Cudgel/Walking Staff 2sp M1 1d4 
+Quarterstaff 2gp L 4 1d6 
+Pole Arm 9gp L 15 1d10 
+Sling 1gp S 0.1 
+Bullet 1sp 0.1 1d4 
+Stone n/a 0.1 1d3 
+Spear 5gp M 5 
+Thrown (one handed) 1d6 
+Melee (one handed) 1d6 
+Melee (two handed) 1d8 
 
 * Silver tip or blade, for use against lycanthropes. 
 
 Armor and Shields (Armor Type, Cost, Weight, AC)
-No Armor0 gp011 
-Leather Armor20 gp1513 
-Chain Mail60 gp4015 
-Plate Mail300 gp5017 
-Shield7 gp5+1
+No Armor 0 gp 0 11 
+Leather Armor 20gp 15 13 
+Chain Mail 60gp 40 15 
+Plate Mail 300gp 50 17 
+Shield 7gp 5 +1
 */
 
 //Page 8
 /*
-Land Transportation VehicleLength x width*WeightCargoMovementHardness / HPCost (gp) Chariot15' x 6'300750 lbs60' (10')10 / 10400 Coach30' x 8'1,0002,000 lbs40' (15')6 / 121,500 Wagon35' x 8'2,0004,000 lbs20' (20')6 / 16500 *Includes hitched horses or mules. Water Transportation VehicleLength x WidthCargoCrewMovementMiles/DayHardness / HPCost (gp) Canoe15' x 4'1/2  ton140'(5')304 / 450 Caravel55' x 15'75 tons1020'(20')428 / 7510,000 Carrack60' x 20'135 tons2030'(30')4810 / 12020,000 Galley, Small100' x 15'210 tons9020'(20')36 / 248 / 7515,000 Galley, Large120' x 20'375 tons16030'(25')42 / 2410 / 12030,000 Longship110' x 15'10 tons7030'(25')42 / 249 / 11025,000 Raft/Bargeper 10' x 10'1 ton240'(10')186 / 12100 Riverboat50' x 20'50 tons1020'(20')308 / 303,500 Rowboat15' x 6'1 ton130'(10')246 / 8600 Sailboat40' x 8'5 tons140'(15')367 / 202,000 Siege Engines WeaponCost Rate of Fire Attack PenaltyDamage Short Range (+1) Medium Range (+0) Long Range (-2) Ballista100 gp1/4-32d850'100'150' Battering Ram200 gp1/3+02d8N/AN/AN/A Onager300 gp1/6-62d12100'200'300' Trebuchet400 gp1/10-83d10N/A300'400' Beasts of Burden ItemCostWeightMovement Horse, Draft120 gp-60' (10') Horse, War200 gp-60' (10') Horse, Riding75 gp-80' (10') Pony*40 gp-40' (10') Pony, War*80 gp-40' (10') Bit and bridle15 sp3Horseshoes & shoeing1 gp10Saddle, Pack5 gp15Saddle, Riding10 gp35Saddlebags, pair4 gp7* Due to their small stature, Dwarves and Halflings must ride ponies rather than horses. Monetary values 1 platinum piece (pp)=5 gold pieces (gp) 1 gold piece (gp)=10 silver pieces (sp) 1 electrum piece (ep)=5 silver pieces (sp) 1 silver piece (sp)=10 copper pieces (cp) Time Normal Game TurnsCombat Rounds 10 minutes long10 seconds long * *  60 combat rounds per game turn Scale DungeonOutdoors FeetYards * * Area of effect measurements (for spells, for instance) normally remain in feet Movement and Encumbrance Armor TypeLightly Loaded Heavily Loaded No Armor or Magic Leather40'30' Leather Armor or Magic Metal30'20' Metal Armor20'10' Load Dwarf, Elf, HumanHalfling StrengthLight Load Heavy Load Light Load Heavy Load 325602040 4-535903060 6-8501204080 9-126015050100 13-156516555110 16-177018060120 188019565130
+Land Transportation (Vehicle Length x width*WeightCargoMovementHardness / HPCost (gp))
+Chariot 15' x 6'300 750 lbs60' (10') 10 / 10400 
+Coach30' x 8'1,0002,000 lbs40' (15')6 / 121,500 Wagon35' x 8'2,0004,000 lbs20' (20')6 / 16500 *Includes hitched horses or mules. Water Transportation VehicleLength x WidthCargoCrewMovementMiles/DayHardness / HPCost (gp) Canoe15' x 4'1/2  ton140'(5')304 / 450 Caravel55' x 15'75 tons1020'(20')428 / 7510,000 Carrack60' x 20'135 tons2030'(30')4810 / 12020,000 Galley, Small100' x 15'210 tons9020'(20')36 / 248 / 7515,000 Galley, Large120' x 20'375 tons16030'(25')42 / 2410 / 12030,000 Longship110' x 15'10 tons7030'(25')42 / 249 / 11025,000 Raft/Bargeper 10' x 10'1 ton240'(10')186 / 12100 Riverboat50' x 20'50 tons1020'(20')308 / 303,500 Rowboat15' x 6'1 ton130'(10')246 / 8600 Sailboat40' x 8'5 tons140'(15')367 / 202,000 Siege Engines WeaponCost Rate of Fire Attack PenaltyDamage Short Range (+1) Medium Range (+0) Long Range (-2) Ballista100 gp1/4-32d850'100'150' Battering Ram200 gp1/3+02d8N/AN/AN/A Onager300 gp1/6-62d12100'200'300' Trebuchet400 gp1/10-83d10N/A300'400' Beasts of Burden ItemCostWeightMovement Horse, Draft120 gp-60' (10') Horse, War200 gp-60' (10') Horse, Riding75 gp-80' (10') Pony*40 gp-40' (10') Pony, War*80 gp-40' (10') Bit and bridle15 sp3Horseshoes & shoeing1 gp10Saddle, Pack5 gp15Saddle, Riding10 gp35Saddlebags, pair4 gp7* Due to their small stature, Dwarves and Halflings must ride ponies rather than horses. Monetary values 1 platinum piece (pp)=5 gold pieces (gp) 1 gold piece (gp)=10 silver pieces (sp) 1 electrum piece (ep)=5 silver pieces (sp) 1 silver piece (sp)=10 copper pieces (cp) Time Normal Game TurnsCombat Rounds 10 minutes long10 seconds long * *  60 combat rounds per game turn Scale DungeonOutdoors FeetYards * * Area of effect measurements (for spells, for instance) normally remain in feet Movement and Encumbrance Armor TypeLightly Loaded Heavily Loaded No Armor or Magic Leather40'30' Leather Armor or Magic Metal30'20' Metal Armor20'10' Load Dwarf, Elf, HumanHalfling StrengthLight Load Heavy Load Light Load Heavy Load 325602040 4-535903060 6-8501204080 9-126015050100 13-156516555110 16-177018060120 188019565130
 */
 
 //Page 9
