@@ -500,6 +500,8 @@ sbyte ClericVsUndead[9][20] =
         1d8 damage per level of the Cleric (roll once and apply
         the same damage to all undead monsters affected)
 */
+
+//Page 6
 /*
 Magic-User Spells
 
@@ -647,4 +649,164 @@ Sixth Level
 8Word of Recall
 
 * Some spells are reversible; such spells are shown with an asterisk after the name
+*/
+
+//Page 7
+/*
+Equipment, Weapons, and Movement
+General Equipment (Item, Cost, Weight)
+Backpack 4 gp * 
+Candles, 12 1 gp *
+Chalk, small bag of pieces 2 gp * 
+Clothing, common outfit 4 gp 1 
+Glass bottle or vial 1 gp * 
+Grappling Hook2 gp4 
+Holy Symbol25 gp* 
+Holy Water, per vial10 gp* 
+Iron Spikes, 121 gp1 
+Ladder, 10 ft.1 gp20 
+Lantern, Hooded8 gp2 
+Map or scroll case1 gp½ 
+Mirror, small metal7 gp* 
+Oil (per flask)1 gp1 
+Paper (per sheet)1 gp** 
+Pole, 10' wooden1 gp10 
+Quiver or Bolt case1 gp1 
+Rations, Dry, one week10 gp14 
+Rope, Hemp (per 50 ft.)1 gp5 
+Rope, Silk (per 50 ft.)10 gp2 
+Sack, Large1 gp* Sack, 
+Small5 sp* 
+Tent, Large (ten men)25 gp20 
+Tent, Small (one man)5 gp10 
+Thieves' picks and tools25 gp1 
+Tinderbox, flint and steel3 gp1 
+Torches, 61 gp1 
+Whetstone1 gp1 
+Wineskin/Waterskin1 gp2 
+Winter blanket1 gp3 
+Writing ink (per vial)8 gp* 
+
+* These items weigh little individually. Ten of these items weigh one pound. 
+** These items have no appreciable weight and should not be considered for 
+encumbrance unless hundreds are carried. 
+
+Missile Weapon Ranges (Weapon, Short (+1), Medium (0), Long (-2))
+Longbow 70 140 210
+Shortbow50100150 
+Heavy Crossbow80160240 
+Light Crossbow60120180 
+Dagger102030 
+Hammer102030 
+Hand Axe102030 
+Oil or Holy Water103050 
+Sling306090 
+Spear102030 
+
+* Missile weapon ranges are given in feet. 
+In the wilderness, substitute yards for feet 
+
+Weapons (Weapon, Cost, Size, Weight, Dmg.)
+//Axes
+Hand Axe4 gpS51d6 
+Battle Axe7 gpM71d8 
+Great Axe14 gpL151d10
+Bows Shortbow25 gpM2 
+Shortbow Arrow1 sp0.11d6 
+Silver*Shortbow Arrow2 gp0.11d6 
+Longbow60 gpL3 
+Longbow Arrow2 sp0.11d8 
+Silver*Longbow Arrow4 gp0.11d8
+Light Crossbow30 gpM7 
+Light Quarrel2 sp0.11d6 
+Silver*Light Quarrel5 gp0.11d6 
+Heavy Crossbow50 gpL14 
+Heavy Quarrel4 sp0.11d8 
+Silver*Heavy Quarrel10 gp0.11d8 
+//Daggers 
+Dagger2 gpS11d4 
+Silver* Dagger25 gpS11d4 
+//Swords 
+Shortsword6 gpS31d6 
+Longsword/Scimitar10 gpM41d8 
+Two-Handed Sword18 gpL101d10 
+//Hammers and Maces 
+Warhammer4 gpS61d6 
+Mace6 gpM101d8 
+Maul10 gpL161d10 
+//Other Weapons 
+Club/Cudgel/Walking Staff 2 spM11d4 
+Quarterstaff2 gpL41d6 
+Pole Arm9 gpL151d10 
+Sling1 gpS0.1 
+Bullet1 sp0.11d4 
+Stone n/a 0.11d3 
+Spear5 gpM5 
+Thrown (one handed)1d6 
+Melee (one handed)1d6 
+Melee (two handed)1d8 
+
+* Silver tip or blade, for use against lycanthropes. 
+
+Armor and Shields (Armor Type, Cost, Weight, AC)
+No Armor0 gp011 
+Leather Armor20 gp1513 
+Chain Mail60 gp4015 
+Plate Mail300 gp5017 
+Shield7 gp5+1
+*/
+
+//Page 8
+/*
+Land Transportation VehicleLength x width*WeightCargoMovementHardness / HPCost (gp) Chariot15' x 6'300750 lbs60' (10')10 / 10400 Coach30' x 8'1,0002,000 lbs40' (15')6 / 121,500 Wagon35' x 8'2,0004,000 lbs20' (20')6 / 16500 *Includes hitched horses or mules. Water Transportation VehicleLength x WidthCargoCrewMovementMiles/DayHardness / HPCost (gp) Canoe15' x 4'1/2  ton140'(5')304 / 450 Caravel55' x 15'75 tons1020'(20')428 / 7510,000 Carrack60' x 20'135 tons2030'(30')4810 / 12020,000 Galley, Small100' x 15'210 tons9020'(20')36 / 248 / 7515,000 Galley, Large120' x 20'375 tons16030'(25')42 / 2410 / 12030,000 Longship110' x 15'10 tons7030'(25')42 / 249 / 11025,000 Raft/Bargeper 10' x 10'1 ton240'(10')186 / 12100 Riverboat50' x 20'50 tons1020'(20')308 / 303,500 Rowboat15' x 6'1 ton130'(10')246 / 8600 Sailboat40' x 8'5 tons140'(15')367 / 202,000 Siege Engines WeaponCost Rate of Fire Attack PenaltyDamage Short Range (+1) Medium Range (+0) Long Range (-2) Ballista100 gp1/4-32d850'100'150' Battering Ram200 gp1/3+02d8N/AN/AN/A Onager300 gp1/6-62d12100'200'300' Trebuchet400 gp1/10-83d10N/A300'400' Beasts of Burden ItemCostWeightMovement Horse, Draft120 gp-60' (10') Horse, War200 gp-60' (10') Horse, Riding75 gp-80' (10') Pony*40 gp-40' (10') Pony, War*80 gp-40' (10') Bit and bridle15 sp3Horseshoes & shoeing1 gp10Saddle, Pack5 gp15Saddle, Riding10 gp35Saddlebags, pair4 gp7* Due to their small stature, Dwarves and Halflings must ride ponies rather than horses. Monetary values 1 platinum piece (pp)=5 gold pieces (gp) 1 gold piece (gp)=10 silver pieces (sp) 1 electrum piece (ep)=5 silver pieces (sp) 1 silver piece (sp)=10 copper pieces (cp) Time Normal Game TurnsCombat Rounds 10 minutes long10 seconds long * *  60 combat rounds per game turn Scale DungeonOutdoors FeetYards * * Area of effect measurements (for spells, for instance) normally remain in feet Movement and Encumbrance Armor TypeLightly Loaded Heavily Loaded No Armor or Magic Leather40'30' Leather Armor or Magic Metal30'20' Metal Armor20'10' Load Dwarf, Elf, HumanHalfling StrengthLight Load Heavy Load Light Load Heavy Load 325602040 4-535903060 6-8501204080 9-126015050100 13-156516555110 16-177018060120 188019565130
+*/
+
+//Page 9
+/*
+Wilderness Movement Rates Encounter Movement (Feet per Round) Wilderness Movement (Miles per Day) 10'6 20'12 30'18 40'24 50'30 60'36 70'42 80'48 90'54 100'60 110'66 120'72 •Based on 8 hour day of travel through open, clear terrain •Forced march: 12 hours per day, add 50% to the distance traveled (1d6 damage, save vs. Death Ray) •Waterborne Travel: 12 hour day of travel (ships may travel 24 hours per day) •Traveling by air: overland movement rates are doubled, and all terrain effects are ignored Overland Travel Terrain Adjustment Jungle, Mountains, Swampx1/3 Desert, Forest, Hillsx1/2 Clear, Plains, Trailx2/3 Road (Paved)x1 Wind Direction d12Wind Direction 1Northerly 2Northeasterly 3Easterly 4Southeasterly 5Southerly 6Southwesterly 7Westerly 8Northwesterly 9-12Prevailing wind direction for this locale Wind Conditions Adjustment d%Wind ConditionsSailing 01-05Becalmedx0 06-13Very Light Breezex1/3 14-25Light Breezex1/2 26-40Moderate Breezex2/3 41-70Average Windsx1 71-85Strong Windsx1 1/3 86-96Very Strong Windsx1 1/2 97-00Galex2 Retainers* Adjusted Die RollResult 2 or lessRefusal, -1 on further rolls 3-5Refusal 6-8Try again 9-11Acceptance 12 or moreAcceptance, +1 to Loyalty * Roll 2d6 and adds the player character's Charisma bonus and any adjustments Monster XP Table Monster Hit DiceXP ValueSpecial Ability Bonus less than 1103 12512 27525 314530 424040 536045 650055 767065 887570 91,07575 101,30090 111,57595 121,875100 132,175110 142,500115 152,850125 163,250135 173,600145 184,000160 194,500175 Opening Doors Door TypeRoll Range / Dice Stuck door1 ÷ (1+Strength bonus) on 1d6 Locked doors1 ÷ (1+Strength bonus) on 1d10 Metal bars doors1 ÷ (1+Strength bonus) on 1d20 Detection Item TypeDwarvesElvesOthers Traps*1-2 on 1d61 on 1d61 on 1d6 Shifting walls1-2 on 1d6-- New construction1-2 on 1d6-- Slanting passages1-2 on 1d6-- Secret doors* •1 on 1d6 •1-2 on 1d6 if INT>=15 •1-2 on 1d6 •1 on 1d6  with a look •1 on 1d6 •1-2 on 1d6 if INT>=15 * It takes at least a turn per 10' square area for searching
+*/
+
+//Page 10
+/*
+Encounter Encounter Sequence Surprise check* •Normal: 1-2 on 1d6 •Ambush: 1-4 on 1d6 •Deafened: 1-3 on 1d6 •Blinded: 1-4 on 1d6 Initiave rolls Roll 1d6 + Dex mod. High numbers act first (-1 penalty if deafened, -2 if blinded) Monster reactionRoll 2d6 + Cha mod of the leader * For Elves reduce the range by 1 Reaction Roll Table Adjusted Die RollResult 2 or lessImmediate Attack 3-7Unfavorable 8-11Favorable 12 or moreVery Favorable Morale Checks HowRoll 2d6 <= Monster morale score When •During first encounter •When the monster party is reduced to half strength (by numbers if more than one monster, or by hit points for one monster) Typical Actions Standard attack Move (encounter movement distance) + melee or ranged attack RunMove (2 X encounter movement distance) Charge*Move (2 X encounter movement distance) + attack (+2 bonus) Parting shotFree attack (+2 bonus) vs. opponents turning from the fight Fighting withdrawal Move back (half normal walking movement) + melee attack * -2 penalty to Armor Class for the round Attack bonus / penalty Attacking From Behind +2 (do not combine with the Sneak Attack ability) Flat of the blade attack-4 ( do half subduing damage) Punch+0 (1d3 points of subduing damage) Kick-2 (1d4 points of subduing damage) Attacker/Defender is invisible+4 / -4 Attacker/Defender is blinded-4 / +4 Defender is pinned+4 Missile fire Target distanceAttack bonus / penalty <= 5'-5 * > 5' AND <= Short range+1 > Short range AND <= Medium range0 > Medium range AND <= Long range-2 > Long rangeCannot be attacked * If the attacker is behind the target creature and undetected, or that creature is distracted apply +1 bonus (+3 total bonus if attacking from behind) Cover and Concealment Penalty Target isCoveredConcealed 25%-2-1 50%-4-2 75%-6-3 90%-8-4 Grenade-Like Missiles Miss Table (behind) •Roll 1d10 and consult the diagram to determine where the missile hit. Treat each number as representing a 10' square area •Missiles that Miss: GM roll attacks against each targets (no more than three). These attack rolls are made with the shooter's normal attack bonus, just as if he or she intended to attack the target. 0 789 5Target6 234 1 (in front) Oil Grenade-Like Missiles •Direct hit: 1d8 points of fire damage, plus in the next round an additional 1d8 points of damage, unless the character spends the round extinguishing the flames •Splash Hit: 1d6 points of fire damage within 5 feet of the point of impact. A save vs. Death Ray is allowed to avoid this damage •Effective for 10 rounds. Those attempting to cross the burning oil will receive 1d6 points of fire damage each round they are in it. Holy Water •Direct hit: 1d8 points damage. •Splash Hit: 1d6 points of fire damage within 5 feet of the point of impact. •Effective for 1 round
+*/
+
+//Page 11
+/*
+Attack Bonus Table Fighter LevelCleric  or Thief LevelMagic-User LevelMonster Hit DiceAttack Bonus NMless than 1+0 11-21-31+1 2-33-44-52+2 45-66-83+3 5-67-89-124+4 79-1113-155+5 8-1012-1416-186+6 11-1215-1719-207+7 13-1518-208-9+8 16-1710-11+9 18-2012-13+10 14-15+11 16-19+12 20-23+13 24-27+14 28-31+15 32 or more+16 *  On a hit roll a natural "1" is always a failure. A natural "20" is always a hit, if the opponent can be hit at all Monsters and mapping Monsters description notation NameIf an asterisk appears after the monster's name, it indicates that the monster is only able to be hit by special weapons (such as silver or magical weapons, or creatures affected only by fire, etc.) Armor Class •If the monster  wears armor, the first listed AC value is with that armor, and the second, in parentheses, is unarmored •Some monsters are only able to be hit by silver(†) or magical weapons(‡) Hit Dice •Monsters always roll eight sided dice (d8) for hit points, unless noted otherwise •* or ** : Special Ability Bonus to experience points (each asterisk adds the special ability bonus once) •If the monster's Attack Bonus is different than its number of Hit Dice the Attack Bonus will be listed in parentheses after the Hit Dice figure MovementA distance may appear in parentheses after a movement figure; this is the creature's turning distance.  If a turning distance is not listed, assume 5'.
+*/
+
+//Page 12
+/*
+Treasure To generate a random treasure, find the indicated treasure type assigned to monsters and read across; where a percentage chance is given, roll percentile dice to see if that sort of treasure is found.  If so, roll the indicated dice to determine how much. Lair Treasures Type100's of Copper 100's of Silver 100's of Electrum 100's of Gold 100's of Platinum Gems and JewelryMagic Items A50% 5d660% 5d640% 5d470% 10d650% 1d1050% 6d6 50% 6d630%any 3 B75% 5d1050% 5d650% 5d450% 3d6None25% 1d6 25% 1d6 10%1 weapon or armor C60% 6d660% 5d430% 2d6NoneNone25% 1d4 25% 1d415%any 1d2 D30% 4d645% 6d6None90% 5d8None30% 1d8 30% 1d8 20%any 1d2 + 1 potion E30% 2d860% 6d1050% 3d850% 4d10None10% 1d10 10% 1d10 30%any 1d4 + 1 scroll FNone40% 3d850% 4d885% 6d1070% 2d820% 2d12 10% 1d12 35%any 1d4 except weapons + 1 potion + 1 scroll GNoneNoneNone90% 4d6x1075% 5d825% 3d6 25% 1d10 50%any 1d4 + 1 scroll H75% 8d1075% 6d10x1075% 3d10x1075% 5d8x1075% 9d850% 1d100 50% 10d4 20%any 1d4 + 1 potion + 1 scroll INoneNoneNoneNone80% 3d1050% 2d6 50% 2d615%any 1 J45% 3d845% 1d8NoneNoneNoneNone NoneNone KNone90% 2d1035% 1d8NoneNoneNone NoneNone LNoneNoneNoneNoneNone50% 1d4 NoneNone MNoneNoneNone90% 4d1090% 2d8x1055% 5d4 45% 2d6None NNoneNoneNoneNoneNoneNone None40%2d4 potions ONoneNoneNoneNoneNoneNone None50%1d4 scrolls Individual Treasures TypePieces of Copper Pieces of Silver Pieces of Electrum Pieces of Gold Pieces of Platinum Gems and JewelryMagic Items P3d8NoneNoneNoneNoneNone NoneNone QNone3d6NoneNoneNoneNone NoneNone RNoneNone2d6NoneNoneNone NoneNone SNoneNoneNone2d4NoneNone NoneNone TNoneNoneNoneNone1d6None NoneNone U50% 1d2050% 1d20None25% 1d20None5% 1d4 5% 1d42%Any 1 VNone25% 1d2025% 1d2050% 1d2025% 1d2010% 1d4 10% 1d45%Any 1
+*/
+
+//Page 13
+/*
+Unguarded Treasures Level*100's of Copper 100's of Silver 100's of Electrum 100's of Gold 100's of Platinum Gems and JewelryMagic Items 175%1d850%1d625%1d47%1d41%1d47%1d4 3%1d42%Any 1 250%1d1050%1d825%1d620%1d62%1d410%1d6 7%1d45%Any 1 330%2d650%1d1025%1d850%1d64%1d415%1d6 7%1d68%Any 1 4-520%3d650%2d625%1d1050%2d68%1d420%1d8 10%1d612%Any 1 6-715%4d650%3d625%1d1270%2d815%1d430%1d8 15%1d616%Any 1 8+10%5d650%5d625%2d875%4d630%1d440%1d8 30%1d820%Any 1 * Dungeon levels Gems and Jewelry Use the tables below to determine the base value and number found when gems are indicated in a treasure hoard.  If the number generated in the main table above is small, roll for each gem; but if the number is large (10 or more, at the GM's option), after each roll for Type and Base Value, roll the indicated die to see how many such gems are in the hoard. d%Type Base Value in Gold Pieces Number Found 01-20Ornamental101d10 21-45Semiprecious501d8 46-75Fancy1001d6 76-95Precious5001d4 96-00Gem10001d2 Jewel50001 The values of gems vary from the above for reasons of quality, size, etc.  The GM may use the table below to adjust the values of the gems in the hoard, at his or her option.  This is why there is no die result given in the table above for Jewel; on a roll of 12 on the table below, a Gem can become a Jewel. 2d6Value Adjustment 2Next Lower Value Row 31/2 43/4 5-9Normal Value 101.5 Times 112 Times 12Next Higher Value Row Standard items of jewelry are valued at 2d8x100 gp value.  The table below can be used to generate descriptions of the items themselves. d%Type 01-06Anklet 07-12Belt 13-14Bowl 15-21Bracelet 22-27Brooch 28-32Buckle 33-37Chain 38-40Choker 41-42Circlet 43-47Clasp 48-51Comb 52Crown 53-55Cup 56-62Earring 63-65Flagon 66-68Goblet 69-73Knife 74-77Letter Opener 78-80Locket 81-82Medal 83-89Necklace 90Plate 91-95Pin 96Sceptre 97-99Statuette 00Tiara
+*/
+
+//Page 14
+/*
+Magic Item Generation Determine the sort of item found by rolling on the following table: AnyWeapon or Armor Any Exc. WeaponsType of Item 01-2501-70Weapon 26-3571-0001-12Armor 36-5513-40Potion 56-8541-79Scroll 86-9080-86Ring 91-9587-93Wand, Staff, or Rod 96-0094-00Miscellaneous Magic Magic Weapons First, roll d% on the following table to determine the weapon type: d%Weapon Typed%Weapon Type 01-02Great Axe60-65Shortsword 03-09Battle Axe66-79Longsword 10-11Hand Axe80-81Scimitar 12-19Shortbow82-83Two-Handed Sword 20-27Shortbow Arrow84-86Warhammer 28-31Longbow87-94Mace 32-35Longbow Arrow95Maul 36-43Light Quarrel96Pole Arm 44-47Heavy Quarrel97Sling Bullet 48-59Dagger98-00Spear Next, roll on the Weapon Bonus tables.  Follow the directions given if a roll on the Special Enemy or Special Ability tables are indicated; generally multiple rolls on the Special Ability table should be ignored when rolled. d% RollWeapon Bonus MeleeMissileBonus 01-4001-46+1 41-5047-58+2 51-5559-64+3 56-57+4 58+5 59-7565-82+1, +2 vs. Special Enemy 76-8583-94+1, +3 vs. Special Enemy 86-95Roll Again + Special Ability 96-9895-98Cursed, -1* 99-0099-00Cursed, -2* * If cursed weapons are rolled along with special abilities, ignore the special ability roll. 1d6Special Enemy1d20Special Ability 1Dragons01-09Casts Light on Command 2Enchanted10-11Charm Person 3Lycanthropes12Drains Energy 4Regenerators13-16Flames on Command 5Spell Users17-19Locate Objects 6Undead20Wishes Wands, Staves and Rods d%Type 01-08Rod of Cancellation 09-13Snake Staff 14-17Staff of Commanding 18-28Staff of Healing 29-30Staff of Power 31-34Staff of Striking 35Staff of Wizardry 36-40Wand of Cold 41-45Wand of Enemy Detection 46-50Wand of Fear 51-55Wand of Fireballs 56-60Wand of Illusion 61-65Wand of Lightning Bolts 66-73Wand of Magic Detection 74-79Wand of Paralyzation 80-84Wand of Polymorph 85-92Wand of Secret Door Detection 93-00Wand of Trap Detection Rings d%Typed%Type 01-06Control Animal71Protection +3 07-12Control Human72-73Regeneration 13-19Control Plant74-75Spell Storing 20-30Delusion76-81Spell Turning 31-33Djinni Summoning82-83Telekinesis 34-44Fire Resistance84-90Water Walking 45-57Invisibility91-97Weakness 58-66Protection +198Wishes 67-70Protection +299-00X-Ray Vision Magic Armor Generate the type and bonus of each item of magic armor on the tables below. d%Armor Typed%Armor Bonus 01-09Leather Armor01-50+1 10-28Chain Mail51-80+2 29-43Plate Mail81-90+3 44-00Shield91-95Cursed * 96-00Cursed, AC 11 ** * If Cursed armor is rolled, roll again and reverse the bonus (e.g., -1 instead of +1). ** This armor has AC 11 but appears to be +1 when tested.
+*/
+
+//Page 15
+/*
+Miscellaneous Magic Items d%Type 01-04Amulet of Proof against Detection and Location 05-06Bag of Devouring 07-12Bag of Holding 13-17Boots of Levitation 18-22Boots of Speed 23-27Boots of Traveling and Leaping 28Bowl Commanding Water Elementals 29Brazier Commanding Fire Elementals 30-35Broom of Flying 36Censer Commanding Air Elementals 37-39Cloak of Displacement 40-43Crystal Ball 44-45Crystal Ball with Clairaudience 46Drums of Panic 47Efreeti Bottle 48-54Elven Boots 55-61Elven Cloak 62-63Flying Carpet 64-70Gauntlets of Ogre Power 71-72Girdle of Giant Strength 73-78Helm of Reading Languages and Magic 79Helm of Telepathy 80Helm of Teleportation 81Horn of Blasting 82-90Medallion of ESP 91Mirror of Life Trapping 92-96Rope of Climbing 97-99Scarab of Protection 00Stone Commanding Earth Elementals Wands, Staves and Rods d%Type 01-08Rod of Cancellation 09-13Snake Staff 14-17Staff of Commanding 18-28Staff of Healing 29-30Staff of Power 31-34Staff of Striking 35Staff of Wizardry 36-40Wand of Cold 41-45Wand of Enemy Detection 46-50Wand of Fear 51-55Wand of Fireballs 56-60Wand of Illusion 61-65Wand of Lightning Bolts 66-73Wand of Magic Detection 74-79Wand of Paralyzation 80-84Wand of Polymorph 85-92Wand of Secret Door Detection 93-00Wand of Trap Detection Potions d%Typed%Type 01-03Clairaudience48-51Gaseous Form 04-07Clairvoyance52-55Giant Strength 08-10Control Animal56-59Growth 11-13Control Dragon60-63Healing 14-16Control Giant64-68Heroism 17-19Control Human69-72Invisibility 20-22Control Plant73-76Invulnerability 23-25Control Undead77-80Levitation 26-32Delusion81-84Longevity 33-35Diminution85-86Poison 36-39ESP87-89Polymorph Self 40-43Fire Resistance90-97Speed 44-47Flying98-00Treasure Finding Scrolls d%General Typed%General Type 01-03Cleric Spell Scroll (1 Spell)35Magic-User Spell Scroll (7 Spells) 04-06Cleric Spell Scroll (2 Spells)36-40Cursed Scroll 07-08Cleric Spell Scroll (3 Spells)41-46Protection from Elementals 09Cleric Spell Scroll (4 Spells)47-56Protection from Lycanthropes 10-15Magic-User Spell Scroll (1 Spell)57-61Protection from Magic 16-20Magic-User Spell Scroll (2 Spells)62-75Protection from Undead 21-25Magic-User Spell Scroll (3 Spells)76-85Map to Treasure Type A 26-29Magic-User Spell Scroll (4 Spells)86-89Map to Treasure Type E 30-32Magic-User Spell Scroll (5 Spells)90-92Map to Treasure Type G 33-34Magic-User Spell Scroll (6 Spells)93-00Map to 1d4 Magic Items
+*/
+
+//Page 16
+/*
+Encounters Dungeon Encounters The Game Master should check once every 3 turns * Roll 1d6; on a roll of 1, an encounter occurs.  * Roll 1d12 on the appropriate table. Die RollLevel 1Level 2Level 3 1Bee, GiantBeetle, Giant BombardierAnt, Giant 2GoblinFly, GiantApe, Carnivorous 3Green Slime*GhoulBeetle, Giant Tiger 4KoboldGnollBugbear 5NPC Party: AdventurerGray OozeDoppleganger 6NPC Party: BanditHobgoblinGargoyle* 7OrcLizard ManGelatinous Cube 8SkeletonNPC Party: AdventurerLycanthrope, Wererat* 9Snake, CobraSnake, Pit ViperOgre 10Spider, Giant CrabSpider, Giant Black WidowShadow* 11StirgeTroglodyteTentacle Worm 12WolfZombieWight* Die RollLevel 4-5Level 6-7Level 8+ 1Bear, CaveBasiliskBlack Pudding 2Caecilia, GiantBlack PuddingChimera 3CockatriceCaeciliaGiant, Hill 4DopplegangerDisplacerGiant, Stone 5Gray OozeHydraHydra 6HellhoundLycanthrope, Weretiger*Lycanthrope, Wereboar* 7Lycanthrope, Werewolf*Mummy*Purple Worm 8MinotaurOwlbearSalamander, Flame* 9Ochre Jelly*Rust Monster*Salamander, Frost* 10OwlbearScorpion, GiantVampire* 11Rust Monster*Spectre* 12Wraith*Troll City, Town or Village Encounters (2d6) Die RollDay EncounterNight Encounter 2DopplegangerDoppleganger 3NobleShadow* 4ThiefPress Gang 5BullyBeggar 6City WatchThief 7MerchantBully 8BeggarMerchant 9PriestGiant Rat 10MercenaryCity Watch 11WizardWizard 12Lycanthrope, Wererat*Lycanthrope, Wererat*
+*/
+
+//Page 17
+/*
+Wilderness Encounters Check about every four hours of game time (this translates nicely to three night checks and three daytime checks) * Roll 1d6; on a roll of 1, an encounter occurs.  * Roll 2d8 on the appropriate table. Die RollDesert or BarrenGrasslandInhabited Territories 2Dragon, BlueDragon, GreenDragon, Gold 3HellhoundTrollGhoul 4Giant, FireFly, GiantBugbear 5Purple WormScorpion, GiantGoblin 6Fly, GiantNPC Party:  BanditCentaur 7Scorpion, GiantLionNPC Party:  Bandit 8CamelBoar, WildNPC Party:  Merchant 9Spider, Giant TarantellaNPC Party:  MerchantNPC Party:  Pilgrim 10NPC Party:  MerchantWolfNPC Party:  Noble 11HawkBee, GiantDog 12NPC Party:  BanditGnollGargoyle* 13OgreGoblinGnoll 14GriffonBlink DogOgre 15GnollWolf, DireMinotaur 16Dragon, RedGiant, HillVampire* Die RollJungleMountains or HillsOcean 2Dragon, GreenDragon, WhiteDragon, Sea 3NPC Party:  BanditRoc (1d6: 1-3 Large, 4-5 Huge, 6 Giant)Hydra 4GoblinDisplacerWhale, Sperm 5HobgoblinLycanthrope, Werewolf*Crocodile, Giant 6Centipede, GiantMountain LionCrab, Giant 7Snake, Giant PythonWolfWhale, Killer 8ElephantSpider, Giant CrabOctopus, Giant 9AntelopeHawkShark, Mako 10JaguarOrcNPC Party:  Merchant 11StirgeBat, GiantNPC Party:  Buccaneer (Pirate) 12Beetle, Giant TigerHawk, GiantShark, Bull 13Caecilia, GiantGiant, HillRoc (1d8: 1-5 Huge, 6-8 Giant) 14Shadow*ChimeraShark, Great White 15NPC Party:  MerchantWolf, DireMermaid 16Lycanthrope, Weretiger*Dragon, RedSea Serpent Die RollRiver or RiversideSwampWoods or Forest 2Dragon, BlackDragon, BlackDragon, Green 3Fish, Giant PiranhaShadow*Alicorn (see Unicorn) 4StirgeTrollTreant 5Fish, Giant BassLizard, Giant DracoOrc 6NPC Party:  MerchantCentipede, GiantBoar, Wild 7LizardmanLeech, GiantBear, Black 8CrocodileLizardmanHawk, Giant 9Frog, GiantCrocodileAntelope 10Fish, Giant CatfishStirgeWolf 11NPC Party:  BuccaneerOrcOgre 12TrollToad, Giant (see Frog, Giant)Bear, Brown 13JaguarTroglodyteWolf, Dire 14NixieBlood RoseGiant, Hill 15Water Termite, GiantHangman TreeOwlbear 16Dragon, GreenBasiliskUnicorn
+*/
+
+//Open Game License
+/*
+OPEN GAME LICENSE INTRODUCTION Basic Fantasy RPG Charts and Tables (hereinafter “the Supplement”) is based on the System Reference Document v3.5 ("SRD"), which is Open Game Content.    The text of the Open Game License itself is not Open Game Content. Instructions on using the License are provided within the License itself. Designation of Open Game Content:  The entire text of the Supplement (except the Open Game License, as noted above) is Open Game Content, released under the Open Game License, Version 1.0a (reproduced below) as described in Section 1(d) of the License.  Artwork incorporated in this document is not Open Game Content, and remains the property of the copyright holder. Designation of Product Identity:  Product identity is not Open Game Content. The following is designated as product identity pursuant to OGL v1.0a(1)(e) and (7): (A) product and product line names, including Basic Fantasy Role-Playing Game, Basic Fantasy RPG, and BFRPG, as well as the phrase “make mine Basic”; (B) all artwork, logos, symbols, graphic designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual representations, including the “eye” logo, which is the personal mark of Chris Gonnerman for his various products, and which is Copyright © 2002 Chris Gonnerman, and the “Scribbled Dragon,” which is Copyright © 2005 Erik Wilson; (C) logos and trademarks, including any trademark or registered trademark clearly identified as product identity by the owner of the product identity, and which specifically excludes the open game content. More information on the Open Game License can be found at: http://www.wizards.com/d20 OPEN GAME LICENSE VERSION 1.0A The following text is the property of Wizards of the Coast, Inc. and is Copyright 2000 Wizards of the Coast, Inc ("Wizards"). All Rights Reserved. 1. Definitions: (a)"Contributors" means the copyright and/or trademark owners who have contributed Open Game Content; (b)"Derivative Material" means copyrighted material including derivative works and translations (including into other computer languages), potation, modification, correction, addition, extension, upgrade, improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted; (c) "Distribute" means to reproduce, license, rent, lease, sell, broadcast, publicly display, transmit or otherwise distribute; (d)"Open Game Content" means the game mechanic and includes the methods, procedures, processes and routines to the extent such content does not embody the Product Identity and is an enhancement over the prior art and any additional content clearly identified as Open Game Content by the Contributor, and means any work covered by this License, including translations and derivative works under copyright law, but specifically excludes Product Identity. (e) "Product Identity" means product and product line names, logos and identifying marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual or audio representations; names and descriptions of characters, spells, enchantments, personalities, teams, personas, likenesses and special abilities; places, locations, environments, creatures, equipment, magical or supernatural abilities or effects, logos, symbols, or graphic designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of the Product Identity, and which specifically excludes the Open Game Content; (f) "Trademark" means the logos, names, mark, sign, motto, designs that are used by a Contributor to identify itself or its products or the associated products contributed to the Open Game License by the Contributor (g) "Use", "Used" or "Using" means to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game Content. (h) "You" or "Your" means the licensee in terms of this agreement. 2. The License: This License applies to any Open Game Content that contains a notice indicating that the Open Game Content may only be Used under and in terms of this License. You must affix such a notice to any Open Game Content that you Use. No terms may be added to or subtracted from this License except as described by the License itself. No other terms or conditions may be applied to any Open Game Content distributed using this License. 3.Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance of the terms of this License. 4. Grant and Consideration: In consideration for agreeing to use this License, the Contributors grant You a perpetual, worldwide, royalty-free, non-exclusive license with the exact terms of this License to Use, the Open Game Content. 5.Representation of Authority to Contribute: If You are contributing original material as Open Game Content, You represent that Your Contributions are Your original creation and/or You have sufficient rights to grant the rights conveyed by this License. 6.Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing, and You must add the title, the copyright date, and the copyright holder's name to the COPYRIGHT NOTICE of any original Open Game Content you Distribute. 7. Use of Product Identity: You agree not to Use any Product Identity, including as an indication as to compatibility, except as expressly licensed in another, independent Agreement with the owner of each element of that Product Identity. You agree not to indicate compatibility or coadaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered Trademark. The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights, title and interest in and to that Product Identity. 8. Identification: If you distribute Open Game Content You must clearly indicate which portions of the work that you are distributing are Open Game Content. 9. Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License. 10. Copy of this License: You MUST include a copy of this License with every copy of the Open Game Content You Distribute. 11. Use of Contributor Credits: You may not market or advertise the Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do so. 12. Inability to Comply: If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then You may not Use any Open Game Material so affected. 13. Termination: This License will terminate automatically if You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the breach. All sublicenses shall survive the termination of this License. 14. Reformation: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable. 15. COPYRIGHT NOTICE Open Game License v 1.0 Copyright 2000, Wizards of the Coast, Inc. System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid, James Wyatt, based on original material by E. Gary Gygax and Dave Arneson. Castles & Crusades: Players Handbook, Copyright 2004, Troll Lord Games; Authors Davis Chenault and Mac Golden. Castles & Crusades: Monsters Product Support, Copyright 2005, Troll Lord Games. Basic Fantasy Role-Playing Game Copyright © 2006-2016 Chris Gonnerman. Basic Fantasy Role-Playing Game Charts and Tables Copyright © 2010, 2016, 2021 Simone Felli
 */
