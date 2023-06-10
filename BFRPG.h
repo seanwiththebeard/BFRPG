@@ -455,3 +455,48 @@ byte ThiefSpecialAbilities[7][20] =
   {10, 15, 20, 25, 30, 35, 40, 45, 50, 53, 56, 59, 62, 65, 68, 69, 70, 71, 72, 73}, //Hide
   {30, 34, 38, 42, 46, 50, 54, 58, 62, 65, 68, 71, 74, 77, 80, 83, 86, 89, 92, 95} //Listen
 };
+
+/*Sneak Attack
+	•+4 attack bonus and does double damage if it is successful. 
+        The opponent  should not be aware where the Thief is
+        (may require a Move Silently or Hide roll).
+        •Can't be performed on the same opponent twice in any given combat
+        •Can also be performed bare-handed and with the "flat of the blade" 
+        (+0 attack bonus and does normal damage). In both cases subduing
+        damage is done.*/
+
+//Clerics vs. Undead (ClericVsUndead[Type - 1][Level]
+#define No 21
+#define T 0
+#define D -1
+#define Skeleton 1
+#define Zombie 2
+#define Ghoul 3
+#define Wight 4
+#define Wraith 5
+#define Mummy 6
+#define Spectre 7
+#define Vampire 8
+#define Ghost 9
+sbyte ClericVsUndead[9][20] = 
+{
+  {13, 11, 9, 7, 5, 4, 3, T, T, T, D, D, D, D, D, D, D, D, D, D}, //Skeleton
+  {17, 15, 13, 11, 9, 7, 5, 3, 2, T, T, T, D, D, D, D, D, D, D, D}, //Zombie
+  {19, 18, 17, 16, 15, 11, 9, 7, 5, 3, 2, T, T, T, D, D, D, D, D, D}, //Ghoul
+  {No, 20, 19, 18, 17, 15, 13, 11, 9, 7, 5, 3, 2, T, T, T, D, D, D, D}, //Wight
+  {No, No, No, 20, 19, 18, 17, 15, 13, 11, 9, 7, 5, 3, 2, T, T, T, D, D}, //Wraith
+  {No, No, No, No, No, 20, 19, 18, 17, 15, 13, 11, 9, 7, 5, 3, 2, T, T, T}, //Mummy
+  {No, No, No, No, No, No, No, 20, 19, 18, 17, 15, 13, 11, 9, 7, 5, 3, 2, T}, //Spectre
+  {No, No, No, No, No, No, No, No, No, 20, 19, 18, 17, 15, 13, 11, 9, 7, 5, 3}, //Vampire
+  {No, No, No, No, No, No, No, No, No, No, No, 20, 19, 18, 17, 15, 13, 11, 9, 7}  //Ghost
+};
+
+/*Turn Undead 
+	•Roll 1d20 >= Target number.
+        If the roll is a success 2d6 hit dice of undead monsters are affected;
+        surplus hit dice are lost
+        •T = undead is automatically affected (no roll needed)
+        •D =  undead will be damaged.
+        1d8 damage per level of the Cleric (roll once and apply
+        the same damage to all undead monsters affected)
+*/
