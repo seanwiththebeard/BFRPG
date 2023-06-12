@@ -14,6 +14,7 @@ void PrintClassDescriptions();
 void PrintSpells();
 void PrintSpecialAbilities();
 void PrintSavingThrows();
+void PrintSpellNames();
 byte x, y, z;
 void main(void) 
 {
@@ -22,9 +23,23 @@ void main(void)
   //PrintClassDescriptions();
   //PrintSpells();
   //PrintSpecialAbilities();
-  PrintSavingThrows();
+  //PrintSavingThrows();
+  PrintSpellNames();
 }
-
+void PrintSpellNames()
+{
+  clrscr();
+  printf("Magic-User Spells:\n");
+  for (y = 0; y < 6; ++y)
+  {
+    printf("\nLevel %d\n", y + 1);
+    for (x = 0; x < 12; ++x)
+    {
+      printf("%s\n", MagicUserSpellsName[y][x]);
+    }
+  }
+  getchar();
+}
 void PrintAbilityModifiers()
 {
   clrscr();

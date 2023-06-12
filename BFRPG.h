@@ -506,7 +506,6 @@ sbyte ClericVsUndead[9][20] =
 struct
 {
   int NameIndex;
-  byte NameLength;
   byte Level;
   bool Reversible;
 }
@@ -515,11 +514,11 @@ MagicUserSpells;
 char *MagicUserSpellsName[][] = 
 {
   {"Charm Person", "Detect Magic", "Floating Disc", "Hold Portal", "Light", "Magic Missile", "Magic Mouth", "Protection from Evil", "Read Languages", "Shield", "Sleep", "Ventriloquism"},
-  {"Continual LightDetect EvilDetect InvisibleESPInvisibilityKnockLevitateLocate ObjectMirror ImagePhantasmal ForceWebWizard Lock"},
-  {"ClairvoyanceDarkvisionDispel MagicFireballFlyHaste*Hold PersonInvisibility 10‘ radiusLightning BoltProtection from Evil 10’ radius*Protection from Normal MissilesWater Breathing"},
+  {"Continual Light", "Detect Evil", "Detect Invisible", "ESP", "Invisibility", "Knock", "Levitate", "Locate Object", "Mirror Image", "Phantasmal Force", "Web", "Wizard Lock"},
+  {"Clairvoyance", "Darkvision", "Dispel Magic", "Fireball", "Fly", "Haste", "Hold Person", "Invisibility 10' radius", "Lightning Bolt", "Protection from Evil 10' radius", "Protection from Normal Missiles", "Water Breathing"},
   {"Charm MonsterConfusionDimension DoorGrowth of Plants*Hallucinatory TerrainIce StormMassmorphPolymorph OtherPolymorph SelfRemove CurseWall of FireWizard Eye"},
-  {"Animate DeadCloudkillConjure ElementalFeeblemindHold MonsterMagic JarPasswallTelekinesisTeleportWall of Stone"},
-  {"Anti-Magic ShellDeath SpellDisintegrateFlesh to StoneGeasInvisible StalkerLower WaterProjected ImageReincarnateWall of Iron"}
+  {"Animate Dead", "Cloudkill", "Conjure Elemental", "Feeblemind", "Hold Monster", "Magic Jar", "Passwall", "Telekinesis", "Teleport", "Wall of Stone"},
+  {"Anti-Magic Shell", "Death Spell", "Disintegrate", "Flesh to Stone", "Geas", "Invisible Stalker", "Lower Water", "Projected Image", "Reincarnate", "Wall of Iron"}
 };
 /* Magic-User Spells
 
