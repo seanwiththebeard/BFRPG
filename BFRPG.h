@@ -502,6 +502,15 @@ sbyte ClericVsUndead[9][20] =
 */
 
 //Page 6
+
+struct
+{
+  int NameIndex;
+  byte NameLength;
+  byte Level;
+  bool Reversible;
+}
+MagicUserSpells;
 /*
 Magic-User Spells
 
