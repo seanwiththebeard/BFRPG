@@ -511,8 +511,17 @@ struct
   bool Reversible;
 }
 MagicUserSpells;
-/*
-Magic-User Spells
+
+char MagicUserSpellsName[][] = 
+{
+  "Charm PersonDetect MagicFloating DiscHold PortalLightMagic MissileMagic MouthProtection from EvilRead LanguagesShieldSleepVentriloquism",
+  "Continual LightDetect EvilDetect InvisibleESPInvisibilityKnockLevitateLocate ObjectMirror ImagePhantasmal ForceWebWizard Lock",
+  "ClairvoyanceDarkvisionDispel MagicFireballFlyHaste*Hold PersonInvisibility 10‘ radiusLightning BoltProtection from Evil 10’ radius*Protection from Normal MissilesWater Breathing",
+  "Charm MonsterConfusionDimension DoorGrowth of Plants*Hallucinatory TerrainIce StormMassmorphPolymorph OtherPolymorph SelfRemove CurseWall of FireWizard Eye",
+  "Animate DeadCloudkillConjure ElementalFeeblemindHold MonsterMagic JarPasswallTelekinesisTeleportWall of Stone",
+  "Anti-Magic ShellDeath SpellDisintegrateFlesh to StoneGeasInvisible StalkerLower WaterProjected ImageReincarnateWall of Iron"
+};
+/* Magic-User Spells
 
 First Level
 1 Charm Person
