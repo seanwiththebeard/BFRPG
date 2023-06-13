@@ -520,6 +520,16 @@ char *MagicUserSpellsName[][] =
   {"Animate Dead", "Cloudkill", "Conjure Elemental", "Feeblemind", "Hold Monster", "Magic Jar", "Passwall", "Telekinesis", "Teleport", "Wall of Stone"},
   {"Anti-Magic Shell", "Death Spell", "Disintegrate", "Flesh to Stone", "Geas", "Invisible Stalker", "Lower Water", "Projected Image", "Reincarnate", "Wall of Iron"}
 };
+
+char *ClericSpellsName[][] = 
+{
+  {"Cure Light Wounds", "Detect Evil", "Detect Magic", "Light", "Protection from Evil", "Purify Food and Water", "Remove Fear", "Resist Cold"},
+  {"Bless", "Charm Animal", "Find Traps", "Hold Person", "Resist Fire", "Silence 15' radius", "Speak with Animals", "Spiritual Hammer"},
+  {"Continual Light", "Cure Blindness", "Cure Disease", "Growth of Animals", "Locate Object", "Remove Curse", "Speak with Dead", "Striking"},
+  {"Animate Dead", "Create Water", "Cure Serious Wounds", "Dispel Magic", "Neutralize Poison", "Protection from Evil 10' radius", "Speak with Plants", "Sticks to Snakes"},
+  {"Commune", "Create Food", "Dispel Evil", "Insect Plague", "Quest", "Raise Dead", "True Seeing", "Wall of Fire"},
+  {"Animate Objects", "Blade Barrier", "Find the Path", "Heal", "Regenerate", "Restoration", "Speak with Monsters", "Word of Recall"}
+};
 /* Magic-User Spells
 
 First Level
@@ -667,6 +677,15 @@ Sixth Level
 */
 
 //Page 7
+struct 
+{
+  byte cost;
+  byte weight;
+  char *Name;
+}Equipment[] = 
+{
+  {4, 0, "Backpack"},
+};
 /*
 Equipment, Weapons, and Movement
 General Equipment (Item, Cost, Weight)
