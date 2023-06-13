@@ -677,6 +677,8 @@ Sixth Level
 */
 
 //Page 7
+//Equipment, Weapons, and Movement
+//General Equipment
 struct 
 {
   char *Name;
@@ -717,43 +719,6 @@ struct
   {"Writing ink (per vial)", 8, 0}
 };
 /*
-Equipment, Weapons, and Movement
-General Equipment (Item, Cost, Weight)
-Backpack 4gp * 
-Candles, 12 1gp *
-Chalk, small bag of pieces 2gp * 
-Clothing, common outfit 4gp 1 
-Glass bottle or vial 1gp * 
-Grappling Hook 2gp 4 
-Holy Symbol 25gp * 
-Holy Water, per vial 10gp * 
-Iron Spikes, 12 1gp 1 
-Ladder, 10 ft. 1gp 20 
-Lantern, Hooded 8 gp2 
-Map or scroll case 1gp ½ 
-Mirror, small metal 7gp * 
-Oil (per flask) 1 gp1 
-Paper (per sheet) 1gp ** 
-Pole, 10' wooden 1gp 10 
-Quiver or Bolt case 1gp 1 
-Rations, Dry, one week 10gp 14 
-Rope, Hemp (per 50 ft.) 1gp 5 
-Rope, Silk (per 50 ft.) 10gp 2 
-Sack, Large 1gp *
-Sack, Small 5sp * 
-Tent, Large (ten men) 25gp 20 
-Tent, Small (one man) 5gp 10 
-Thieves' picks and tools 25gp 1 
-Tinderbox, flint and steel 3gp 1 
-Torches, 6 1gp 1 
-Whetstone 1gp 1 
-Wineskin/Waterskin 1gp 2 
-Winter blanket 1gp 3 
-Writing ink (per vial) 8gp * 
-
-* These items weigh little individually. Ten of these items weigh one pound. 
-** These items have no appreciable weight and should not be considered for 
-encumbrance unless hundreds are carried. 
 
 Missile Weapon Ranges (Weapon, Short (+1), Medium (0), Long (-2))
 Longbow 70 140 210
@@ -830,7 +795,52 @@ Shield 7gp 5 +1
 /*
 Land Transportation (Vehicle Length x width*WeightCargoMovementHardness / HPCost (gp))
 Chariot 15' x 6'300 750 lbs60' (10') 10 / 10400 
-Coach30' x 8'1,0002,000 lbs40' (15')6 / 121,500 Wagon35' x 8'2,0004,000 lbs20' (20')6 / 16500 *Includes hitched horses or mules. Water Transportation VehicleLength x WidthCargoCrewMovementMiles/DayHardness / HPCost (gp) Canoe15' x 4'1/2  ton140'(5')304 / 450 Caravel55' x 15'75 tons1020'(20')428 / 7510,000 Carrack60' x 20'135 tons2030'(30')4810 / 12020,000 Galley, Small100' x 15'210 tons9020'(20')36 / 248 / 7515,000 Galley, Large120' x 20'375 tons16030'(25')42 / 2410 / 12030,000 Longship110' x 15'10 tons7030'(25')42 / 249 / 11025,000 Raft/Bargeper 10' x 10'1 ton240'(10')186 / 12100 Riverboat50' x 20'50 tons1020'(20')308 / 303,500 Rowboat15' x 6'1 ton130'(10')246 / 8600 Sailboat40' x 8'5 tons140'(15')367 / 202,000 Siege Engines WeaponCost Rate of Fire Attack PenaltyDamage Short Range (+1) Medium Range (+0) Long Range (-2) Ballista100 gp1/4-32d850'100'150' Battering Ram200 gp1/3+02d8N/AN/AN/A Onager300 gp1/6-62d12100'200'300' Trebuchet400 gp1/10-83d10N/A300'400' Beasts of Burden ItemCostWeightMovement Horse, Draft120 gp-60' (10') Horse, War200 gp-60' (10') Horse, Riding75 gp-80' (10') Pony*40 gp-40' (10') Pony, War*80 gp-40' (10') Bit and bridle15 sp3Horseshoes & shoeing1 gp10Saddle, Pack5 gp15Saddle, Riding10 gp35Saddlebags, pair4 gp7* Due to their small stature, Dwarves and Halflings must ride ponies rather than horses. Monetary values 1 platinum piece (pp)=5 gold pieces (gp) 1 gold piece (gp)=10 silver pieces (sp) 1 electrum piece (ep)=5 silver pieces (sp) 1 silver piece (sp)=10 copper pieces (cp) Time Normal Game TurnsCombat Rounds 10 minutes long10 seconds long * *  60 combat rounds per game turn Scale DungeonOutdoors FeetYards * * Area of effect measurements (for spells, for instance) normally remain in feet Movement and Encumbrance Armor TypeLightly Loaded Heavily Loaded No Armor or Magic Leather40'30' Leather Armor or Magic Metal30'20' Metal Armor20'10' Load Dwarf, Elf, HumanHalfling StrengthLight Load Heavy Load Light Load Heavy Load 325602040 4-535903060 6-8501204080 9-126015050100 13-156516555110 16-177018060120 188019565130
+Coach30' x 8'1,0002,000 lbs40' (15')6 / 121,500
+Wagon35' x 8'2,0004,000 lbs20' (20')6 / 16500
+
+*Includes hitched horses or mules. 
+
+Water Transportation VehicleLength x WidthCargoCrewMovementMiles/DayHardness / HPCost (gp) 
+Canoe15' x 4'1/2  ton140'(5')304 / 450 
+Caravel55' x 15'75 tons1020'(20')428 / 7510,000 
+Carrack60' x 20'135 tons2030'(30')4810 / 12020,000 
+Galley, Small100' x 15'210 tons9020'(20')36 / 248 / 7515,000
+Galley, Large120' x 20'375 tons16030'(25')42 / 2410 / 12030,000
+Longship110' x 15'10 tons7030'(25')42 / 249 / 11025,000
+Raft/Bargeper 10' x 10'1 ton240'(10')186 / 12100
+Riverboat50' x 20'50 tons1020'(20')308 / 303,500
+Rowboat15' x 6'1 ton130'(10')246 / 8600 Sailboat40' x 8'5 tons140'(15')367 / 202,000
+
+Siege Engines WeaponCost Rate of Fire Attack PenaltyDamage Short Range (+1) Medium Range (+0) Long Range (-2) 
+Ballista100 gp1/4-32d850'100'150' 
+Battering Ram200 gp1/3+02d8N/AN/AN/A 
+Onager300 gp1/6-62d12100'200'300' 
+Trebuchet400 gp1/10-83d10N/A300'400' 
+
+Beasts of Burden ItemCostWeightMovement 
+Horse, Draft120 gp-60' (10') 
+Horse, War200 gp-60' (10') 
+Horse, Riding75 gp-80' (10') 
+Pony*40 gp-40' (10') 
+Pony, War*80 gp-40' (10') 
+
+Bit and bridle15 sp3
+Horseshoes & shoeing1 gp10
+Saddle, Pack5 gp15
+Saddle, Riding10 gp35
+Saddlebags, pair4 gp7
+
+* Due to their small stature, Dwarves and Halflings must ride ponies rather than horses. 
+
+Monetary values 
+1 platinum piece (pp)=5 gold pieces (gp) 
+1 gold piece (gp)=10 silver pieces (sp) 
+1 electrum piece (ep)=5 silver pieces (sp) 
+1 silver piece (sp)=10 copper pieces (cp) 
+
+Time 
+Normal Game Turns
+Combat Rounds 10 minutes long10 seconds long * *  60 combat rounds per game turn Scale DungeonOutdoors FeetYards * * Area of effect measurements (for spells, for instance) normally remain in feet Movement and Encumbrance Armor TypeLightly Loaded Heavily Loaded No Armor or Magic Leather40'30' Leather Armor or Magic Metal30'20' Metal Armor20'10' Load Dwarf, Elf, HumanHalfling StrengthLight Load Heavy Load Light Load Heavy Load 325602040 4-535903060 6-8501204080 9-126015050100 13-156516555110 16-177018060120 188019565130
 */
 
 //Page 9
