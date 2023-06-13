@@ -840,7 +840,14 @@ Monetary values
 
 Time 
 Normal Game Turns
-Combat Rounds 10 minutes long10 seconds long * *  60 combat rounds per game turn Scale DungeonOutdoors FeetYards * * Area of effect measurements (for spells, for instance) normally remain in feet Movement and Encumbrance Armor TypeLightly Loaded Heavily Loaded No Armor or Magic Leather40'30' Leather Armor or Magic Metal30'20' Metal Armor20'10' Load Dwarf, Elf, HumanHalfling StrengthLight Load Heavy Load Light Load Heavy Load 325602040 4-535903060 6-8501204080 9-126015050100 13-156516555110 16-177018060120 188019565130
+Combat Rounds 10 minutes long10 seconds long * *  60 combat rounds per game turn 
+Scale DungeonOutdoors FeetYards * * 
+Area of effect measurements (for spells, for instance) normally remain in feet Movement and Encumbrance 
+Armor TypeLightly Loaded Heavily Loaded No Armor or Magic 
+Leather40'30' 
+Leather Armor or Magic Metal30'20' 
+Metal Armor20'10' 
+Load Dwarf, Elf, HumanHalfling StrengthLight Load Heavy Load Light Load Heavy Load 325602040 4-535903060 6-8501204080 9-126015050100 13-156516555110 16-177018060120 188019565130
 */
 
 //Page 9

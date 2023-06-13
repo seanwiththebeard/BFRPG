@@ -26,7 +26,7 @@ void main(void)
   //PrintSpecialAbilities();
   //PrintSavingThrows();
   //PrintSpellNames();
-  PrintItems();
+  //PrintItems();
 }
 
 void PrintItems()
