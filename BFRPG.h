@@ -680,9 +680,9 @@ Sixth Level
 struct 
 {
   char *Name;
-  byte cost;
-  byte weight;
-}Equipment[] = 
+  byte Cost;
+  byte Weight;
+}Equipment[31] = 
 {
   {"Backpack", 4, 0,},
   {"Candles, 12", 1, 0},
@@ -691,30 +691,30 @@ struct
   {"Glass bottle or vial", 1, 0}, 
   {"Grappling Hook", 2, 4},
   {"Holy Symbol", 25, 0}, 
-Holy Water, per vial 10gp * 
-Iron Spikes, 12 1gp 1 
-Ladder, 10 ft. 1gp 20 
-Lantern, Hooded 8 gp2 
-Map or scroll case 1gp ½ 
-Mirror, small metal 7gp * 
-Oil (per flask) 1 gp1 
-Paper (per sheet) 1gp ** 
-Pole, 10' wooden 1gp 10 
-Quiver or Bolt case 1gp 1 
-Rations, Dry, one week 10gp 14 
-Rope, Hemp (per 50 ft.) 1gp 5 
-Rope, Silk (per 50 ft.) 10gp 2 
-Sack, Large 1gp *
-Sack, Small 5sp * 
-Tent, Large (ten men) 25gp 20 
-Tent, Small (one man) 5gp 10 
-Thieves' picks and tools 25gp 1 
-Tinderbox, flint and steel 3gp 1 
-Torches, 6 1gp 1 
-Whetstone 1gp 1 
-Wineskin/Waterskin 1gp 2 
-Winter blanket 1gp 3 
-Writing ink (per vial) 8gp * }
+  {"Holy Water, per vial", 10, 0},
+  {"Iron Spikes, 12", 1, 1 },
+  {"Ladder, 10 ft", 1, 20},
+  {"Lantern, Hooded", 8, 2},
+  {"Map or scroll case", 1, 0.5}, 
+  {"Mirror, small metal", 7, 0},
+  {"Oil (per flask)", 1, 1},
+  {"Paper (per sheet)", 1, 0}, 
+  {"Pole, 10ft wooden", 1, 10},
+  {"Quiver or Bolt case", 1, 1},
+  {"Rations, Dry, one week", 10, 14}, 
+  {"Rope, Hemp (per 50 ft.)", 1, 5},
+  {"Rope, Silk (per 50 ft.)", 10, 2},
+  {"Sack, Large", 1, 0},
+  {"Sack, Small", 5, 0},
+  {"Tent, Large (ten men)", 25, 20},
+  {"Tent, Small (one man)", 5, 10},
+  {"Thieves' picks and tools", 25, 1},
+  {"Tinderbox, flint and steel", 3, 1},
+  {"Torches, 6", 1, 1},
+  {"Whetstone", 1, 1},
+  {"Wineskin/Waterskin", 1, 2},
+  {"Winter blanket", 1, 3},
+  {"Writing ink (per vial)", 8, 0}
 };
 /*
 Equipment, Weapons, and Movement

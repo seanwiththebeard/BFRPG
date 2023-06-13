@@ -15,6 +15,7 @@ void PrintSpells();
 void PrintSpecialAbilities();
 void PrintSavingThrows();
 void PrintSpellNames();
+void PrintItems();
 byte x, y, z;
 void main(void) 
 {
@@ -24,7 +25,19 @@ void main(void)
   //PrintSpells();
   //PrintSpecialAbilities();
   //PrintSavingThrows();
-  PrintSpellNames();
+  //PrintSpellNames();
+  PrintItems();
+}
+
+void PrintItems()
+{
+  clrscr();
+  printf("Common Equipment:\n");
+    for (x = 0; x < 31; ++x)
+    {
+      printf("%s %dgp %dlb\n", Equipment[x].Name, Equipment[x].Cost, Equipment[x].Weight);
+    }
+  getchar();
 }
 void PrintSpellNames()
 {
