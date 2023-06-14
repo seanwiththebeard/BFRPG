@@ -718,70 +718,90 @@ struct
   {"Winter blanket", 1, 3},
   {"Writing ink (per vial)", 8, 0}
 };
-/*
 
-Missile Weapon Ranges (Weapon, Short (+1), Medium (0), Long (-2))
-Longbow 70 140 210
-Shortbow 50 100 150 
-Heavy Crossbow 80 160 240 
-Light Crossbow 60 120 180 
-Dagger 10 20 30 
-Hammer 10 20 30 
-Hand Axe 10 20 30 
-Oil or Holy Water 10 30 50 
-Sling 30 60 90 
-Spear 10 20 30 
+struct
+{
+  char *Name;
+  byte Range[3];
+}MissileWeaponRanges[] =
+{
+  //Short +1 Medium 0 Long -2
+  {"Longbow", 70, 140, 210},
+  {"Shortbow", 50, 100, 150}, 
+  {"Heavy Crossbow", 80, 160, 240}, 
+  {"Light Crossbow", 60, 120, 180},
+  {"Dagger", 10, 20, 30},
+  {"Hammer", 10, 20, 30},
+  {"Hand Axe", 10, 20, 30},
+  {"Oil or Holy Water", 10, 30, 50},
+  {"Sling", 30, 60, 90},
+  {"Spear", 10, 20, 30},
+  //* Missile weapon ranges are given in feet. 
+  //In the wilderness, substitute yards for feet 
+};
 
-* Missile weapon ranges are given in feet. 
-In the wilderness, substitute yards for feet 
+typedef enum {S, M, L} weaponSize;
 
-Weapons (Weapon, Cost, Size, Weight, Dmg.)
-//Axes
-Hand Axe 4gp S 5 1d6 
-Battle Axe7 gpM71d8 
-Great Axe14 gpL151d10
+struct
+{
+  char *Name;
+  byte Cost;
+  weaponSize Size;
+  byte Weight;
+  byte DmgDiceSize;
+}Weapons[] = 
+{
+  //Axes
+  {"Hand Axe", 4, S, 5, 6},
+  {"Battle Axe", 7, M, 7, 8}, 
+{"Great Axe", 14, L, 15, 10},
 
 //Bows
-Shortbow 25gp M 2 
+{"Shortbow", 25, M, 2},
 	Shortbow Arrow 1sp 0.1 1d6 
 	Silver*Shortbow Arrow 2gp 0.1 1d6 
-Longbow 60gp L 3 
+{"Longbow", 60gp L 3 },
 	Longbow Arrow 2sp 0.1 1d8 
 	Silver*Longbow Arrow 4gp 0.1 1d8
-Light Crossbow 30gp M 7 
+{"Light Crossbow", 30gp M 7 },
 	Light Quarrel 2sp 0.1 1d6 
 	Silver*Light Quarre l 5gp 0.1 1d6 
-Heavy Crossbow 50gp L 14 
+{"Heavy Crossbow", 50gp L 14 },
 	Heavy Quarrel 4sp 0.1 1d8 
 	Silver*Heavy Quarrel 10gp 0.1 1d8 
 
 //Daggers 
-Dagger2 gpS11d4 
-Silver* Dagger25 gpS11d4 
+{"Dagger",2 gpS11d4 },
+{"Silver* Dagger",25 gpS11d4 },
 
 //Swords 
-Shortsword 6gp S 3 1d6 
-Longsword/Scimitar 10gp M 4 1d8 
-Two-Handed Sword 18 gp L 10 1d10 
+{"Shortsword", 6gp S 3 1d6 },
+{"Longsword/Scimitar", 10gp M 4 1d8 },
+{"Two-Handed Sword", 18 gp L 10 1d10 },
 
 //Hammers and Maces 
-Warhammer 4gp S 6 1d6 
-Mace 6gp M 10 1d8 
-Maul 10gp L 16 1d10 
+{"Warhammer", 4gp S 6 1d6 },
+{"Mace", 6gp M 10 1d8 },
+{"Maul", 10gp L 16 1d10 },
 
 //Other Weapons 
-Club/Cudgel/Walking Staff 2sp M1 1d4 
-Quarterstaff 2gp L 4 1d6 
-Pole Arm 9gp L 15 1d10 
-Sling 1gp S 0.1 
-Bullet 1sp 0.1 1d4 
-Stone n/a 0.1 1d3 
-Spear 5gp M 5 
-Thrown (one handed) 1d6 
-Melee (one handed) 1d6 
-Melee (two handed) 1d8 
+{"Club/Cudgel/Walking Staff", 2sp M1 1d4 },
+{"Quarterstaff", 2gp L 4 1d6 },
+{"Pole Arm", 9gp L 15 1d10 },
+{"Sling", 1gp S 0.1 },
+{"Bullet", 1sp 0.1 1d4 },
+{"Stone", n/a 0.1 1d3 },
+{"Spear", 5gp M 5 },
+	Thrown (one handed) 1d6 },
+	Melee (one handed) 1d6 },
+	Melee (two handed) 1d8 },
 
-* Silver tip or blade, for use against lycanthropes. 
+//* Silver tip or blade, for use against lycanthropes. 
+  };
+
+
+/*
+
 
 Armor and Shields (Armor Type, Cost, Weight, AC)
 No Armor 0 gp 0 11 
