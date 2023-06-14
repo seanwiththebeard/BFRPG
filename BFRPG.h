@@ -399,7 +399,7 @@ typedef enum
   Ability_Hide,
   Ability_Listen,
   Ability_SneakAttack,
-  }SpecialAbility;
+}SpecialAbility;
 
 struct{char Value[14];}SpecialAbilityName[13] = {"Null", "Turn Undead", "Cast Divine", "Read Magic", "Cast Arcane", "Open Lock", "Remove Trap", "Pick Pocket", "Move Silently", "Climb Wall", "Hide", "Listen", "Sneak Attack"};
 
@@ -754,62 +754,63 @@ struct
   //Axes
   {"Hand Axe", 4, S, 5, 6},
   {"Battle Axe", 7, M, 7, 8}, 
-{"Great Axe", 14, L, 15, 10},
+  {"Great Axe", 14, L, 15, 10},
 
-//Bows
-{"Shortbow", 25, M, 2},
-	Shortbow Arrow 1sp 0.1 1d6 
-	Silver*Shortbow Arrow 2gp 0.1 1d6 
-{"Longbow", 60gp L 3 },
-	Longbow Arrow 2sp 0.1 1d8 
-	Silver*Longbow Arrow 4gp 0.1 1d8
-{"Light Crossbow", 30gp M 7 },
-	Light Quarrel 2sp 0.1 1d6 
-	Silver*Light Quarre l 5gp 0.1 1d6 
-{"Heavy Crossbow", 50gp L 14 },
-	Heavy Quarrel 4sp 0.1 1d8 
-	Silver*Heavy Quarrel 10gp 0.1 1d8 
+  //Bows
+  {"Shortbow", 25, M, 2, 6},
+  //Shortbow Arrow 1sp 0.1 1d6 
+  //Silver*Shortbow Arrow 2gp 0.1 1d6 
+  {"Longbow", 60, L, 3, 8},
+  //Longbow Arrow 2sp 0.1 1d8 
+  //Silver*Longbow Arrow 4gp 0.1 1d8
+  {"Light Crossbow", 30, M, 7, 6},
+  //Light Quarrel 2sp 0.1 1d6 
+  //Silver*Light Quarre l 5gp 0.1 1d6 
+  {"Heavy Crossbow", 50, L, 14, 8},
+  //Heavy Quarrel 4sp 0.1 1d8 
+  //Silver*Heavy Quarrel 10gp 0.1 1d8 
 
-//Daggers 
-{"Dagger",2 gpS11d4 },
-{"Silver* Dagger",25 gpS11d4 },
+  //Daggers 
+  {"Dagger", 2, S, 1,4},
+  {"Silver* Dagger", 25, S, 1, 4},
 
-//Swords 
-{"Shortsword", 6gp S 3 1d6 },
-{"Longsword/Scimitar", 10gp M 4 1d8 },
-{"Two-Handed Sword", 18 gp L 10 1d10 },
+  //Swords 
+  {"Shortsword", 6, S, 3, 6},
+  {"Longsword/Scimitar", 10, M, 4, 8},
+  {"Two-Handed Sword", 18, L, 10, 10},
 
-//Hammers and Maces 
-{"Warhammer", 4gp S 6 1d6 },
-{"Mace", 6gp M 10 1d8 },
-{"Maul", 10gp L 16 1d10 },
+  //Hammers and Maces 
+  {"Warhammer", 4, S, 6, 6},
+  {"Mace", 6, M, 10, 8},
+  {"Maul", 10, L, 16, 10},
 
-//Other Weapons 
-{"Club/Cudgel/Walking Staff", 2sp M1 1d4 },
-{"Quarterstaff", 2gp L 4 1d6 },
-{"Pole Arm", 9gp L 15 1d10 },
-{"Sling", 1gp S 0.1 },
-{"Bullet", 1sp 0.1 1d4 },
-{"Stone", n/a 0.1 1d3 },
-{"Spear", 5gp M 5 },
-	Thrown (one handed) 1d6 },
-	Melee (one handed) 1d6 },
-	Melee (two handed) 1d8 },
+  //Other Weapons 
+  {"Club/Cudgel/Walking Staff", 2, M, 1, 4},
+  {"Quarterstaff", 2, L, 4, 6},
+  {"Pole Arm", 9, L, 15, 10},
+  {"Sling", 1, S, 0.1 },
+  {"Bullet", 1, S, 0.1, 4 },
+  {"Stone", 0, S, 0.1, 3 },
+  {"Spear Thrown (one handed)", 5, M, 5, 6 },
+  {"Spear Melee (one handed)", 5, M, 5, 6 },
+  {"Spear Melee (two handed)", 5, M, 5, 8 },
 
-//* Silver tip or blade, for use against lycanthropes. 
-  };
+  //* Silver tip or blade, for use against lycanthropes. 
+};
 
+struct
+{
+  char* Name;
+  byte Cost, Weight, AC;
+}Armor[] = 
+{
+  {"No Armor", 0, 0, 11},
+  {"Leather Armor", 20, 15, 13}, 
+  {"Chain Mail", 60, 40, 15},
+  {"Plate Mail", 300, 50, 17},
+  {"Shield", 7, 5, 1}
+};
 
-/*
-
-
-Armor and Shields (Armor Type, Cost, Weight, AC)
-No Armor 0 gp 0 11 
-Leather Armor 20gp 15 13 
-Chain Mail 60gp 40 15 
-Plate Mail 300gp 50 17 
-Shield 7gp 5 +1
-*/
 
 //Page 8
 /*
