@@ -817,7 +817,7 @@ struct
 {
   char* Name;
   byte VehicleLength, VehicleWidth, MovementA, MovementB, Hardness, HP, Cost;
-  int Weight, CargoCapacity;
+  int Weight, CargoCapacity; //Pounds
 }LandTransportation[] =
 {
   {"Chariot", 15, 6, 60, 10, 10, 10, 400, 300, 750},
@@ -825,25 +825,52 @@ struct
   {"Wagon", 35, 8, 20, 20, 6, 16, 500, 2000, 4000}
   //*Includes hitched horses or mules.
 };
+
+struct
+{
+  char* Name;
+  //Cargo in tons
+  byte Length, Width, Crew, MovementA, MovementB, MilesPerDayA, MilesPerDayB, Hardness, HP;
+  int Cost, Cargo;
+}WaterTransportation[] = 
+{
+  {"Canoe", 15, 4, 1, 40, 5, 30, 30, 4, 4,
+   50, 0.5},
+  {"Caravel", 55, 15, 10, 20, 20, 42, 42, 8, 75,
+   10000, 75},
+  {"Carrack", 60, 20, 20, 30, 30, 48, 48, 10, 120,
+   20000, 135},
+  {"Galley, Small", 100, 15, 90, 20, 20, 36, 24, 8, 75,
+   15000, 210},
+  {"Galley, Large", 120, 20, 160, 30, 25, 42, 24, 10, 120,
+   30000, 375},
+  {"Longship", 110, 15, 70, 30, 25, 42, 24, 9, 110,
+   25000, 10},
+  {"Raft/Barge", 10, 10, 1, 2, 40, 10, 18, 18, 6, 12,
+   100, },
+  {"Riverboat", 50, 20, 50, 10, 20, 20, 30, 30, 8, 30,
+   3500, },
+  {"Rowboat", 15, 6, 1, 30, 10, 24, 24, 6, 8,
+   600, 1},
+  {"Sailboat", 40, 8, 5, 40, 15, 36, 7, 20,
+   2000, 1}
+};
+
+struct
+{
+  char* Name;
+    int Cost;
+  //Rate of Fire = 1/RateOfFire
+  //Attack Penalty = negative
+    byte RateOfFire, AttackPenalty, DamageDiceQuantity, DamageDiceSize, ShortRange, MediumRange, LongRange;   
+}SiegeEngines[] = 
+{
+  {"Ballista", 100, 4, 3, 2, 8, 50, 100, 150}, 
+  {"Battering Ram", 200, 3,0, 2,8, 0, 0, 0}, 
+  {"Onager", 300, 6, 6, 2, 12, 100, 200, 300},
+  {"Trebuchet", 400, 10, 8, 3, 10, 300, 400} 
+};
 /*
-
-
-Water Transportation VehicleLength x WidthCargoCrewMovementMiles/DayHardness / HPCost (gp) 
-Canoe15' x 4'1/2  ton140'(5')304 / 450 
-Caravel55' x 15'75 tons1020'(20')428 / 7510,000 
-Carrack60' x 20'135 tons2030'(30')4810 / 12020,000 
-Galley, Small100' x 15'210 tons9020'(20')36 / 248 / 7515,000
-Galley, Large120' x 20'375 tons16030'(25')42 / 2410 / 12030,000
-Longship110' x 15'10 tons7030'(25')42 / 249 / 11025,000
-Raft/Bargeper 10' x 10'1 ton240'(10')186 / 12100
-Riverboat50' x 20'50 tons1020'(20')308 / 303,500
-Rowboat15' x 6'1 ton130'(10')246 / 8600 Sailboat40' x 8'5 tons140'(15')367 / 202,000
-
-Siege Engines WeaponCost Rate of Fire Attack PenaltyDamage Short Range (+1) Medium Range (+0) Long Range (-2) 
-Ballista100 gp1/4-32d850'100'150' 
-Battering Ram200 gp1/3+02d8N/AN/AN/A 
-Onager300 gp1/6-62d12100'200'300' 
-Trebuchet400 gp1/10-83d10N/A300'400' 
 
 Beasts of Burden ItemCostWeightMovement 
 Horse, Draft120 gp-60' (10') 
@@ -851,7 +878,6 @@ Horse, War200 gp-60' (10')
 Horse, Riding75 gp-80' (10') 
 Pony*40 gp-40' (10') 
 Pony, War*80 gp-40' (10') 
-
 Bit and bridle15 sp3
 Horseshoes & shoeing1 gp10
 Saddle, Pack5 gp15
