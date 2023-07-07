@@ -813,13 +813,20 @@ struct
 
 
 //Page 8
+struct
+{
+  char* Name;
+  byte VehicleLength, VehicleWidth, MovementA, MovementB, Hardness, HP, Cost;
+  int Weight, CargoCapacity;
+}LandTransportation[] =
+{
+  {"Chariot", 15, 6, 60, 10, 10, 10, 400, 300, 750},
+  {"Coach", 30, 8, 40, 15, 6, 12, 1500, 1000, 2000},
+  {"Wagon", 35, 8, 20, 20, 6, 16, 500, 2000, 4000}
+  //*Includes hitched horses or mules.
+};
 /*
-Land Transportation (Vehicle Length x width*WeightCargoMovementHardness / HPCost (gp))
-Chariot 15' x 6'300 750 lbs60' (10') 10 / 10400 
-Coach30' x 8'1,0002,000 lbs40' (15')6 / 121,500
-Wagon35' x 8'2,0004,000 lbs20' (20')6 / 16500
 
-*Includes hitched horses or mules. 
 
 Water Transportation VehicleLength x WidthCargoCrewMovementMiles/DayHardness / HPCost (gp) 
 Canoe15' x 4'1/2  ton140'(5')304 / 450 
