@@ -870,22 +870,26 @@ struct
   {"Onager", 300, 6, 6, 2, 12, 100, 200, 300},
   {"Trebuchet", 400, 10, 8, 3, 10, 300, 400} 
 };
+
+struct
+{
+char* Name;
+  byte Cost, Weight, Movement; 
+}BeastsOfBurden[] =
+{
+  {"Horse, Draft", 120, 60, 10},
+  {"Horse, War", 200, 60, 10},
+  {"Horse, Riding", 75, 80, 10},
+  {"Pony*", 40, 40, 10},
+  {"Pony, War*", 80, 40, 10}, 
+  {"Bit and bridle", 1.5, 0, 0},
+  {"Horseshoes & shoeing", 1, 10},
+  {"Saddle, Pack", 5, 15, 0},
+  {"Saddle, Riding", 10, 35, 0},
+  {"Saddlebags, pair", 4, 7, 0}
+  //* Due to their small stature, Dwarves and Halflings must ride ponies rather than horses. 
+};
 /*
-
-Beasts of Burden ItemCostWeightMovement 
-Horse, Draft120 gp-60' (10') 
-Horse, War200 gp-60' (10') 
-Horse, Riding75 gp-80' (10') 
-Pony*40 gp-40' (10') 
-Pony, War*80 gp-40' (10') 
-Bit and bridle15 sp3
-Horseshoes & shoeing1 gp10
-Saddle, Pack5 gp15
-Saddle, Riding10 gp35
-Saddlebags, pair4 gp7
-
-* Due to their small stature, Dwarves and Halflings must ride ponies rather than horses. 
-
 Monetary values 
 1 platinum piece (pp)=5 gold pieces (gp) 
 1 gold piece (gp)=10 silver pieces (sp) 
