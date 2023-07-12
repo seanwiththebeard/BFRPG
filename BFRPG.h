@@ -889,6 +889,7 @@ char* Name;
   {"Saddlebags, pair", 4, 7, 0}
   //* Due to their small stature, Dwarves and Halflings must ride ponies rather than horses. 
 };
+
 /*
 Monetary values 
 1 platinum piece (pp)=5 gold pieces (gp) 
@@ -897,20 +898,91 @@ Monetary values
 1 silver piece (sp)=10 copper pieces (cp) 
 
 Time 
-Normal Game Turns
-Combat Rounds 10 minutes long10 seconds long * *  60 combat rounds per game turn 
-Scale DungeonOutdoors FeetYards * * 
-Area of effect measurements (for spells, for instance) normally remain in feet Movement and Encumbrance 
-Armor TypeLightly Loaded Heavily Loaded No Armor or Magic 
-Leather40'30' 
-Leather Armor or Magic Metal30'20' 
-Metal Armor20'10' 
-Load Dwarf, Elf, HumanHalfling StrengthLight Load Heavy Load Light Load Heavy Load 325602040 4-535903060 6-8501204080 9-126015050100 13-156516555110 16-177018060120 188019565130
+Normal Game Turns - 10 minutes long
+Combat Rounds - 10 seconds long* 
+*60 combat rounds per game turn
+
+Scale
+Dungeon - Feet
+Outdoors Yards*
+*Area of effect measurements (for spells, for instance) normally remain in feet
 */
+
+struct
+{
+  byte LightlyLoaded, HeavilyLoaded;
+}MovementEncumberance[] =
+{
+  {40, 30},	//No Armor or Magic Leather
+  {30, 20},	//Leather Armor or Magic Metal
+  {20, 10}	//Metal Armor
+};
+
+struct
+{
+  byte NormalLight, NormalHeavy, HalflingLight, HalflingHeavy;
+}Load[] =
+{
+  //Index = level - 3
+  {25, 60, 20, 40}, 	//3
+  {35, 90, 30, 60},	//4
+  {35, 90, 30, 60},	//5
+  {50, 120, 40, 80},	//6
+  {50, 120, 40, 80},	//7
+  {50, 120, 40, 80},	//8
+  {60, 150, 50, 100},	//9
+  {60, 150, 50, 100},	//10
+  {60, 150, 50, 100},	//11
+  {60, 150, 50, 100},	//12
+  {65, 165, 55, 110},	//13
+  {65, 165, 55, 110},	//14
+  {65, 165, 55, 110},	//15
+  {70, 180, 70, 120}, 	//16
+  {70, 180, 70, 120}, 	//17
+  {80, 195, 65, 130}	//18
+};
 
 //Page 9
 /*
-Wilderness Movement Rates Encounter Movement (Feet per Round) Wilderness Movement (Miles per Day) 10'6 20'12 30'18 40'24 50'30 60'36 70'42 80'48 90'54 100'60 110'66 120'72 •Based on 8 hour day of travel through open, clear terrain •Forced march: 12 hours per day, add 50% to the distance traveled (1d6 damage, save vs. Death Ray) •Waterborne Travel: 12 hour day of travel (ships may travel 24 hours per day) •Traveling by air: overland movement rates are doubled, and all terrain effects are ignored Overland Travel Terrain Adjustment Jungle, Mountains, Swampx1/3 Desert, Forest, Hillsx1/2 Clear, Plains, Trailx2/3 Road (Paved)x1 Wind Direction d12Wind Direction 1Northerly 2Northeasterly 3Easterly 4Southeasterly 5Southerly 6Southwesterly 7Westerly 8Northwesterly 9-12Prevailing wind direction for this locale Wind Conditions Adjustment d%Wind ConditionsSailing 01-05Becalmedx0 06-13Very Light Breezex1/3 14-25Light Breezex1/2 26-40Moderate Breezex2/3 41-70Average Windsx1 71-85Strong Windsx1 1/3 86-96Very Strong Windsx1 1/2 97-00Galex2 Retainers* Adjusted Die RollResult 2 or lessRefusal, -1 on further rolls 3-5Refusal 6-8Try again 9-11Acceptance 12 or moreAcceptance, +1 to Loyalty * Roll 2d6 and adds the player character's Charisma bonus and any adjustments Monster XP Table Monster Hit DiceXP ValueSpecial Ability Bonus less than 1103 12512 27525 314530 424040 536045 650055 767065 887570 91,07575 101,30090 111,57595 121,875100 132,175110 142,500115 152,850125 163,250135 173,600145 184,000160 194,500175 Opening Doors Door TypeRoll Range / Dice Stuck door1 ÷ (1+Strength bonus) on 1d6 Locked doors1 ÷ (1+Strength bonus) on 1d10 Metal bars doors1 ÷ (1+Strength bonus) on 1d20 Detection Item TypeDwarvesElvesOthers Traps*1-2 on 1d61 on 1d61 on 1d6 Shifting walls1-2 on 1d6-- New construction1-2 on 1d6-- Slanting passages1-2 on 1d6-- Secret doors* •1 on 1d6 •1-2 on 1d6 if INT>=15 •1-2 on 1d6 •1 on 1d6  with a look •1 on 1d6 •1-2 on 1d6 if INT>=15 * It takes at least a turn per 10' square area for searching
+Wilderness Movement Rates Encounter Movement (Feet per Round)
+Wilderness Movement (Miles per Day) 10'6 20'12 30'18 40'24 50'30 60'36 70'42 80'48 90'54 100'60 110'66 120'72 
+•Based on 8 hour day of travel through open, clear terrain 
+•Forced march: 12 hours per day, add 50% to the distance traveled (1d6 damage, save vs. Death Ray) 
+•Waterborne Travel: 12 hour day of travel (ships may travel 24 hours per day) 
+•Traveling by air: overland movement rates are doubled, and all terrain effects are ignored 
+
+Overland Travel Terrain Adjustment
+Jungle, Mountains, Swampx1/3 Desert, Forest, Hillsx1/2 Clear, Plains, Trailx2/3 Road (Paved)x1 
+
+Wind Direction d12
+1Northerly 
+2Northeasterly 
+3Easterly 
+4Southeasterly 
+5Southerly 
+6Southwesterly 
+7Westerly 
+8Northwesterly 
+9-12Prevailing wind direction for this locale
+
+Wind Conditions Adjustment 
+d% Wind Conditions Sailing
+01-05 Becalmed x0
+06-13 Very Light Breeze x1/3
+14-25 Light Breeze x1/2
+26-40 Moderate Breeze x2/3
+41-70 Average Winds x1
+71-85 Strong Winds x1 1/3
+86-96 Very Strong Winds x1 1/2
+97-00 Gale x2
+
+Retainers* Adjusted Die RollResult 2 or lessRefusal, -1 on further rolls 3-5Refusal 6-8Try again 9-11Acceptance 12 or moreAcceptance, +1 to Loyalty * Roll 2d6 and adds the player character's Charisma bonus and any adjustments
+
+Monster XP Table Monster Hit DiceXP ValueSpecial Ability Bonus less than 1103 12512 27525 314530 424040 536045 650055 767065 887570 91,07575 101,30090 111,57595 121,875100 132,175110 142,500115 152,850125 163,250135 173,600145 184,000160 194,500175 
+
+Opening Doors Door TypeRoll Range / Dice Stuck door1 ÷ (1+Strength bonus) on 1d6 Locked doors1 ÷ (1+Strength bonus) on 1d10 Metal bars doors1 ÷ (1+Strength bonus) on 1d20
+
+Detection Item TypeDwarvesElvesOthers Traps*1-2 on 1d61 on 1d61 on 1d6 Shifting walls1-2 on 1d6-- New construction1-2 on 1d6-- Slanting passages1-2 on 1d6-- Secret doors* •1 on 1d6 •1-2 on 1d6 if INT>=15 •1-2 on 1d6 •1 on 1d6  with a look •1 on 1d6 •1-2 on 1d6 if INT>=15 * It takes at least a turn per 10' square area for searching
 */
 
 //Page 10
