@@ -943,28 +943,52 @@ struct
 };
 
 //Page 9
+struct{byte FeetPerRound, MilesPerDay;}WildernessMovementRates[] = 
+{
+  {10, 6},
+  {20, 12},
+  {30, 18},
+  {40, 24},
+  {50, 30},
+  {60, 36},
+  {70, 42},
+  {80, 48},
+  {90, 54},
+  {100, 60},
+  {110, 66},
+  {120, 72}
+  
+  //•Based on 8 hour day of travel through open, clear terrain 
+  //•Forced march: 12 hours per day, add 50% to the distance traveled (1d6 damage, save vs. Death Ray)
+  //•Waterborne Travel: 12 hour day of travel (ships may travel 24 hours per day) 
+  //•Traveling by air: overland movement rates are doubled, and all terrain effects are ignored 
+};
+
+byte OverlandTravelAdjustment[] = 
+{ //Multuply by value and divide by 100
+  33, //Jungle, Mountains, Swamp
+  33, //Desert, Forest, Hills
+  66, //Clear, Plains, Trail
+  100 //Road (Paved)
+};
+
+char* WindDirection[] = 
+{
+  "Northerly",
+  "Northeasterly",
+  "Easterly",
+  "Southeasterly",
+  "Southerly",
+  "Southwesterly",
+  "Westerly",
+  "Northwesterly",
+  "Prevailing",
+  "Prevailing",
+  "Prevailing",
+  "Prevailing",
+};
+
 /*
-Wilderness Movement Rates Encounter Movement (Feet per Round)
-Wilderness Movement (Miles per Day) 10'6 20'12 30'18 40'24 50'30 60'36 70'42 80'48 90'54 100'60 110'66 120'72 
-•Based on 8 hour day of travel through open, clear terrain 
-•Forced march: 12 hours per day, add 50% to the distance traveled (1d6 damage, save vs. Death Ray) 
-•Waterborne Travel: 12 hour day of travel (ships may travel 24 hours per day) 
-•Traveling by air: overland movement rates are doubled, and all terrain effects are ignored 
-
-Overland Travel Terrain Adjustment
-Jungle, Mountains, Swampx1/3 Desert, Forest, Hillsx1/2 Clear, Plains, Trailx2/3 Road (Paved)x1 
-
-Wind Direction d12
-1Northerly 
-2Northeasterly 
-3Easterly 
-4Southeasterly 
-5Southerly 
-6Southwesterly 
-7Westerly 
-8Northwesterly 
-9-12Prevailing wind direction for this locale
-
 Wind Conditions Adjustment 
 d% Wind Conditions Sailing
 01-05 Becalmed x0
