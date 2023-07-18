@@ -1198,9 +1198,51 @@ of the point of impact.
 */
 
 //Page 11
+//Attack Bonus Tables
+//*On a hit roll a natural "1" is always a failure. A natural "20" is always a hit, if the opponent can be hit at all
+byte AttackBonusTable[][] = 
+{//Index = Level + 1
+  {//Fighter
+    1, 2, 2, 3, 4, 4, 5, 6, 6, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 10},
+  {//Cleric
+    1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8},
+  {//Thief
+    1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8},
+  {//Magic-User
+    1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7},
+};
+
+//0-32 and 32+
+byte MonsterAttackBonusTable[] = 
+{//Index = Monster Hit Dice
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14, 15, 15, 15, 15, 16};
+
 /*
-Attack Bonus Table Fighter LevelCleric  or Thief LevelMagic-User LevelMonster Hit DiceAttack Bonus NMless than 1+0 11-21-31+1 2-33-44-52+2 45-66-83+3 5-67-89-124+4 79-1113-155+5 8-1012-1416-186+6 11-1215-1719-207+7 13-1518-208-9+8 16-1710-11+9 18-2012-13+10 14-15+11 16-19+12 20-23+13 24-27+14 28-31+15 32 or more+16 *  On a hit roll a natural "1" is always a failure. A natural "20" is always a hit, if the opponent can be hit at all Monsters and mapping Monsters description notation NameIf an asterisk appears after the monster's name, it indicates that the monster is only able to be hit by special weapons (such as silver or magical weapons, or creatures affected only by fire, etc.) Armor Class •If the monster  wears armor, the first listed AC value is with that armor, and the second, in parentheses, is unarmored •Some monsters are only able to be hit by silver(†) or magical weapons(‡) Hit Dice •Monsters always roll eight sided dice (d8) for hit points, unless noted otherwise •* or ** : Special Ability Bonus to experience points (each asterisk adds the special ability bonus once) •If the monster's Attack Bonus is different than its number of Hit Dice the Attack Bonus will be listed in parentheses after the Hit Dice figure MovementA distance may appear in parentheses after a movement figure; this is the creature's turning distance.  If a turning distance is not listed, assume 5'.
+Monsters and mapping
+Monsters description notation
+Name		If an asterisk appears after the monster's name, it indicates that the monster 
+        	is only able to be hit by special weapons (such as silver or magical weapons, 
+        	or creatures affected only by fire, etc.) 
+
+Armor Class	•If the monster  wears armor, the first listed AC value is with that armor, and 
+		the second, in parentheses, is unarmored 
+                •Some monsters are only able to be hit by silver(†) or magical weapons(‡)
+
+Hit Dice 	•Monsters always roll eight sided dice (d8) for hit points, unless noted otherwise 
+		•* or ** : Special Ability Bonus to experience points (each asterisk adds the special
+                ability bonus once) 
+                •If the monster's Attack Bonus is different than its number of Hit Dice the Attack Bonus 
+                will be listed in parentheses after the Hit Dice figure MovementA distance may appear in 
+                parentheses after a movement figure; this is the creature's turning distance.  If a turning 
+                distance is not listed, assume 5'.
 */
+
+typedef enum
+{Door, DoubleDoor, Locked Door, DoubleLockedDoor,
+ Grate, Fireplace, Ladder, Curtain, Bars, Statue,
+ Secret Door, Pit, Fountain, Chest, Well, Trapdoor,
+ Stairs, Spiralstair, Bed, FalseDoor, Altar, Throne,
+ Ctrapdoor, Pillar}CommonDungeonSymbols;
 
 //Page 12
 /*
