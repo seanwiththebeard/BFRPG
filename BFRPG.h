@@ -998,15 +998,79 @@ d% Wind Conditions Sailing
 41-70 Average Winds x1
 71-85 Strong Winds x1 1/3
 86-96 Very Strong Winds x1 1/2
-97-00 Gale x2
+97-00 Gale x2*/
+typedef enum
+{
+  RefusalPenalty, 
+  Refusal,
+  TryAgain, 
+  Acceptance,
+  AcceptLoyaltyBonus
+}RetainerResult;
 
-Retainers* Adjusted Die RollResult 2 or lessRefusal, -1 on further rolls 3-5Refusal 6-8Try again 9-11Acceptance 12 or moreAcceptance, +1 to Loyalty * Roll 2d6 and adds the player character's Charisma bonus and any adjustments
+RetainerResult retainerResult[] = 
+{ //Index = Roll 2d6 + character CHA bonus - 1
+  RefusalPenalty,	//1
+  RefusalPenalty,	//2
+  Refusal,		//3
+  Refusal,		//4
+  Refusal,		//5
+  TryAgain,		//6
+  TryAgain,  		//7
+  TryAgain,  		//8
+  Acceptance,		//9
+  Acceptance,		//10
+  Acceptance,		//11
+  AcceptLoyaltyBonus  	//12
+};
 
-Monster XP Table Monster Hit DiceXP ValueSpecial Ability Bonus less than 1103 12512 27525 314530 424040 536045 650055 767065 887570 91,07575 101,30090 111,57595 121,875100 132,175110 142,500115 152,850125 163,250135 173,600145 184,000160 194,500175 
+struct 
+{
+  int XPValue;
+  byte SpeciaAbilityBonus;
+}MonsterXPTable[] = 
+{ //Index = Monster Hit Dice
+  {10, 3},
+  {25, 12},
+  {75, 145},
+  {240, 40},
+  {360, 45},
+  {500, 55},
+  {670, 65},
+  {875, 70},
+  {1075, 75},
+  {1300, 90},
+  {1575, 95},
+  {1875, 100},
+  {2175, 110},
+  {2500, 115},
+  {2850, 125},
+  {3250, 135},
+  {3600, 135},
+  {4000, 160},
+  {4500, 175},
+};
 
-Opening Doors Door TypeRoll Range / Dice Stuck door1 ÷ (1+Strength bonus) on 1d6 Locked doors1 ÷ (1+Strength bonus) on 1d10 Metal bars doors1 ÷ (1+Strength bonus) on 1d20
+byte OpeningDoors[] =  //1 / (1+STRBonus) on 1dX
+{
+  6,	//Stuck door
+  10,	//Locked door
+  20	//Metal bars doors
+};
 
-Detection Item TypeDwarvesElvesOthers Traps*1-2 on 1d61 on 1d61 on 1d6 Shifting walls1-2 on 1d6-- New construction1-2 on 1d6-- Slanting passages1-2 on 1d6-- Secret doors* •1 on 1d6 •1-2 on 1d6 if INT>=15 •1-2 on 1d6 •1 on 1d6  with a look •1 on 1d6 •1-2 on 1d6 if INT>=15 * It takes at least a turn per 10' square area for searching
+/*
+Detection - Dwarves, Elves, Others
+Traps* 			1-2 on 1d6, 1 on 1d6, 1 on 1d6
+*It takes at least a turn per 10' square area for searching
+
+Shifting walls		1-2 on 1d6, -, -
+
+New construction	1-2 on 1d6, -, -
+
+Slanting passages	1-2 on 1d6, -, -
+
+Secret doors* 		•1 on 1d6 •1-2 on 1d6 if INT>=15, •1-2 on 1d6 •1 on 1d6 with a look, •1 on 1d6 •1-2 on 1d6 if INT>=15 
+
 */
 
 //Page 10

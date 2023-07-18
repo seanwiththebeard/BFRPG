@@ -1,5 +1,5 @@
 #include "BFRPG.h"
-#include <conio.h>
+/*#include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <peekpoke.h>
@@ -16,7 +16,7 @@ void PrintSpecialAbilities();
 void PrintSavingThrows();
 void PrintSpellNames();
 void PrintItems();
-byte x, y, z;
+byte x, y, z;*/
 void main(void) 
 {
   //PrintAbilityModifiers();
@@ -28,7 +28,7 @@ void main(void)
   //PrintSpellNames();
   //PrintItems();
 }
-
+/*
 void PrintItems()
 {
   clrscr();
@@ -161,3 +161,4 @@ void PrintSavingThrows()
   }
   getchar();
 }
+*/
