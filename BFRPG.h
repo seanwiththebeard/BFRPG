@@ -1303,7 +1303,10 @@ d%, Type, Base Value in Gold Pieces, Number Found,
 96-00, Gem, 1000, 1d2
        Jewel, 5000, 1
        
-The values of gems vary from the above for reasons of quality, size, etc.  The GM may use the table below to adjust the values of the gems in the hoard, at his or her option.  This is why there is no die result given in the table above for Jewel; on a roll of 12 on the table below, a Gem can become a Jewel. 
+The values of gems vary from the above for reasons of quality, size, etc. 
+The GM may use the table below to adjust the values of the gems in the hoard, at his or her option.  
+This is why there is no die result given in the table above for Jewel; on a roll of 12 on
+the table below, a Gem can become a Jewel. 
 2d6, Value Adjustment
 2, Next Lower Value Row
 3, 1/2 
@@ -1480,20 +1483,301 @@ d%Armor Bonus
 /*
 Miscellaneous Magic Items 
 d%, Type 
-01-04 Amulet of Proof against Detection and Location 05-06Bag of Devouring 07-12Bag of Holding 13-17Boots of Levitation 18-22Boots of Speed 23-27Boots of Traveling and Leaping 28Bowl Commanding Water Elementals 29Brazier Commanding Fire Elementals 30-35Broom of Flying 36Censer Commanding Air Elementals 37-39Cloak of Displacement 40-43Crystal Ball 44-45Crystal Ball with Clairaudience 46Drums of Panic 47Efreeti Bottle 48-54Elven Boots 55-61Elven Cloak 62-63Flying Carpet 64-70Gauntlets of Ogre Power 71-72Girdle of Giant Strength 73-78Helm of Reading Languages and Magic 79Helm of Telepathy 80Helm of Teleportation 81Horn of Blasting 82-90Medallion of ESP 91Mirror of Life Trapping 92-96Rope of Climbing 97-99Scarab of Protection 00Stone Commanding Earth Elementals Wands, Staves and Rods d%Type 01-08Rod of Cancellation 09-13Snake Staff 14-17Staff of Commanding 18-28Staff of Healing 29-30Staff of Power 31-34Staff of Striking 35Staff of Wizardry 36-40Wand of Cold 41-45Wand of Enemy Detection 46-50Wand of Fear 51-55Wand of Fireballs 56-60Wand of Illusion 61-65Wand of Lightning Bolts 66-73Wand of Magic Detection 74-79Wand of Paralyzation 80-84Wand of Polymorph 85-92Wand of Secret Door Detection 93-00Wand of Trap Detection Potions d%Typed%Type 01-03Clairaudience48-51Gaseous Form 04-07Clairvoyance52-55Giant Strength 08-10Control Animal56-59Growth 11-13Control Dragon60-63Healing 14-16Control Giant64-68Heroism 17-19Control Human69-72Invisibility 20-22Control Plant73-76Invulnerability 23-25Control Undead77-80Levitation 26-32Delusion81-84Longevity 33-35Diminution85-86Poison 36-39ESP87-89Polymorph Self 40-43Fire Resistance90-97Speed 44-47Flying98-00Treasure Finding Scrolls d%General Typed%General Type 01-03Cleric Spell Scroll (1 Spell)35Magic-User Spell Scroll (7 Spells) 04-06Cleric Spell Scroll (2 Spells)36-40Cursed Scroll 07-08Cleric Spell Scroll (3 Spells)41-46Protection from Elementals 09Cleric Spell Scroll (4 Spells)47-56Protection from Lycanthropes 10-15Magic-User Spell Scroll (1 Spell)57-61Protection from Magic 16-20Magic-User Spell Scroll (2 Spells)62-75Protection from Undead 21-25Magic-User Spell Scroll (3 Spells)76-85Map to Treasure Type A 26-29Magic-User Spell Scroll (4 Spells)86-89Map to Treasure Type E 30-32Magic-User Spell Scroll (5 Spells)90-92Map to Treasure Type G 33-34Magic-User Spell Scroll (6 Spells)93-00Map to 1d4 Magic Items
+01-04 Amulet of Proof against Detection and Location 
+05-06 Bag of Devouring 
+07-12 Bag of Holding 
+13-17 Boots of Levitation 
+18-22 Boots of Speed 
+23-27 Boots of Traveling and Leaping 
+28 Bowl Commanding Water Elementals 
+29 Brazier Commanding Fire Elementals 
+30-35 Broom of Flying 
+36 Censer Commanding Air Elementals 
+37-39 Cloak of Displacement 
+40-43 Crystal Ball 
+44-45 Crystal Ball with Clairaudience 
+46 Drums of Panic 
+47 Efreeti Bottle 
+48-54 Elven Boots 
+55-61 Elven Cloak 
+62-63 Flying Carpet 
+64-70 Gauntlets of Ogre Power 
+71-72 Girdle of Giant Strength 
+73-78 Helm of Reading Languages and Magic 
+79 Helm of Telepathy 
+80 Helm of Teleportation 
+81 Horn of Blasting 
+82-90 Medallion of ESP 
+91 Mirror of Life Trapping 
+92-96 Rope of Climbing 
+97-99 Scarab of Protection 
+00 Stone Commanding Earth Elementals 
+
+Wands, Staves and Rods 
+d%, Type 
+01-08 Rod of Cancellation
+09-13 Snake Staff
+14-17 Staff of Commanding
+18-28 Staff of Healing
+29-30 Staff of Power
+31-34 Staff of Striking
+35 Staff of Wizardry
+36-40 Wand of Cold
+41-45 Wand of Enemy Detection
+46-50 Wand of Fear
+51-55 Wand of Fireballs
+56-60 Wand of Illusion
+61-65 Wand of Lightning Bolts
+66-73 Wand of Magic Detection
+74-79 Wand of Paralyzation
+80-84 Wand of Polymorph
+85-92 Wand of Secret Door Detection
+93-00 Wand of Trap Detection
+
+Potions
+d%, Type
+01-03 Clairaudience
+04-07 Clairvoyance
+08-10 Control Animal
+11-13 Control Dragon
+14-16 Control Giant
+17-19 Control Human
+20-22 Control Plant
+23-25 Control Undead
+26-32 Delusion
+33-35 Diminution
+36-39 ESP
+40-43 Fire Resistance
+44-47 Flying
+48-51 Gaseous Form
+52-55 Giant Strength
+56-59 Growth
+60-63 Healing
+64-68 Heroism
+69-72 Invisibility
+73-76 Invulnerability 
+77-80 Levitation
+81-84 Longevity
+85-86 Poison
+87-89 Polymorph Self
+90-97 Speed
+98-00 Treasure Finding
+
+Scrolls
+d%, General Type
+01-03 Cleric Spell Scroll (1 Spell)
+04-06 Cleric Spell Scroll (2 Spells)
+07-08 Cleric Spell Scroll (3 Spells)
+09 Cleric Spell Scroll (4 Spells)
+10-15 Magic-User Spell Scroll (1 Spell)
+16-20 Magic-User Spell Scroll (2 Spells)
+21-25 Magic-User Spell Scroll (3 Spells)
+26-29 Magic-User Spell Scroll (4 Spells)
+30-32 Magic-User Spell Scroll (5 Spells)
+33-34 Magic-User Spell Scroll (6 Spells)
+35 Magic-User Spell Scroll (7 Spells)
+36-40 Cursed Scroll
+41-46 Protection from Elementals
+47-56 Protection from Lycanthropes
+57-61 Protection from Magic
+62-75 Protection from Undead
+76-85 Map to Treasure Type A
+86-89 Map to Treasure Type E
+90-92 Map to Treasure Type G
+93-00 Map to 1d4 Magic Items
+
 */
 
 //Page 16
 /*
-Encounters Dungeon Encounters The Game Master should check once every 3 turns * Roll 1d6; on a roll of 1, an encounter occurs.  * Roll 1d12 on the appropriate table. Die RollLevel 1Level 2Level 3 1Bee, GiantBeetle, Giant BombardierAnt, Giant 2GoblinFly, GiantApe, Carnivorous 3Green Slime*GhoulBeetle, Giant Tiger 4KoboldGnollBugbear 5NPC Party: AdventurerGray OozeDoppleganger 6NPC Party: BanditHobgoblinGargoyle* 7OrcLizard ManGelatinous Cube 8SkeletonNPC Party: AdventurerLycanthrope, Wererat* 9Snake, CobraSnake, Pit ViperOgre 10Spider, Giant CrabSpider, Giant Black WidowShadow* 11StirgeTroglodyteTentacle Worm 12WolfZombieWight* Die RollLevel 4-5Level 6-7Level 8+ 1Bear, CaveBasiliskBlack Pudding 2Caecilia, GiantBlack PuddingChimera 3CockatriceCaeciliaGiant, Hill 4DopplegangerDisplacerGiant, Stone 5Gray OozeHydraHydra 6HellhoundLycanthrope, Weretiger*Lycanthrope, Wereboar* 7Lycanthrope, Werewolf*Mummy*Purple Worm 8MinotaurOwlbearSalamander, Flame* 9Ochre Jelly*Rust Monster*Salamander, Frost* 10OwlbearScorpion, GiantVampire* 11Rust Monster*Spectre* 12Wraith*Troll City, Town or Village Encounters (2d6) Die RollDay EncounterNight Encounter 2DopplegangerDoppleganger 3NobleShadow* 4ThiefPress Gang 5BullyBeggar 6City WatchThief 7MerchantBully 8BeggarMerchant 9PriestGiant Rat 10MercenaryCity Watch 11WizardWizard 12Lycanthrope, Wererat*Lycanthrope, Wererat*
+Encounters
+
+Dungeon Encounters 
+The Game Master should check once every 3 turns 
+* Roll 1d6; on a roll of 1, an encounter occurs.  
+* Roll 1d12 on the appropriate table. 
+Die Roll	Level 1			Level 2				Level 3 
+1 		Bee, Giant		Beetle, Giant Bombardier	Ant, Giant 
+2		Goblin			Fly, Giant			Ape, Carnivorous 
+3		Green Slime*		Ghoul				Beetle, Giant Tiger
+4		Kobold			Gnoll				Bugbear 
+5		NPC Party: Adventurer	Gray Ooze			Doppleganger 
+6		NPC Party: Bandit	Hobgoblin			Gargoyle* 
+7		Orc			Lizard Man			Gelatinous Cube 
+8		Skeleton		NPC Party: Adventurer		Lycanthrope, Wererat* 
+9		Snake, Cobra		Snake, Pit Viper		Ogre
+10		Spider, Giant Crab	Spider, Giant Black Widow	Shadow* 
+11		Stirge			Troglodyte			Tentacle Worm 
+12		Wolf			Zombie				Wight* 
+
+Die Roll	Level 4-5		Level 6-7			Level 8+ 
+1		Bear, Cave		Basilisk			Black Pudding 
+2		Caecilia, Giant		Black Pudding			Chimera 
+3		Cockatrice		Caecilia			Giant, Hill
+4		Doppleganger		Displacer			Giant, Stone
+5		Gray Ooze		Hydra				Hydra
+6		Hellhound		Lycanthrope, Weretiger*		Lycanthrope, Wereboar*
+7		Lycanthrope, Werewolf*	Mummy*				Purple Worm
+8		Minotaur		Owlbear				Salamander, Flame* 
+9		Ochre Jelly*		Rust Monster*			Salamander, Frost* 
+10		Owlbear			Scorpion, Giant			Vampire* 
+11		Rust Monster*		Spectre*
+12		Wraith*			Troll
+
+City, Town or Village Encounters (2d6) 
+Die Roll	Day Encounter		Night Encounter
+2		Doppleganger		Doppleganger 
+3		Noble			Shadow* 
+4		Thief			Press Gang
+5		Bully			Beggar
+6		City Watch		Thief
+7		Merchant		Bully 
+8		Beggar			Merchant
+9		Priest			Giant Rat 
+10		Mercenary		City Watch 
+11		Wizard			Wizard
+12		Lycanthrope, Wererat*	Lycanthrope, Wererat*
 */
 
 //Page 17
 /*
-Wilderness Encounters Check about every four hours of game time (this translates nicely to three night checks and three daytime checks) * Roll 1d6; on a roll of 1, an encounter occurs.  * Roll 2d8 on the appropriate table. Die RollDesert or BarrenGrasslandInhabited Territories 2Dragon, BlueDragon, GreenDragon, Gold 3HellhoundTrollGhoul 4Giant, FireFly, GiantBugbear 5Purple WormScorpion, GiantGoblin 6Fly, GiantNPC Party:  BanditCentaur 7Scorpion, GiantLionNPC Party:  Bandit 8CamelBoar, WildNPC Party:  Merchant 9Spider, Giant TarantellaNPC Party:  MerchantNPC Party:  Pilgrim 10NPC Party:  MerchantWolfNPC Party:  Noble 11HawkBee, GiantDog 12NPC Party:  BanditGnollGargoyle* 13OgreGoblinGnoll 14GriffonBlink DogOgre 15GnollWolf, DireMinotaur 16Dragon, RedGiant, HillVampire* Die RollJungleMountains or HillsOcean 2Dragon, GreenDragon, WhiteDragon, Sea 3NPC Party:  BanditRoc (1d6: 1-3 Large, 4-5 Huge, 6 Giant)Hydra 4GoblinDisplacerWhale, Sperm 5HobgoblinLycanthrope, Werewolf*Crocodile, Giant 6Centipede, GiantMountain LionCrab, Giant 7Snake, Giant PythonWolfWhale, Killer 8ElephantSpider, Giant CrabOctopus, Giant 9AntelopeHawkShark, Mako 10JaguarOrcNPC Party:  Merchant 11StirgeBat, GiantNPC Party:  Buccaneer (Pirate) 12Beetle, Giant TigerHawk, GiantShark, Bull 13Caecilia, GiantGiant, HillRoc (1d8: 1-5 Huge, 6-8 Giant) 14Shadow*ChimeraShark, Great White 15NPC Party:  MerchantWolf, DireMermaid 16Lycanthrope, Weretiger*Dragon, RedSea Serpent Die RollRiver or RiversideSwampWoods or Forest 2Dragon, BlackDragon, BlackDragon, Green 3Fish, Giant PiranhaShadow*Alicorn (see Unicorn) 4StirgeTrollTreant 5Fish, Giant BassLizard, Giant DracoOrc 6NPC Party:  MerchantCentipede, GiantBoar, Wild 7LizardmanLeech, GiantBear, Black 8CrocodileLizardmanHawk, Giant 9Frog, GiantCrocodileAntelope 10Fish, Giant CatfishStirgeWolf 11NPC Party:  BuccaneerOrcOgre 12TrollToad, Giant (see Frog, Giant)Bear, Brown 13JaguarTroglodyteWolf, Dire 14NixieBlood RoseGiant, Hill 15Water Termite, GiantHangman TreeOwlbear 16Dragon, GreenBasiliskUnicorn
+Wilderness Encounters
+Check about every four hours of game time (this translates nicely to three night checks 
+and three daytime checks) 
+
+*Roll 1d6; on a roll of 1, an encounter occurs.  
+*Roll 2d8 on the appropriate table. 
+
+Die Roll	Desert or Barren	Grassland	Inhabited Territories 
+2		Dragon, Blue		Dragon, Green	Dragon, Gold 
+3		Hellhound		Troll		Ghoul
+4		Giant, Fire		Fly, Giant	Bugbear 
+5		Purple Worm		Scorpion, Giant	Goblin 
+6		Fly, Giant		NPC Party:BanditCentaur 
+7		Scorpion, Giant		Lion		NPC Party:  Bandit 
+8		Camel			Boar, Wild	NPC Party:  Merchant 
+9		Spider, Giant TarantellaNPC Party:MerchantNPC Party:  Pilgrim 
+10		NPC Party:  Merchant	Wolf		NPC Party:  Noble 
+11		Hawk			Bee, Giant	Dog 
+12		NPC Party:  Bandit	Gnoll		Gargoyle* 
+13		Ogre			Goblin		Gnoll 
+14		Griffon			Blink Dog	Ogre 
+15		Gnoll		Wolf, DireMinotaur 
+16		Dragon, Red		Giant, 		HillVampire* 
+
+Die Roll	Jungle			Mountains or Hills	Ocean 
+2Dragon, GreenDragon, WhiteDragon, Sea 
+3NPC Party:  BanditRoc (1d6: 1-3 Large, 4-5 Huge, 6 Giant)Hydra 
+4GoblinDisplacerWhale, Sperm 
+5HobgoblinLycanthrope, Werewolf*Crocodile, Giant 
+6Centipede, GiantMountain LionCrab, Giant 
+7Snake, Giant PythonWolfWhale, Killer 
+8ElephantSpider, Giant CrabOctopus, Giant 
+9AntelopeHawkShark, Mako 
+10JaguarOrcNPC Party:  Merchant 
+11StirgeBat, GiantNPC Party:  Buccaneer (Pirate) 
+12Beetle, Giant TigerHawk, GiantShark, Bull 
+13Caecilia, GiantGiant, HillRoc (1d8: 1-5 Huge, 6-8 Giant) 
+14Shadow*ChimeraShark, Great White 
+15NPC Party:  MerchantWolf, DireMermaid 
+16Lycanthrope, Weretiger*Dragon, RedSea Serpent 
+
+Die Roll	River or Riverside	Swamp			Woods or Forest 
+2Dragon, BlackDragon, BlackDragon, Green 
+3Fish, Giant PiranhaShadow*Alicorn (see Unicorn) 
+4StirgeTrollTreant 
+5Fish, Giant BassLizard, Giant DracoOrc 
+6NPC Party:  MerchantCentipede, GiantBoar, Wild 
+7LizardmanLeech, GiantBear, Black
+8CrocodileLizardmanHawk, Giant
+9Frog, GiantCrocodileAntelope 
+10Fish, Giant CatfishStirgeWolf
+11NPC Party:  BuccaneerOrcOgre 
+12TrollToad, Giant (see Frog, Giant)Bear, Brown
+13JaguarTroglodyteWolf, Dire
+14NixieBlood RoseGiant, Hill
+15Water Termite, GiantHangman TreeOwlbear
+16Dragon, GreenBasiliskUnicorn
 */
 
 //Open Game License
 /*
-OPEN GAME LICENSE INTRODUCTION Basic Fantasy RPG Charts and Tables (hereinafter “the Supplement”) is based on the System Reference Document v3.5 ("SRD"), which is Open Game Content.    The text of the Open Game License itself is not Open Game Content. Instructions on using the License are provided within the License itself. Designation of Open Game Content:  The entire text of the Supplement (except the Open Game License, as noted above) is Open Game Content, released under the Open Game License, Version 1.0a (reproduced below) as described in Section 1(d) of the License.  Artwork incorporated in this document is not Open Game Content, and remains the property of the copyright holder. Designation of Product Identity:  Product identity is not Open Game Content. The following is designated as product identity pursuant to OGL v1.0a(1)(e) and (7): (A) product and product line names, including Basic Fantasy Role-Playing Game, Basic Fantasy RPG, and BFRPG, as well as the phrase “make mine Basic”; (B) all artwork, logos, symbols, graphic designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual representations, including the “eye” logo, which is the personal mark of Chris Gonnerman for his various products, and which is Copyright © 2002 Chris Gonnerman, and the “Scribbled Dragon,” which is Copyright © 2005 Erik Wilson; (C) logos and trademarks, including any trademark or registered trademark clearly identified as product identity by the owner of the product identity, and which specifically excludes the open game content. More information on the Open Game License can be found at: http://www.wizards.com/d20 OPEN GAME LICENSE VERSION 1.0A The following text is the property of Wizards of the Coast, Inc. and is Copyright 2000 Wizards of the Coast, Inc ("Wizards"). All Rights Reserved. 1. Definitions: (a)"Contributors" means the copyright and/or trademark owners who have contributed Open Game Content; (b)"Derivative Material" means copyrighted material including derivative works and translations (including into other computer languages), potation, modification, correction, addition, extension, upgrade, improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted; (c) "Distribute" means to reproduce, license, rent, lease, sell, broadcast, publicly display, transmit or otherwise distribute; (d)"Open Game Content" means the game mechanic and includes the methods, procedures, processes and routines to the extent such content does not embody the Product Identity and is an enhancement over the prior art and any additional content clearly identified as Open Game Content by the Contributor, and means any work covered by this License, including translations and derivative works under copyright law, but specifically excludes Product Identity. (e) "Product Identity" means product and product line names, logos and identifying marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual or audio representations; names and descriptions of characters, spells, enchantments, personalities, teams, personas, likenesses and special abilities; places, locations, environments, creatures, equipment, magical or supernatural abilities or effects, logos, symbols, or graphic designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of the Product Identity, and which specifically excludes the Open Game Content; (f) "Trademark" means the logos, names, mark, sign, motto, designs that are used by a Contributor to identify itself or its products or the associated products contributed to the Open Game License by the Contributor (g) "Use", "Used" or "Using" means to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game Content. (h) "You" or "Your" means the licensee in terms of this agreement. 2. The License: This License applies to any Open Game Content that contains a notice indicating that the Open Game Content may only be Used under and in terms of this License. You must affix such a notice to any Open Game Content that you Use. No terms may be added to or subtracted from this License except as described by the License itself. No other terms or conditions may be applied to any Open Game Content distributed using this License. 3.Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance of the terms of this License. 4. Grant and Consideration: In consideration for agreeing to use this License, the Contributors grant You a perpetual, worldwide, royalty-free, non-exclusive license with the exact terms of this License to Use, the Open Game Content. 5.Representation of Authority to Contribute: If You are contributing original material as Open Game Content, You represent that Your Contributions are Your original creation and/or You have sufficient rights to grant the rights conveyed by this License. 6.Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing, and You must add the title, the copyright date, and the copyright holder's name to the COPYRIGHT NOTICE of any original Open Game Content you Distribute. 7. Use of Product Identity: You agree not to Use any Product Identity, including as an indication as to compatibility, except as expressly licensed in another, independent Agreement with the owner of each element of that Product Identity. You agree not to indicate compatibility or coadaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered Trademark. The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights, title and interest in and to that Product Identity. 8. Identification: If you distribute Open Game Content You must clearly indicate which portions of the work that you are distributing are Open Game Content. 9. Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License. 10. Copy of this License: You MUST include a copy of this License with every copy of the Open Game Content You Distribute. 11. Use of Contributor Credits: You may not market or advertise the Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do so. 12. Inability to Comply: If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then You may not Use any Open Game Material so affected. 13. Termination: This License will terminate automatically if You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the breach. All sublicenses shall survive the termination of this License. 14. Reformation: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable. 15. COPYRIGHT NOTICE Open Game License v 1.0 Copyright 2000, Wizards of the Coast, Inc. System Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid, James Wyatt, based on original material by E. Gary Gygax and Dave Arneson. Castles & Crusades: Players Handbook, Copyright 2004, Troll Lord Games; Authors Davis Chenault and Mac Golden. Castles & Crusades: Monsters Product Support, Copyright 2005, Troll Lord Games. Basic Fantasy Role-Playing Game Copyright © 2006-2016 Chris Gonnerman. Basic Fantasy Role-Playing Game Charts and Tables Copyright © 2010, 2016, 2021 Simone Felli
+OPEN GAME LICENSE INTRODUCTION Basic Fantasy RPG Charts and Tables (hereinafter “the Supplement”)
+is based on the System Reference Document v3.5 ("SRD"), which is Open Game Content.    
+The text of the Open Game License itself is not Open Game Content. 
+Instructions on using the License are provided within the License itself. Designation of Open Game Content: 
+The entire text of the Supplement (except the Open Game License, as noted above) is Open Game Content,
+released under the Open Game License, Version 1.0a (reproduced below) as described in Section 1(d) of the License. 
+Artwork incorporated in this document is not Open Game Content, and remains the property of the copyright holder.
+Designation of Product Identity:  Product identity is not Open Game Content. 
+The following is designated as product identity pursuant to OGL v1.0a(1)(e) and 
+(7): (A) product and product line names, including Basic Fantasy Role-Playing Game, Basic Fantasy RPG, 
+and BFRPG, as well as the phrase “make mine Basic”; (B) all artwork, logos, symbols, graphic designs, depictions,
+likenesses, formats, poses, concepts, themes and graphic, photographic and other visual representations,
+including the “eye” logo, which is the personal mark of Chris Gonnerman for his various products, and which is
+Copyright © 2002 Chris Gonnerman, and the “Scribbled Dragon,” which is Copyright © 2005 Erik Wilson; (C) logos 
+and trademarks, including any trademark or registered trademark clearly identified as product identity by the owner
+of the product identity, and which specifically excludes the open game content. More information on the Open 
+Game License can be found at: http://www.wizards.com/d20 OPEN GAME LICENSE VERSION 1.0A The following text is 
+the property of Wizards of the Coast, Inc. and is Copyright 2000 Wizards of the Coast, Inc ("Wizards"). All Rights 
+Reserved. 1. Definitions: (a)"Contributors" means the copyright and/or trademark owners who have contributed
+Open Game Content; (b)"Derivative Material" means copyrighted material including derivative works and translations
+(including into other computer languages), potation, modification, correction, addition, extension, upgrade,
+improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted; 
+(c) "Distribute" means to reproduce, license, rent, lease, sell, broadcast, publicly display, transmit or otherwise 
+distribute; (d)"Open Game Content" means the game mechanic and includes the methods, procedures, processes and
+routines to the extent such content does not embody the Product Identity and is an enhancement over the prior 
+art and any additional content clearly identified as Open Game Content by the Contributor, and means any work 
+covered by this License, including translations and derivative works under copyright law, but specifically 
+excludes Product Identity. (e) "Product Identity" means product and product line names, logos and identifying 
+marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements,
+dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts,
+themes and graphic, photographic and other visual or audio representations; names and descriptions of characters,
+spells, enchantments, personalities, teams, personas, likenesses and special abilities; places, locations,
+environments, creatures, equipment, magical or supernatural abilities or effects, logos, symbols, or graphic
+designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of 
+the Product Identity, and which specifically excludes the Open Game Content; (f) "Trademark" means the logos,
+names, mark, sign, motto, designs that are used by a Contributor to identify itself or its products or the 
+associated products contributed to the Open Game License by the Contributor (g) "Use", "Used" or "Using" means 
+to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game
+Content. (h) "You" or "Your" means the licensee in terms of this agreement. 2. The License: This License applies
+to any Open Game Content that contains a notice indicating that the Open Game Content may only be Used under and
+in terms of this License. You must affix such a notice to any Open Game Content that you Use. No terms may be 
+added to or subtracted from this License except as described by the License itself. No other terms or conditions
+may be applied to any Open Game Content distributed using this License. 3.Offer and Acceptance: By Using the 
+Open Game Content You indicate Your acceptance of the terms of this License. 4. Grant and Consideration: In
+consideration for agreeing to use this License, the Contributors grant You a perpetual, worldwide, royalty-free,
+non-exclusive license with the exact terms of this License to Use, the Open Game Content. 5.Representation of
+Authority to Contribute: If You are contributing original material as Open Game Content, You represent that Your 
+Contributions are Your original creation and/or You have sufficient rights to grant the rights conveyed by this 
+License. 6.Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to 
+include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing,
+and You must add the title, the copyright date, and the copyright holder's name to the COPYRIGHT NOTICE of any 
+original Open Game Content you Distribute. 7. Use of Product Identity: You agree not to Use any Product Identity,
+including as an indication as to compatibility, except as expressly licensed in another, independent Agreement 
+with the owner of each element of that Product Identity. You agree not to indicate compatibility or
+coadaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content
+except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered 
+Trademark. The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership 
+of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights,
+title and interest in and to that Product Identity. 8. Identification: If you distribute Open Game Content
+You must clearly indicate which portions of the work that you are distributing are Open Game Content. 9. Updating
+the License: Wizards or its designated Agents may publish updated versions of this License. You may use any
+authorized version of this License to copy, modify and distribute any Open Game Content originally distributed
+under any version of this License. 10. Copy of this License: You MUST include a copy of this License with every 
+copy of the Open Game Content You Distribute. 11. Use of Contributor Credits: You may not market or advertise the
+Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do 
+so. 12. Inability to Comply: If it is impossible for You to comply with any of the terms of this License with 
+respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then 
+You may not Use any Open Game Material so affected. 13. Termination: This License will terminate automatically if
+You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the
+breach. All sublicenses shall survive the termination of this License. 14. Reformation: If any provision of this
+License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it
+enforceable. 15. COPYRIGHT NOTICE Open Game License v 1.0 Copyright 2000, Wizards of the Coast, Inc. System 
+Reference Document Copyright 2000-2003, Wizards of the Coast, Inc.; Authors Jonathan Tweet, Monte Cook, Skip 
+Williams, Rich Baker, Andy Collins, David Noonan, Rich Redman, Bruce R. Cordell, John D. Rateliff, Thomas Reid,
+James Wyatt, based on original material by E. Gary Gygax and Dave Arneson. Castles & Crusades: Players Handbook,
+Copyright 2004, Troll Lord Games; Authors Davis Chenault and Mac Golden. Castles & Crusades: Monsters Product 
+Support, Copyright 2005, Troll Lord Games. Basic Fantasy Role-Playing Game Copyright © 2006-2016 Chris Gonnerman.
+Basic Fantasy Role-Playing Game Charts and Tables Copyright © 2010, 2016, 2021 Simone Felli
 */
