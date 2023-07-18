@@ -1059,7 +1059,7 @@ byte OpeningDoors[] =  //1 / (1+STRBonus) on 1dX
 };
 
 /*
-Detection - Dwarves, Elves, Others
+Detection - Dwarves, Elves, Others //This isn't really a data table, probably better to implement in code
 Traps* 			1-2 on 1d6, 1 on 1d6, 1 on 1d6
 *It takes at least a turn per 10' square area for searching
 
@@ -1070,12 +1070,131 @@ New construction	1-2 on 1d6, -, -
 Slanting passages	1-2 on 1d6, -, -
 
 Secret doors* 		•1 on 1d6 •1-2 on 1d6 if INT>=15, •1-2 on 1d6 •1 on 1d6 with a look, •1 on 1d6 •1-2 on 1d6 if INT>=15 
-
 */
 
-//Page 10
+//Page 10 - Encounter
 /*
-Encounter Encounter Sequence Surprise check* •Normal: 1-2 on 1d6 •Ambush: 1-4 on 1d6 •Deafened: 1-3 on 1d6 •Blinded: 1-4 on 1d6 Initiave rolls Roll 1d6 + Dex mod. High numbers act first (-1 penalty if deafened, -2 if blinded) Monster reactionRoll 2d6 + Cha mod of the leader * For Elves reduce the range by 1 Reaction Roll Table Adjusted Die RollResult 2 or lessImmediate Attack 3-7Unfavorable 8-11Favorable 12 or moreVery Favorable Morale Checks HowRoll 2d6 <= Monster morale score When •During first encounter •When the monster party is reduced to half strength (by numbers if more than one monster, or by hit points for one monster) Typical Actions Standard attack Move (encounter movement distance) + melee or ranged attack RunMove (2 X encounter movement distance) Charge*Move (2 X encounter movement distance) + attack (+2 bonus) Parting shotFree attack (+2 bonus) vs. opponents turning from the fight Fighting withdrawal Move back (half normal walking movement) + melee attack * -2 penalty to Armor Class for the round Attack bonus / penalty Attacking From Behind +2 (do not combine with the Sneak Attack ability) Flat of the blade attack-4 ( do half subduing damage) Punch+0 (1d3 points of subduing damage) Kick-2 (1d4 points of subduing damage) Attacker/Defender is invisible+4 / -4 Attacker/Defender is blinded-4 / +4 Defender is pinned+4 Missile fire Target distanceAttack bonus / penalty <= 5'-5 * > 5' AND <= Short range+1 > Short range AND <= Medium range0 > Medium range AND <= Long range-2 > Long rangeCannot be attacked * If the attacker is behind the target creature and undetected, or that creature is distracted apply +1 bonus (+3 total bonus if attacking from behind) Cover and Concealment Penalty Target isCoveredConcealed 25%-2-1 50%-4-2 75%-6-3 90%-8-4 Grenade-Like Missiles Miss Table (behind) •Roll 1d10 and consult the diagram to determine where the missile hit. Treat each number as representing a 10' square area •Missiles that Miss: GM roll attacks against each targets (no more than three). These attack rolls are made with the shooter's normal attack bonus, just as if he or she intended to attack the target. 0 789 5Target6 234 1 (in front) Oil Grenade-Like Missiles •Direct hit: 1d8 points of fire damage, plus in the next round an additional 1d8 points of damage, unless the character spends the round extinguishing the flames •Splash Hit: 1d6 points of fire damage within 5 feet of the point of impact. A save vs. Death Ray is allowed to avoid this damage •Effective for 10 rounds. Those attempting to cross the burning oil will receive 1d6 points of fire damage each round they are in it. Holy Water •Direct hit: 1d8 points damage. •Splash Hit: 1d6 points of fire damage within 5 feet of the point of impact. •Effective for 1 round
+ Encounter Sequence
+ Surprise check*
+ 	•Normal: 1-2 on 1d6 
+        •Ambush: 1-4 on 1d6 
+        •Deafened: 1-3 on 1d6 
+        •Blinded: 1-4 on 1d6 
+  
+ Initiave rolls 
+ 	Roll 1d6 + Dex mod. 
+        High numbers act first 
+        (-1 penalty if deafened, -2 if blinded)
+ 
+ Monster reaction
+ Roll 2d6 + Cha mod of the leader
+ 
+ * For Elves reduce the range by 1
+*/
+
+/*
+ Reaction Roll Table (Adjusted Die Roll, Result)
+ 2 or less	Immediate Attack
+ 3-7 		Unfavorable
+ 8-11 		Favorable
+ 12 or more 	Very Favorable
+*/
+
+/*
+Morale Checks
+How	Roll 2d6 <= Monster morale score
+When 	•During first encounter 
+	•When the monster party is reduced to half strength 
+        (by numbers if more than one monster, or by 
+        hit points for one monster) 
+*/
+
+/*
+Typical Actions
+Standard attack 	Move (encounter movement distance) + melee or ranged attack 
+Run			Move (2 X encounter movement distance) 
+Charge			*Move (2 X encounter movement distance) + attack (+2 bonus) 
+Parting shot		Free attack (+2 bonus) vs. opponents turning from the fight 
+Fighting withdrawal 	Move back (half normal walking movement) + melee attack 
+
+* -2 penalty to Armor Class for the round 
+*/
+
+/*
+Attack bonus / penalty 
+Attacking From Behind 		+2 (do not combine with the Sneak Attack ability) 
+Flat of the blade attack	-4 ( do half subduing damage) 
+Punch				+0 (1d3 points of subduing damage) 
+Kick				-2 (1d4 points of subduing damage) 
+Attacker/Defender is invisible	+4 / -4 
+Attacker/Defender is blinded	-4 / +4 
+Defender is pinned		+4 
+*/
+
+/*
+Missile fire - Target distance, Attack bonus / penalty
+<= 5', 					-5 * 
+> 5' AND <= Short range			+1 
+> Short range AND <= Medium range	0 
+> Medium range AND <= Long range	-2 
+> Long range				Cannot be attacked 
+
+* If the attacker is behind the target creature and undetected, 
+or that creature is distracted apply +1 bonus 
+(+3 total bonus if attacking from behind)
+*/
+
+/*
+Cover and Concealment Penalty
+Target is,	 Covered,	 Concealed 
+25%		-2		-1 
+50%		-4		-2 
+75%		-6		-3 
+90%		-8		-4 
+*/
+
+/*
+Grenade-Like Missiles Miss Table
+(behind)
+  0 
+7 8 9
+5 T 6
+2 3 4
+  1 
+(in front)
+
+•Roll 1d10 and consult the diagram to determine where 
+the missile hit. Treat each number as representing a 
+10' square area 
+
+•Missiles that Miss: GM roll attacks against each targets 
+(no more than three). These attack rolls are made with the 
+shooter's normal attack bonus, just as if he or she intended 
+to attack the target. 
+*/
+
+/*
+Oil Grenade-Like Missiles
+
+•Direct hit: 1d8 points of fire damage, plus in the next round 
+an additional 1d8 points of damage, unless the character spends 
+the round extinguishing the flames 
+
+•Splash Hit: 1d6 points of fire damage within 5 feet of the point
+of impact. A save vs. Death Ray is allowed to avoid this damage 
+
+•Effective for 10 rounds. Those attempting to cross the burning oil 
+will receive 1d6 points of fire damage each round they are in it. 
+*/
+
+/*
+Holy Water 
+•Direct hit: 1d8 points damage. 
+
+•Splash Hit: 1d6 points of fire damage within 5 feet 
+of the point of impact. 
+
+•Effective for 1 round
 */
 
 //Page 11
