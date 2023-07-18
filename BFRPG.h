@@ -1238,30 +1238,249 @@ Hit Dice 	•Monsters always roll eight sided dice (d8) for hit points, unless n
 */
 
 typedef enum
-{Door, DoubleDoor, Locked Door, DoubleLockedDoor,
- Grate, Fireplace, Ladder, Curtain, Bars, Statue,
- Secret Door, Pit, Fountain, Chest, Well, Trapdoor,
- Stairs, Spiralstair, Bed, FalseDoor, Altar, Throne,
- Ctrapdoor, Pillar}CommonDungeonSymbols;
+{
+  NormalDoor, DoubleDoor, LockedDoor, DoubleLockedDoor,
+  Grate, Fireplace, Ladder, Curtain, Bars, Statue,
+  SecretDoor, Pit, Fountain, Chest, Well, Trapdoor,
+  Stairs, Spiralstair, Bed, FalseDoor, Altar, Throne,
+  Ctrapdoor, Pillar
+  }CommonDungeonSymbol;
 
 //Page 12
 /*
-Treasure To generate a random treasure, find the indicated treasure type assigned to monsters and read across; where a percentage chance is given, roll percentile dice to see if that sort of treasure is found.  If so, roll the indicated dice to determine how much. Lair Treasures Type100's of Copper 100's of Silver 100's of Electrum 100's of Gold 100's of Platinum Gems and JewelryMagic Items A50% 5d660% 5d640% 5d470% 10d650% 1d1050% 6d6 50% 6d630%any 3 B75% 5d1050% 5d650% 5d450% 3d6None25% 1d6 25% 1d6 10%1 weapon or armor C60% 6d660% 5d430% 2d6NoneNone25% 1d4 25% 1d415%any 1d2 D30% 4d645% 6d6None90% 5d8None30% 1d8 30% 1d8 20%any 1d2 + 1 potion E30% 2d860% 6d1050% 3d850% 4d10None10% 1d10 10% 1d10 30%any 1d4 + 1 scroll FNone40% 3d850% 4d885% 6d1070% 2d820% 2d12 10% 1d12 35%any 1d4 except weapons + 1 potion + 1 scroll GNoneNoneNone90% 4d6x1075% 5d825% 3d6 25% 1d10 50%any 1d4 + 1 scroll H75% 8d1075% 6d10x1075% 3d10x1075% 5d8x1075% 9d850% 1d100 50% 10d4 20%any 1d4 + 1 potion + 1 scroll INoneNoneNoneNone80% 3d1050% 2d6 50% 2d615%any 1 J45% 3d845% 1d8NoneNoneNoneNone NoneNone KNone90% 2d1035% 1d8NoneNoneNone NoneNone LNoneNoneNoneNoneNone50% 1d4 NoneNone MNoneNoneNone90% 4d1090% 2d8x1055% 5d4 45% 2d6None NNoneNoneNoneNoneNoneNone None40%2d4 potions ONoneNoneNoneNoneNoneNone None50%1d4 scrolls Individual Treasures TypePieces of Copper Pieces of Silver Pieces of Electrum Pieces of Gold Pieces of Platinum Gems and JewelryMagic Items P3d8NoneNoneNoneNoneNone NoneNone QNone3d6NoneNoneNoneNone NoneNone RNoneNone2d6NoneNoneNone NoneNone SNoneNoneNone2d4NoneNone NoneNone TNoneNoneNoneNone1d6None NoneNone U50% 1d2050% 1d20None25% 1d20None5% 1d4 5% 1d42%Any 1 VNone25% 1d2025% 1d2050% 1d2025% 1d2010% 1d4 10% 1d45%Any 1
+Treasure To generate a random treasure, find the indicated treasure type assigned to monsters and read across; 
+where a percentage chance is given, roll percentile dice to see if that sort of treasure is found.  
+If so, roll the indicated dice to determine how much. 
+
+Lair Treasures - 100's of Copper, 100's of Silver, 100's of Electrum, 100's of Gold, 100's of Platinum,  Gems and Jewelry, Magic Items 
+A 50% 5d660% 5d640% 5d470% 10d650% 1d1050% 6d6 50% 6d630%any 3 
+B75% 5d1050% 5d650% 5d450% 3d6None25% 1d6 25% 1d6 10%1 weapon or armor 
+C60% 6d660% 5d430% 2d6NoneNone25% 1d4 25% 1d415%any 1d2 
+D30% 4d645% 6d6None90% 5d8None30% 1d8 30% 1d8 20%any 1d2 + 1 potion 
+E30% 2d860% 6d1050% 3d850% 4d10None10% 1d10 10% 1d10 30%any 1d4 + 1 scroll 
+FNone40% 3d850% 4d885% 6d1070% 2d820% 2d12 10% 1d12 35%any 1d4 except weapons + 1 potion + 1 scroll 
+GNoneNoneNone90% 4d6x1075% 5d825% 3d6 25% 1d10 50%any 1d4 + 1 scroll 
+H75% 8d1075% 6d10x1075% 3d10x1075% 5d8x1075% 9d850% 1d100 50% 10d4 20%any 1d4 + 1 potion + 1 scroll 
+INoneNoneNoneNone80% 3d1050% 2d6 50% 2d615%any 1 
+J45% 3d845% 1d8NoneNoneNoneNone NoneNone 
+KNone90% 2d1035% 1d8NoneNoneNone NoneNone 
+LNoneNoneNoneNoneNone50% 1d4 NoneNone 
+MNoneNoneNone90% 4d1090% 2d8x1055% 5d4 45% 2d6None 
+NNoneNoneNoneNoneNoneNone None40%2d4 potions 
+ONoneNoneNoneNoneNoneNone None50%1d4 scrolls 
+
+Individual Treasures - Pieces of Copper, Pieces of Silver, Pieces of Electrum, Pieces of Gold, Pieces of Platinum, Gems and Jewelry, Magic Items
+P3d8NoneNoneNoneNoneNone NoneNone 
+QNone3d6NoneNoneNoneNone NoneNone 
+RNoneNone2d6NoneNoneNone NoneNone 
+SNoneNoneNone2d4NoneNone NoneNone 
+TNoneNoneNoneNone1d6None NoneNone 
+U50% 1d2050% 1d20None25% 1d20None5% 1d4 5% 1d42%Any 1 
+VNone25% 1d2025% 1d2050% 1d2025% 1d2010% 1d4 10% 1d45%Any 1
 */
 
 //Page 13
 /*
-Unguarded Treasures Level*100's of Copper 100's of Silver 100's of Electrum 100's of Gold 100's of Platinum Gems and JewelryMagic Items 175%1d850%1d625%1d47%1d41%1d47%1d4 3%1d42%Any 1 250%1d1050%1d825%1d620%1d62%1d410%1d6 7%1d45%Any 1 330%2d650%1d1025%1d850%1d64%1d415%1d6 7%1d68%Any 1 4-520%3d650%2d625%1d1050%2d68%1d420%1d8 10%1d612%Any 1 6-715%4d650%3d625%1d1270%2d815%1d430%1d8 15%1d616%Any 1 8+10%5d650%5d625%2d875%4d630%1d440%1d8 30%1d820%Any 1 * Dungeon levels Gems and Jewelry Use the tables below to determine the base value and number found when gems are indicated in a treasure hoard.  If the number generated in the main table above is small, roll for each gem; but if the number is large (10 or more, at the GM's option), after each roll for Type and Base Value, roll the indicated die to see how many such gems are in the hoard. d%Type Base Value in Gold Pieces Number Found 01-20Ornamental101d10 21-45Semiprecious501d8 46-75Fancy1001d6 76-95Precious5001d4 96-00Gem10001d2 Jewel50001 The values of gems vary from the above for reasons of quality, size, etc.  The GM may use the table below to adjust the values of the gems in the hoard, at his or her option.  This is why there is no die result given in the table above for Jewel; on a roll of 12 on the table below, a Gem can become a Jewel. 2d6Value Adjustment 2Next Lower Value Row 31/2 43/4 5-9Normal Value 101.5 Times 112 Times 12Next Higher Value Row Standard items of jewelry are valued at 2d8x100 gp value.  The table below can be used to generate descriptions of the items themselves. d%Type 01-06Anklet 07-12Belt 13-14Bowl 15-21Bracelet 22-27Brooch 28-32Buckle 33-37Chain 38-40Choker 41-42Circlet 43-47Clasp 48-51Comb 52Crown 53-55Cup 56-62Earring 63-65Flagon 66-68Goblet 69-73Knife 74-77Letter Opener 78-80Locket 81-82Medal 83-89Necklace 90Plate 91-95Pin 96Sceptre 97-99Statuette 00Tiara
+Unguarded Treasures - Dungeon Level, 100's of Copper, 100's of Silver, 100's of Electrum, 100's of Gold, 100's of Platinum, Gems and Jewelry, Magic Items, 
+1 75%1d850%1d625%1d47%1d41%1d47%1d4 3%1d4
+2%Any 1 250%1d1050%1d825%1d620%1d62%1d410%1d6 7%1d45%Any 1 
+330%2d650%1d1025%1d850%1d64%1d415%1d6 7%1d68%Any 1 
+4-520%3d650%2d625%1d1050%2d68%1d420%1d8 10%1d612%Any 1 
+6-715%4d650%3d625%1d1270%2d815%1d430%1d8 15%1d616%Any 1 
+8+10%5d650%5d625%2d875%4d630%1d440%1d8 30%1d820%Any 1 
+
+Gems and Jewelry
+Use the tables below to determine the base value and number found when gems are indicated in a treasure hoard.  
+If the number generated in the main table above is small, roll for each gem; but if the number is large 
+(10 or more, at the GM's option), after each roll for Type and Base Value, roll the indicated die to see how 
+many such gems are in the hoard. 
+
+d%, Type, Base Value in Gold Pieces, Number Found,
+01-20, Ornamental, 10, 1d10
+21-45, Semiprecious, 50, 1d8
+46-75, Fancy, 100, 1d6
+76-95, Precious, 500, 1d4
+96-00, Gem, 1000, 1d2
+       Jewel, 5000, 1
+       
+The values of gems vary from the above for reasons of quality, size, etc.  The GM may use the table below to adjust the values of the gems in the hoard, at his or her option.  This is why there is no die result given in the table above for Jewel; on a roll of 12 on the table below, a Gem can become a Jewel. 
+2d6, Value Adjustment
+2, Next Lower Value Row
+3, 1/2 
+4, 3/4 
+5-9, Normal Value 
+10, 1.5 Times 
+11, 2 Times 
+12, Next Higher Value Row 
+
+Standard items of jewelry are valued at 2d8x100 gp value.  
+The table below can be used to generate descriptions of 
+the items themselves. 
+d%, Type
+01-06 Anklet
+07-12 Belt 
+13-14 Bowl 
+15-21 Bracelet 
+22-27 Brooch 
+28-32 Buckle 
+33-37 Chain 
+38-40 Choker 
+41-42 Circlet 
+43-47 Clasp 
+48-51 Comb 
+52 Crown 
+53-55 Cup 
+56-62 Earring 
+63-65 Flagon 
+66-68 Goblet 
+69-73 Knife 
+74-77 Letter Opener 
+78-80 Locket 
+81-82 Medal 
+83-89 Necklace 
+90 Plate 
+91-95 Pin 
+96 Sceptre 
+97-99 Statuette 
+00 Tiara
 */
 
 //Page 14
 /*
-Magic Item Generation Determine the sort of item found by rolling on the following table: AnyWeapon or Armor Any Exc. WeaponsType of Item 01-2501-70Weapon 26-3571-0001-12Armor 36-5513-40Potion 56-8541-79Scroll 86-9080-86Ring 91-9587-93Wand, Staff, or Rod 96-0094-00Miscellaneous Magic Magic Weapons First, roll d% on the following table to determine the weapon type: d%Weapon Typed%Weapon Type 01-02Great Axe60-65Shortsword 03-09Battle Axe66-79Longsword 10-11Hand Axe80-81Scimitar 12-19Shortbow82-83Two-Handed Sword 20-27Shortbow Arrow84-86Warhammer 28-31Longbow87-94Mace 32-35Longbow Arrow95Maul 36-43Light Quarrel96Pole Arm 44-47Heavy Quarrel97Sling Bullet 48-59Dagger98-00Spear Next, roll on the Weapon Bonus tables.  Follow the directions given if a roll on the Special Enemy or Special Ability tables are indicated; generally multiple rolls on the Special Ability table should be ignored when rolled. d% RollWeapon Bonus MeleeMissileBonus 01-4001-46+1 41-5047-58+2 51-5559-64+3 56-57+4 58+5 59-7565-82+1, +2 vs. Special Enemy 76-8583-94+1, +3 vs. Special Enemy 86-95Roll Again + Special Ability 96-9895-98Cursed, -1* 99-0099-00Cursed, -2* * If cursed weapons are rolled along with special abilities, ignore the special ability roll. 1d6Special Enemy1d20Special Ability 1Dragons01-09Casts Light on Command 2Enchanted10-11Charm Person 3Lycanthropes12Drains Energy 4Regenerators13-16Flames on Command 5Spell Users17-19Locate Objects 6Undead20Wishes Wands, Staves and Rods d%Type 01-08Rod of Cancellation 09-13Snake Staff 14-17Staff of Commanding 18-28Staff of Healing 29-30Staff of Power 31-34Staff of Striking 35Staff of Wizardry 36-40Wand of Cold 41-45Wand of Enemy Detection 46-50Wand of Fear 51-55Wand of Fireballs 56-60Wand of Illusion 61-65Wand of Lightning Bolts 66-73Wand of Magic Detection 74-79Wand of Paralyzation 80-84Wand of Polymorph 85-92Wand of Secret Door Detection 93-00Wand of Trap Detection Rings d%Typed%Type 01-06Control Animal71Protection +3 07-12Control Human72-73Regeneration 13-19Control Plant74-75Spell Storing 20-30Delusion76-81Spell Turning 31-33Djinni Summoning82-83Telekinesis 34-44Fire Resistance84-90Water Walking 45-57Invisibility91-97Weakness 58-66Protection +198Wishes 67-70Protection +299-00X-Ray Vision Magic Armor Generate the type and bonus of each item of magic armor on the tables below. d%Armor Typed%Armor Bonus 01-09Leather Armor01-50+1 10-28Chain Mail51-80+2 29-43Plate Mail81-90+3 44-00Shield91-95Cursed * 96-00Cursed, AC 11 ** * If Cursed armor is rolled, roll again and reverse the bonus (e.g., -1 instead of +1). ** This armor has AC 11 but appears to be +1 when tested.
+Magic Item Generation
+Determine the sort of item found by rolling on the following table: 
+Any, 	Weapon or Armor, 	Any Exc. Weapons, 	Type of Item 
+01-25 	01-70 						Weapon
+26-35 	71-00			01-12			Armor
+36-55				13-40			Potion
+56-85				41-79			Scroll 
+86-90				80-86			Ring 
+91-95				87-93			Wand, Staff, or Rod 
+96-00				94-00			Miscellaneous Magic 
+
+Magic Weapons 
+First, roll d% on the following table to determine the weapon type: 
+d%, Weapon Type
+01-02 Great Axe
+60-65 Shortsword
+03-09 Battle Axe
+66-79 Longsword
+10-11 Hand Axe
+80-81 Scimitar
+12-19 Shortbow
+82-83 Two-Handed Sword 
+20-27 Shortbow Arrow
+84-86 Warhammer 
+28-31 Longbow
+87-94 Mace 
+32-35 Longbow Arrow
+95 Maul 
+36-43 Light Quarrel
+96 Pole Arm 
+44-47 Heavy Quarrel
+97 Sling Bullet 
+48-59 Dagger
+98-00 Spear 
+
+Next, roll on the Weapon Bonus tables.  Follow the directions given if a roll 
+on the Special Enemy or Special Ability tables are indicated; generally 
+multiple rolls on the Special Ability table should be ignored when rolled. 
+Melee d% Roll	Missile d% Roll	Bonus
+01-40 		01-46		+1 
+41-50		47-58		+2 
+51-55		59-64		+3 
+56-57				+4 
+58				+5 
+59-75		65-82		+1, +2 vs. Special Enemy 
+76-85		83-94		+1, +3 vs. Special Enemy 
+86-95				Roll Again + Special Ability 
+96-98		95-98		Cursed, -1* 
+99-00		99-00		Cursed, -2* 
+*If cursed weapons are rolled along with special abilities, ignore the special ability roll. 
+1d6 Special Enemy 
+1 Dragons
+2 Enchanted
+3 Lycanthropes
+4 Regenerators
+5 Spell Users
+6 Undead
+
+1d20 Special Ability 
+01-09 Casts Light on Command 
+10-11 Charm Person 
+12 Drains Energy 
+13-16 Flames on Command 
+17-19 Locate Objects
+20 Wishes
+
+Wands, Staves and Rods
+d%, Type
+01-08 Rod of Cancellation 
+09-13 Snake Staff
+14-17 Staff of Commanding
+18-28 Staff of Healing
+29-30 Staff of Power
+31-34 Staff of Striking
+35 Staff of Wizardry
+36-40 Wand of Cold 
+41-45 Wand of Enemy Detection
+46-50 Wand of Fear
+51-55 Wand of Fireballs
+56-60 Wand of Illusion
+61-65 Wand of Lightning Bolts
+66-73 Wand of Magic Detection
+74-79 Wand of Paralyzation
+80-84 Wand of Polymorph
+85-92 Wand of Secret Door Detection
+93-00 Wand of Trap Detection 
+
+Rings 
+d%, Type
+01-06 Control Animal
+07-12 Control Human
+13-19 Control Plant
+20-30 Delusion
+31-33 Djinni Summoning
+34-44 Fire Resistance
+45-57 Invisibility
+58-66 Protection +1
+67-70 Protection +2
+71 Protection +3
+72-73 Regeneration 
+74-75 Spell Storing
+76-81 Spell Turning
+82-83 Telekinesis 
+84-90 Water Walking 
+91-97 Weakness 
+98 Wishes
+99-00 X-Ray Vision
+
+Magic Armor 
+Generate the type and bonus of each item of magic armor on the tables below. 
+d%, Armor Type
+01-09 Leather Armor
+10-28 Chain Mail
+29-43 Plate Mail
+44-00 Shield
+
+d%Armor Bonus
+01-50 +1 
+51-80 +2 
+81-90 +3 
+91-95 Cursed *
+96-00 Cursed, AC 11 ** 
+
+* If Cursed armor is rolled, roll again and reverse the bonus 
+(e.g., -1 instead of +1). 
+
+** This armor has AC 11 but appears to be +1 when tested.
 */
 
 //Page 15
 /*
-Miscellaneous Magic Items d%Type 01-04Amulet of Proof against Detection and Location 05-06Bag of Devouring 07-12Bag of Holding 13-17Boots of Levitation 18-22Boots of Speed 23-27Boots of Traveling and Leaping 28Bowl Commanding Water Elementals 29Brazier Commanding Fire Elementals 30-35Broom of Flying 36Censer Commanding Air Elementals 37-39Cloak of Displacement 40-43Crystal Ball 44-45Crystal Ball with Clairaudience 46Drums of Panic 47Efreeti Bottle 48-54Elven Boots 55-61Elven Cloak 62-63Flying Carpet 64-70Gauntlets of Ogre Power 71-72Girdle of Giant Strength 73-78Helm of Reading Languages and Magic 79Helm of Telepathy 80Helm of Teleportation 81Horn of Blasting 82-90Medallion of ESP 91Mirror of Life Trapping 92-96Rope of Climbing 97-99Scarab of Protection 00Stone Commanding Earth Elementals Wands, Staves and Rods d%Type 01-08Rod of Cancellation 09-13Snake Staff 14-17Staff of Commanding 18-28Staff of Healing 29-30Staff of Power 31-34Staff of Striking 35Staff of Wizardry 36-40Wand of Cold 41-45Wand of Enemy Detection 46-50Wand of Fear 51-55Wand of Fireballs 56-60Wand of Illusion 61-65Wand of Lightning Bolts 66-73Wand of Magic Detection 74-79Wand of Paralyzation 80-84Wand of Polymorph 85-92Wand of Secret Door Detection 93-00Wand of Trap Detection Potions d%Typed%Type 01-03Clairaudience48-51Gaseous Form 04-07Clairvoyance52-55Giant Strength 08-10Control Animal56-59Growth 11-13Control Dragon60-63Healing 14-16Control Giant64-68Heroism 17-19Control Human69-72Invisibility 20-22Control Plant73-76Invulnerability 23-25Control Undead77-80Levitation 26-32Delusion81-84Longevity 33-35Diminution85-86Poison 36-39ESP87-89Polymorph Self 40-43Fire Resistance90-97Speed 44-47Flying98-00Treasure Finding Scrolls d%General Typed%General Type 01-03Cleric Spell Scroll (1 Spell)35Magic-User Spell Scroll (7 Spells) 04-06Cleric Spell Scroll (2 Spells)36-40Cursed Scroll 07-08Cleric Spell Scroll (3 Spells)41-46Protection from Elementals 09Cleric Spell Scroll (4 Spells)47-56Protection from Lycanthropes 10-15Magic-User Spell Scroll (1 Spell)57-61Protection from Magic 16-20Magic-User Spell Scroll (2 Spells)62-75Protection from Undead 21-25Magic-User Spell Scroll (3 Spells)76-85Map to Treasure Type A 26-29Magic-User Spell Scroll (4 Spells)86-89Map to Treasure Type E 30-32Magic-User Spell Scroll (5 Spells)90-92Map to Treasure Type G 33-34Magic-User Spell Scroll (6 Spells)93-00Map to 1d4 Magic Items
+Miscellaneous Magic Items 
+d%, Type 
+01-04 Amulet of Proof against Detection and Location 05-06Bag of Devouring 07-12Bag of Holding 13-17Boots of Levitation 18-22Boots of Speed 23-27Boots of Traveling and Leaping 28Bowl Commanding Water Elementals 29Brazier Commanding Fire Elementals 30-35Broom of Flying 36Censer Commanding Air Elementals 37-39Cloak of Displacement 40-43Crystal Ball 44-45Crystal Ball with Clairaudience 46Drums of Panic 47Efreeti Bottle 48-54Elven Boots 55-61Elven Cloak 62-63Flying Carpet 64-70Gauntlets of Ogre Power 71-72Girdle of Giant Strength 73-78Helm of Reading Languages and Magic 79Helm of Telepathy 80Helm of Teleportation 81Horn of Blasting 82-90Medallion of ESP 91Mirror of Life Trapping 92-96Rope of Climbing 97-99Scarab of Protection 00Stone Commanding Earth Elementals Wands, Staves and Rods d%Type 01-08Rod of Cancellation 09-13Snake Staff 14-17Staff of Commanding 18-28Staff of Healing 29-30Staff of Power 31-34Staff of Striking 35Staff of Wizardry 36-40Wand of Cold 41-45Wand of Enemy Detection 46-50Wand of Fear 51-55Wand of Fireballs 56-60Wand of Illusion 61-65Wand of Lightning Bolts 66-73Wand of Magic Detection 74-79Wand of Paralyzation 80-84Wand of Polymorph 85-92Wand of Secret Door Detection 93-00Wand of Trap Detection Potions d%Typed%Type 01-03Clairaudience48-51Gaseous Form 04-07Clairvoyance52-55Giant Strength 08-10Control Animal56-59Growth 11-13Control Dragon60-63Healing 14-16Control Giant64-68Heroism 17-19Control Human69-72Invisibility 20-22Control Plant73-76Invulnerability 23-25Control Undead77-80Levitation 26-32Delusion81-84Longevity 33-35Diminution85-86Poison 36-39ESP87-89Polymorph Self 40-43Fire Resistance90-97Speed 44-47Flying98-00Treasure Finding Scrolls d%General Typed%General Type 01-03Cleric Spell Scroll (1 Spell)35Magic-User Spell Scroll (7 Spells) 04-06Cleric Spell Scroll (2 Spells)36-40Cursed Scroll 07-08Cleric Spell Scroll (3 Spells)41-46Protection from Elementals 09Cleric Spell Scroll (4 Spells)47-56Protection from Lycanthropes 10-15Magic-User Spell Scroll (1 Spell)57-61Protection from Magic 16-20Magic-User Spell Scroll (2 Spells)62-75Protection from Undead 21-25Magic-User Spell Scroll (3 Spells)76-85Map to Treasure Type A 26-29Magic-User Spell Scroll (4 Spells)86-89Map to Treasure Type E 30-32Magic-User Spell Scroll (5 Spells)90-92Map to Treasure Type G 33-34Magic-User Spell Scroll (6 Spells)93-00Map to 1d4 Magic Items
 */
 
 //Page 16
