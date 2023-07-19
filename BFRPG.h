@@ -1252,42 +1252,45 @@ Treasure To generate a random treasure, find the indicated treasure type assigne
 where a percentage chance is given, roll percentile dice to see if that sort of treasure is found.  
 If so, roll the indicated dice to determine how much. 
 
-Lair Treasures - 100's of Copper, 100's of Silver, 100's of Electrum, 100's of Gold, 100's of Platinum,  Gems and Jewelry, Magic Items 
-A 50% 5d660% 5d640% 5d470% 10d650% 1d1050% 6d6 50% 6d630%any 3 
-B75% 5d1050% 5d650% 5d450% 3d6None25% 1d6 25% 1d6 10%1 weapon or armor 
-C60% 6d660% 5d430% 2d6NoneNone25% 1d4 25% 1d415%any 1d2 
-D30% 4d645% 6d6None90% 5d8None30% 1d8 30% 1d8 20%any 1d2 + 1 potion 
-E30% 2d860% 6d1050% 3d850% 4d10None10% 1d10 10% 1d10 30%any 1d4 + 1 scroll 
-FNone40% 3d850% 4d885% 6d1070% 2d820% 2d12 10% 1d12 35%any 1d4 except weapons + 1 potion + 1 scroll 
-GNoneNoneNone90% 4d6x1075% 5d825% 3d6 25% 1d10 50%any 1d4 + 1 scroll 
-H75% 8d1075% 6d10x1075% 3d10x1075% 5d8x1075% 9d850% 1d100 50% 10d4 20%any 1d4 + 1 potion + 1 scroll 
-INoneNoneNoneNone80% 3d1050% 2d6 50% 2d615%any 1 
-J45% 3d845% 1d8NoneNoneNoneNone NoneNone 
-KNone90% 2d1035% 1d8NoneNoneNone NoneNone 
-LNoneNoneNoneNoneNone50% 1d4 NoneNone 
-MNoneNoneNone90% 4d1090% 2d8x1055% 5d4 45% 2d6None 
-NNoneNoneNoneNoneNoneNone None40%2d4 potions 
-ONoneNoneNoneNoneNoneNone None50%1d4 scrolls 
+Lair Treasures
+	100xC 		100xS 		100xE		100xG 		100xP		Gems		Jewelry		Magic Items 
+A 	50% 5d6		60% 5d6		40% 5d4		70% 10d6	50% 1d10	50% 6d6 	50% 6d6		30% any 3 
+B	75% 5d10	50% 5d6		50% 5d4		50% 3d6		None		25% 1d6 	25% 1d6 	10% 1 weapon or armor 
+C	60% 6d6		60% 5d4		30% 2d6		None		None		25% 1d4 	25% 1d4		15% any 1d2 
+D	30% 4d6		45% 6d6		None		90% 5d8		None		30% 1d8 	30% 1d8 	20% any 1d2 + 1 potion 
+E	30% 2d8		60% 6d10	50% 3d8		50% 4d10	None		10% 1d10 	10% 1d10 	30% any 1d4 + 1 scroll 
+F	None		40% 3d8		50% 4d8		85% 6d10	70% 2d8		20% 2d12 	10% 1d12 	35% any 1d4 except weapons + 1 potion + 1 scroll 
+G	None		None		None		90% 4d6x10	75% 5d8		25% 3d6 	25% 1d10 	50% any 1d4 + 1 scroll 
+H	75% 8d10	75% 6d10x10	75% 3d10x10	75% 5d8x10	75% 9d8		50% 1d100 	50% 10d4 	20% any 1d4 + 1 potion + 1 scroll 
+I	None		None		None		None		80% 3d10	50% 2d6 	50% 2d6		15% any 1 
+J	45% 3d8		45% 1d8		None		None		None		None 		None		None 
+K	None		90% 2d10	35% 1d8		None		None		None 		None		None 
+L	None		None		None		None		None		50% 1d4 	None		None 
+M	None		None		None		90% 4d10	90% 2d8x10	55% 5d4 	45% 2d6		None 
+N	None		None		None		None		None		None 		None		40% 2d4 potions 
+O	None		None		None		None		None		None 		None		50% 1d4 scrolls 
 
-Individual Treasures - Pieces of Copper, Pieces of Silver, Pieces of Electrum, Pieces of Gold, Pieces of Platinum, Gems and Jewelry, Magic Items
-P3d8NoneNoneNoneNoneNone NoneNone 
-QNone3d6NoneNoneNoneNone NoneNone 
-RNoneNone2d6NoneNoneNone NoneNone 
-SNoneNoneNone2d4NoneNone NoneNone 
-TNoneNoneNoneNone1d6None NoneNone 
-U50% 1d2050% 1d20None25% 1d20None5% 1d4 5% 1d42%Any 1 
-VNone25% 1d2025% 1d2050% 1d2025% 1d2010% 1d4 10% 1d45%Any 1
+Individual Treasures
+	C		S		E		G		P		Gems	Jewelry		Magic Items
+P	3d8		None		None		None		None		None 	None		None 
+Q	None		3d6		None		None		None		None	None		None 
+R	None		None		2d6		None		None		None 	None		None 
+S	None		None		None		2d4		None		None 	None		None 
+T	None		None		None		None		1d6		None 	None		None 
+U	50% 1d20	50% 1d20	None		25% 1d20	None		5% 1d4 	5% 1d4		2%Any 1 
+V	None		25% 1d20	25% 1d20	50% 1d20	25% 1d20	10% 1d4 10% 1d4		5%Any 1
 */
 
 //Page 13
 /*
-Unguarded Treasures - Dungeon Level, 100's of Copper, 100's of Silver, 100's of Electrum, 100's of Gold, 100's of Platinum, Gems and Jewelry, Magic Items, 
-1 75%1d850%1d625%1d47%1d41%1d47%1d4 3%1d4
-2%Any 1 250%1d1050%1d825%1d620%1d62%1d410%1d6 7%1d45%Any 1 
-330%2d650%1d1025%1d850%1d64%1d415%1d6 7%1d68%Any 1 
-4-520%3d650%2d625%1d1050%2d68%1d420%1d8 10%1d612%Any 1 
-6-715%4d650%3d625%1d1270%2d815%1d430%1d8 15%1d616%Any 1 
-8+10%5d650%5d625%2d875%4d630%1d440%1d8 30%1d820%Any 1 
+Unguarded Treasures
+Dungeon Level, 100's of Copper, 100's of Silver, 100's of Electrum, 100's of Gold, 100's of Platinum, Gems and Jewelry, Magic Items, 
+1 	75%1d850%1d625%1d47%1d41%1d47%1d4 3%1d4
+2	%Any 1 250%1d1050%1d825%1d620%1d62%1d410%1d6 7%1d45%Any 1 
+3	30%2d650%1d1025%1d850%1d64%1d415%1d6 7%1d68%Any 1 
+4	-520%3d650%2d625%1d1050%2d68%1d420%1d8 10%1d612%Any 1 
+6	-715%4d650%3d625%1d1270%2d815%1d430%1d8 15%1d616%Any 1 
+8	+10%5d650%5d625%2d875%4d630%1d440%1d8 30%1d820%Any 1 
 
 Gems and Jewelry
 Use the tables below to determine the base value and number found when gems are indicated in a treasure hoard.  
@@ -1363,27 +1366,27 @@ Any, 	Weapon or Armor, 	Any Exc. Weapons, 	Type of Item
 
 Magic Weapons 
 First, roll d% on the following table to determine the weapon type: 
-d%, Weapon Type
-01-02 Great Axe
-60-65 Shortsword
-03-09 Battle Axe
-66-79 Longsword
-10-11 Hand Axe
-80-81 Scimitar
-12-19 Shortbow
-82-83 Two-Handed Sword 
-20-27 Shortbow Arrow
-84-86 Warhammer 
-28-31 Longbow
-87-94 Mace 
-32-35 Longbow Arrow
-95 Maul 
-36-43 Light Quarrel
-96 Pole Arm 
-44-47 Heavy Quarrel
-97 Sling Bullet 
-48-59 Dagger
-98-00 Spear 
+d% 	Weapon Type
+01-02 	Great Axe
+60-65	Shortsword
+03-09 	Battle Axe
+66-79	Longsword
+10-11 	Hand Axe
+80-81 	Scimitar
+12-19	Shortbow
+82-83 	Two-Handed Sword 
+20-27	Shortbow Arrow
+84-86 	Warhammer 
+28-31 	Longbow
+87-94	Mace 
+32-35	Longbow Arrow
+95 	Maul 
+36-43 	Light Quarrel
+96 	Pole Arm 
+44-47	Heavy Quarrel
+97	Sling Bullet 
+48-59	Dagger
+98-00	Spear 
 
 Next, roll on the Weapon Bonus tables.  Follow the directions given if a roll 
 on the Special Enemy or Special Ability tables are indicated; generally 
