@@ -1522,21 +1522,50 @@ EncounterMonster WildernessEncounters[][] =
   /*Woods or Forest */		{GreenDragon, Alicorn/* (see Unicorn)*/, Treant, Orc, WildBoar,BlackBear, GiantHawk, Antelope, Wolf, Ogre, BrownBear, DireWolf, HillGiant, Owlbear, Unicorn},
 };
 
+enum{NullAttack, Sting, }AttackNames;
+enum{NullMovement, Fly,}MovementNames;
+enum{NullTreasure, Special}TreasureTypeNames;
+
 struct
 {
   char* Name;
   byte ArmorClass, HitDice, 
-  AttackNameA, AttackCountA, AttackDamageA, 
-  AttackNameB, AttackCountB, AttackDamageB, 
-  AttackNameC, AttackCountC, AttackDamageC,
-  Movement,
+  AttackNameA, AttackCountA, AttackDamageDiceSizeA, AttackDamageDiceCountA, 
+  AttackNameB, AttackCountB, AttackDamageDiceSizeB, AttackDamageDiceCountB, 
+  AttackNameC, AttackCountC, AttackDamageDiceSizeC, AttackDamageDiceCountC,
+  MovementA, MovementType, MovementB,
   AppearDiceCountWild, AppearDiceSizeWild,
   AppearDiceCountLair, AppearDiceSizeLair;
   CharacterClass SaveAsClass;
   byte SaveAsLevel, Morale, TreasureType, XP;
 }MonsterData[] = 
 {
-  {"Bee", 13, 0.25, 1, Sting, 1, 4, },
+  {
+    "Bee", 13, 0.25, 1, 
+    Sting, 1, 4,
+    NullAttack, 0, 0,
+    NullAttack, 0, 0,
+    10, Fly, 50,
+    1, 6, 5, 6,
+    Fighter, 1,
+    9, //12 if queen is threatened
+    Special,
+    13
+  },
+  
+  /*
+  Bee, Giant
+  Armor Class: 13
+  Hit Dice: ½* (1d4 hit points)
+  No. of Attacks: 1 sting
+  Damage: 1d4 + poison sting
+  Movement: 10' Fly 50'
+  No. Appearing: 1d6, Wild 1d6, Lair 5d6
+  Save As: Fighter: 1
+  Morale: 9 (12 if queen is threatened)
+  Treasure Type: Special
+  XP: 13
+  */
 };
 
 char* MonsterNames[] =  {"Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, Snake, Cobra, GiantCrabSpider, Stirge, Wolf, GiantBombardierBeetle, GiantFly, Ghoul, Gnoll, GrayOoze, Hobgoblin, LizardMan, /*NPCPartyAdventurer,*/ PitViperSnake, GiantBlackWidowSpider, Troglodyte, Zombie,GiantAnt, CarnivorousApe, GiantTigerBeetle, Bugbear, Doppleganger, Gargoyle, GelatinousCube, WereratLycanthrope, Ogre, Shadow, TentacleWorm, Wight,",
