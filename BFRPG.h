@@ -1538,7 +1538,7 @@ struct
   AppearDiceCountLair, AppearDiceSizeLair;
   CharacterClass SaveAsClass;
   byte SaveAsLevel, Morale, TreasureType, XP;
-}MonsterData[] = 
+}MonsterData[100] = 
 {
   {
     "Bee", 13, 0.25, 1, 
