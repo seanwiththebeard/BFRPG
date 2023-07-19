@@ -1648,56 +1648,56 @@ and three daytime checks)
 *Roll 1d6; on a roll of 1, an encounter occurs.  
 *Roll 2d8 on the appropriate table. 
 
-Die Roll	Desert or Barren	Grassland	Inhabited Territories 
-2		Dragon, Blue		Dragon, Green	Dragon, Gold 
-3		Hellhound		Troll		Ghoul
-4		Giant, Fire		Fly, Giant	Bugbear 
-5		Purple Worm		Scorpion, Giant	Goblin 
-6		Fly, Giant		NPC Party:BanditCentaur 
-7		Scorpion, Giant		Lion		NPC Party:  Bandit 
-8		Camel			Boar, Wild	NPC Party:  Merchant 
-9		Spider, Giant TarantellaNPC Party:MerchantNPC Party:  Pilgrim 
-10		NPC Party:  Merchant	Wolf		NPC Party:  Noble 
-11		Hawk			Bee, Giant	Dog 
-12		NPC Party:  Bandit	Gnoll		Gargoyle* 
-13		Ogre			Goblin		Gnoll 
-14		Griffon			Blink Dog	Ogre 
-15		Gnoll		Wolf, DireMinotaur 
-16		Dragon, Red		Giant, 		HillVampire* 
+Die Roll	Desert or Barren	Grassland				Inhabited Territories 
+2		Dragon, Blue		Dragon, Green				Dragon, Gold 
+3		Hellhound		Troll					Ghoul
+4		Giant, Fire		Fly, Giant				Bugbear 
+5		Purple Worm		Scorpion, Giant				Goblin 
+6		Fly, Giant		NPC Party:Bandit			Centaur 
+7		Scorpion, Giant		Lion					NPC Party:  Bandit 
+8		Camel			Boar, Wild				NPC Party:  Merchant 
+9		Spider, Giant TarantellaNPC Party:Merchant			NPC Party:  Pilgrim 
+10		NPC Party:  Merchant	Wolf					NPC Party:  Noble 
+11		Hawk			Bee, Giant				Dog 
+12		NPC Party:  Bandit	Gnoll					Gargoyle* 
+13		Ogre			Goblin					Gnoll 
+14		Griffon			Blink Dog				Ogre 
+15		Gnoll			Wolf, Dire				Minotaur 
+16		Dragon, Red		Giant, Hill				Vampire* 
 
-Die Roll	Jungle			Mountains or Hills	Ocean 
-2Dragon, GreenDragon, WhiteDragon, Sea 
-3NPC Party:  BanditRoc (1d6: 1-3 Large, 4-5 Huge, 6 Giant)Hydra 
-4GoblinDisplacerWhale, Sperm 
-5HobgoblinLycanthrope, Werewolf*Crocodile, Giant 
-6Centipede, GiantMountain LionCrab, Giant 
-7Snake, Giant PythonWolfWhale, Killer 
-8ElephantSpider, Giant CrabOctopus, Giant 
-9AntelopeHawkShark, Mako 
-10JaguarOrcNPC Party:  Merchant 
-11StirgeBat, GiantNPC Party:  Buccaneer (Pirate) 
-12Beetle, Giant TigerHawk, GiantShark, Bull 
-13Caecilia, GiantGiant, HillRoc (1d8: 1-5 Huge, 6-8 Giant) 
-14Shadow*ChimeraShark, Great White 
-15NPC Party:  MerchantWolf, DireMermaid 
-16Lycanthrope, Weretiger*Dragon, RedSea Serpent 
+Die Roll	Jungle			Mountains or Hills			Ocean 
+2		Dragon, Green		Dragon, White				Dragon, Sea 
+3		NPC Party:  Bandit	Roc (1d6: 1-3 Large, 4-5 Huge, 6 Giant)	Hydra 
+4		Goblin			Displacer				Whale, Sperm 
+5		Hobgoblin		Lycanthrope, Werewolf*			Crocodile, Giant 
+6		Centipede, Giant	Mountain Lion				Crab, Giant 
+7		Snake, Giant Python	Wolf					Whale, Killer 
+8		Elephant		Spider, Giant Crab			Octopus, Giant 
+9		Antelope		Hawk					Shark, Mako 
+10		Jaguar			Orc					NPC Party:  Merchant 
+11		Stirge			Bat, Giant				NPC Party:  Buccaneer (Pirate) 
+12		Beetle, Giant Tiger	Hawk, Giant				Shark, Bull 
+13		Caecilia, Giant		Giant, Hill				Roc (1d8: 1-5 Huge, 6-8 Giant) 
+14		Shadow*			Chimera					Shark, Great White 
+15		NPC Party:  Merchant	Wolf, Dire				Mermaid 
+16		Lycanthrope, Weretiger*	Dragon, Red				Sea Serpent 
 
-Die Roll	River or Riverside	Swamp			Woods or Forest 
-2Dragon, BlackDragon, BlackDragon, Green 
-3Fish, Giant PiranhaShadow*Alicorn (see Unicorn) 
-4StirgeTrollTreant 
-5Fish, Giant BassLizard, Giant DracoOrc 
-6NPC Party:  MerchantCentipede, GiantBoar, Wild 
-7LizardmanLeech, GiantBear, Black
-8CrocodileLizardmanHawk, Giant
-9Frog, GiantCrocodileAntelope 
-10Fish, Giant CatfishStirgeWolf
-11NPC Party:  BuccaneerOrcOgre 
-12TrollToad, Giant (see Frog, Giant)Bear, Brown
-13JaguarTroglodyteWolf, Dire
-14NixieBlood RoseGiant, Hill
-15Water Termite, GiantHangman TreeOwlbear
-16Dragon, GreenBasiliskUnicorn
+Die Roll	River or Riverside	Swamp					Woods or Forest 
+2		Dragon, Black		Dragon, Black				Dragon, Green 
+3		Fish, Giant Piranha	Shadow*					Alicorn (see Unicorn) 
+4		Stirge			Troll					Treant 
+5		Fish, Giant Bass	Lizard, Giant Draco			Orc 
+6		NPC Party:  Merchant	Centipede, Giant			Boar, Wild 
+7		Lizardman		Leech, Giant				Bear, Black
+8		Crocodile		Lizardman				Hawk, Giant
+9		Frog, Giant		Crocodile				Antelope 
+10		Fish, Giant Catfish	Stirge					Wolf
+11		NPC Party:  Buccaneer	Orc					Ogre 
+12		Troll			Toad, Giant (see Frog, Giant)		Bear, Brown
+13		Jaguar			Troglodyte				Wolf, Dire
+14		Nixie			Blood Rose				Giant, Hill
+15		Water Termite, Giant	Hangman Tree				Owlbear
+16		Dragon, Green		Basilisk				Unicorn
 */
 
 //Open Game License
