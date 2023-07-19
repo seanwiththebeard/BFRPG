@@ -1571,17 +1571,24 @@ Die Roll	River or Riverside	Swamp					Woods or Forest
 
 typedef enum
 {
-  Bee,
-  Goblin, 
-  GreenSlime, 
-  Kobold, 
-  NPCPartyAdventurer, 
-  NPCPartyBandit,
-  Orc,
-  Skeleton,
-  Snake,
-  Cobra,
-  GiantCrabSpider, Stirge, Wolf}EncounterDungeon;
+  /*Level 1*/	Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, Snake, Cobra, GiantCrabSpider, Stirge, Wolf,
+  /*Level 2*/	GiantBombardierBeetle, GiantFly, Ghoul, Gnoll, GrayOoze, Hobgoblin, LizardMan, /*NPCPartyAdventurer,*/ PitViperSnake, GiantBlackWidowSpider, Troglodyte, Zombie,
+  /*Level 3*/	GiantAnt, CarnivorousApe, GiantTigerBeetle, Bugbear, Doppleganger, Gargoyle, GelatinousCube, WereratLycanthrope, Ogre, Shadow, TentacleWorm, Wight,
+  /*Level 4-5*/	CaveBear, GiantCaecilia, Cockatrice, /*Doppleganger,*/ /*GrayOoze,*/ Hellhound, Lycanthrope, Werewolf, Minotaur, OchreJelly, Owlbear, RustMonster, Wraith,
+  /*Level 6-7*/	Basilisk, BlackPudding, Caecilia, Displacer, Hydra, WeretigerLycanthrope, Mummy, /*Owlbear,*/ /*RustMonster,*/ /*GiantScorpion,*/ Spectre, Troll,
+  /*Level 8+*/	/*BlackPudding,*/ Chimera, HillGiant, StoneGiant, /*Hydra,*/ WereboarLycanthrope, PurpleWorm, FlameSalamander, FrostSalamander, Vampire,
+
+}EncounterMonster;
+
+EncounterMonster DungeonEncounters[][] = 
+{
+  {/*Level 1*/	Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, Snake, Cobra, GiantCrabSpider, Stirge, Wolf},
+  {/*Level 2*/	GiantBombardierBeetle, GiantFly, Ghoul, Gnoll, GrayOoze, Hobgoblin, LizardMan, NPCPartyAdventurer, PitViperSnake, GiantBlackWidowSpider, Troglodyte, Zombie},
+  {/*Level 3*/	GiantAnt, CarnivorousApe, GiantTigerBeetle, Bugbear, Doppleganger, Gargoyle, GelatinousCube, WereratLycanthrope, Ogre, Shadow, TentacleWorm, Wight},
+  {/*Level 4-5*/CaveBear, GiantCaecilia, Cockatrice, Doppleganger, GrayOoze, Hellhound, Lycanthrope, Werewolf, Minotaur, OchreJelly, Owlbear, RustMonster, Wraith},
+  {/*Level 6-7*/Basilisk, BlackPudding, Caecilia, Displacer, Hydra, WeretigerLycanthrope, Mummy, Owlbear, RustMonster,*/ GiantScorpion, Spectre, Troll},
+  {/*Level 8+*/	BlackPudding, Chimera, HillGiant, StoneGiant, Hydra, WereboarLycanthrope, PurpleWorm, FlameSalamander, FrostSalamander, Vampire},
+};
 
 //Open Game License
 /*
