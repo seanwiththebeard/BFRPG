@@ -468,18 +468,22 @@ byte ThiefSpecialAbilities[7][20] =
         damage is done.*/
 
 //Clerics vs. Undead (ClericVsUndead[Type - 1][Level]
+typedef enum
+{
+  Undead_Skeleton, 
+  Undead_Zombie, 
+  Undead_Ghoul, 
+  Undead_Wight, 
+  Undead_Wraith, 
+  Undead_Mummy, 
+  Undead_Spectre, 
+  Undead_Vampire, 
+  Undead_Ghost,
+}UndeadType;
+
 #define No 21
 #define T 0
 #define D -1
-#define Skeleton 1
-#define Zombie 2
-#define Ghoul 3
-#define Wight 4
-#define Wraith 5
-#define Mummy 6
-#define Spectre 7
-#define Vampire 8
-#define Ghost 9
 sbyte ClericVsUndead[9][20] = 
 {
   {13, 11, 9, 7, 5, 4, 3, T, T, T, D, D, D, D, D, D, D, D, D, D}, //Skeleton
@@ -492,6 +496,9 @@ sbyte ClericVsUndead[9][20] =
   {No, No, No, No, No, No, No, No, No, 20, 19, 18, 17, 15, 13, 11, 9, 7, 5, 3}, //Vampire
   {No, No, No, No, No, No, No, No, No, No, No, 20, 19, 18, 17, 15, 13, 11, 9, 7}  //Ghost
 };
+#undef No
+#undef T
+#undef D
 
 /*Turn Undead 
 	•Roll 1d20 >= Target number.
@@ -1561,6 +1568,20 @@ Die Roll	River or Riverside	Swamp					Woods or Forest
 15		Water Termite, Giant	Hangman Tree				Owlbear
 16		Dragon, Green		Basilisk				Unicorn
 */
+
+typedef enum
+{
+  Bee,
+  Goblin, 
+  GreenSlime, 
+  Kobold, 
+  NPCPartyAdventurer, 
+  NPCPartyBandit,
+  Orc,
+  Skeleton,
+  Snake,
+  Cobra,
+  GiantCrabSpider, Stirge, Wolf}EncounterDungeon;
 
 //Open Game License
 /*
