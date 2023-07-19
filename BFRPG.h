@@ -1571,23 +1571,65 @@ Die Roll	River or Riverside	Swamp					Woods or Forest
 
 typedef enum
 {
+  //Dungeon Encounters
   /*Level 1*/	Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, Snake, Cobra, GiantCrabSpider, Stirge, Wolf,
   /*Level 2*/	GiantBombardierBeetle, GiantFly, Ghoul, Gnoll, GrayOoze, Hobgoblin, LizardMan, /*NPCPartyAdventurer,*/ PitViperSnake, GiantBlackWidowSpider, Troglodyte, Zombie,
   /*Level 3*/	GiantAnt, CarnivorousApe, GiantTigerBeetle, Bugbear, Doppleganger, Gargoyle, GelatinousCube, WereratLycanthrope, Ogre, Shadow, TentacleWorm, Wight,
   /*Level 4-5*/	CaveBear, GiantCaecilia, Cockatrice, /*Doppleganger,*/ /*GrayOoze,*/ Hellhound, Lycanthrope, Werewolf, Minotaur, OchreJelly, Owlbear, RustMonster, Wraith,
-  /*Level 6-7*/	Basilisk, BlackPudding, Caecilia, Displacer, Hydra, WeretigerLycanthrope, Mummy, /*Owlbear,*/ /*RustMonster,*/ /*GiantScorpion,*/ Spectre, Troll,
+  /*Level 6-7*/	Basilisk, BlackPudding, Caecilia, Displacer, Hydra, WeretigerLycanthrope, Mummy, /*Owlbear,*/ /*RustMonster,*/ GiantScorpion, Spectre, Troll,
   /*Level 8+*/	/*BlackPudding,*/ Chimera, HillGiant, StoneGiant, /*Hydra,*/ WereboarLycanthrope, PurpleWorm, FlameSalamander, FrostSalamander, Vampire,
 
+  //City, Town or Village Encounters (2d6)
+  /*Day Encounter*/ 	/*Doppleganger,*/ Noble, Thief, Bully, CityWatch, Merchant, Beggar, Priest, Mercenary, Wizard, /*WereratLycanthrope,*/
+  /*Night Encounter*/	/*Doppleganger,*/ /*Shadow,*/ PressGang, /*Beggar,*/ /*Thief,*/ /*Bully,*/ /*Merchant,*/ GiantRat, /*CityWatch,*/ /*Wizard,*/ /*WereratLycanthrope,*/
+  
+  //Wilderness Encounters
+  /*Desert or Barren*/		BlueDragon, /*Hellhound,*/ FireGiant, /*PurpleWorm,*/ /*GiantFly,*/ /*GiantScorpion,*/ Camel, GiantTarantellaSpider, NPCPartyMerchant, /*NPCPartyMerchant,*/ Hawk, /*NPCPartyBandit,*/ /*Ogre,*/ Griffon, /*Gnoll,*/ RedDragon,
+  /*Grassland*/			GreenDragon, /*Troll, GiantFly, GiantScorpion, NPCPartyBandit,*/ Lion, WildBoar, NPCPartyPilgrim, /*Wolf,*/ GiantBee, /*Gnoll, Goblin,*/ BlinkDog, DireWolf, /*HillGiant,*/
+  /*Inhabited Territories*/ 	GoldDragon, /*Ghoul, Bugbear, Goblin,*/ Centaur, /*NPCPartyBandit, NPCPartyMerchant,*/ NPCPartyNoble, Dog, /*Gargoyle, Gnoll, Ogre, Minotaur, Vampire*/
+  /*Jungle*/			/*GreenDragon, NPCPartyBandit, Goblin, Hobgoblin,*/ GiantCentipede, GiantPythonSnake, Elephant, Antelope, Jaguar, /*Stirge, GiantTigerBeetle, GiantCaecilia, Shadow, NPCPartyMerchant, WeretigerLycanthrope,*/
+  /*Mountains or Hills*/	WhiteDragon, Roc/* (1d6: 1-3 Large, 4-5 Huge, 6 Giant)*/, /*Displacer,*/ WerewolfLycanthrope, MountainLion, /*Wolf, GiantCrabSpider, Hawk, Orc,*/ GiantBat, GiantHawk, /*HillGiant, Chimera, DireWolf, RedDragon,*/
+  /*Ocean*/			SeaDragon, /*Hydra,*/ WhaleSperm, GiantCrocodile, GiantCrab, KillerWhale, GiantOctopus, MakoShark, /*NPCPartyMerchant,*/ NPCPartyBuccaneer, BullShark, /*Roc (1d8: 1-5 Huge, 6-8 Giant),*/ GreatWhiteShark, Mermaid, SeaSerpent,
+  /*River or Riverside*/	BlackDragon, GiantPiranhaFish, /*Stirge,*/ GiantBassFish, /*NPCPartyMerchant,*/ Lizardman, Crocodile, GiantFrog, GiantCatfish, /*NPCPartyBuccaneer, Troll, Jaguar,*/ Nixie, GiantWaterTermite, /*GreenDragon,*/
+  /*Swamp*/			/*BlackDragon, Shadow, Troll,*/ GiantDracoLizard, /*GiantCentipede,*/ GiantLeech, /*Lizardman, Crocodile, Stirge, Orc,*/ GiantToad/* (see Frog, Giant)*/, /*Troglodyte,*/ BloodRose, HangmanTree, /*Basilisk,*/
+  /*Woods or Forest */		/*GreenDragon,*/ Alicorn/* (see Unicorn)*/, Treant, /*Orc, WildBoar,*/ BlackBear, /*GiantHawk, Antelope, Wolf, Ogre,*/ BrownBear, /*DireWolf, HillGiant, Owlbear,*/ Unicorn
 }EncounterMonster;
 
 EncounterMonster DungeonEncounters[][] = 
 {
-  {/*Level 1*/	Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, Snake, Cobra, GiantCrabSpider, Stirge, Wolf},
-  {/*Level 2*/	GiantBombardierBeetle, GiantFly, Ghoul, Gnoll, GrayOoze, Hobgoblin, LizardMan, NPCPartyAdventurer, PitViperSnake, GiantBlackWidowSpider, Troglodyte, Zombie},
-  {/*Level 3*/	GiantAnt, CarnivorousApe, GiantTigerBeetle, Bugbear, Doppleganger, Gargoyle, GelatinousCube, WereratLycanthrope, Ogre, Shadow, TentacleWorm, Wight},
-  {/*Level 4-5*/CaveBear, GiantCaecilia, Cockatrice, Doppleganger, GrayOoze, Hellhound, Lycanthrope, Werewolf, Minotaur, OchreJelly, Owlbear, RustMonster, Wraith},
-  {/*Level 6-7*/Basilisk, BlackPudding, Caecilia, Displacer, Hydra, WeretigerLycanthrope, Mummy, Owlbear, RustMonster,*/ GiantScorpion, Spectre, Troll},
-  {/*Level 8+*/	BlackPudding, Chimera, HillGiant, StoneGiant, Hydra, WereboarLycanthrope, PurpleWorm, FlameSalamander, FrostSalamander, Vampire},
+  //The Game Master should check once every 3 turns 
+  //* Roll 1d6; on a roll of 1, an encounter occurs.  
+  //* Roll 1d12 on the appropriate table.
+  {/*Level 1*/		Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, Snake, Cobra, GiantCrabSpider, Stirge, Wolf},
+  {/*Level 2*/		GiantBombardierBeetle, GiantFly, Ghoul, Gnoll, GrayOoze, Hobgoblin, LizardMan, NPCPartyAdventurer, PitViperSnake, GiantBlackWidowSpider, Troglodyte, Zombie},
+  {/*Level 3*/		GiantAnt, CarnivorousApe, GiantTigerBeetle, Bugbear, Doppleganger, Gargoyle, GelatinousCube, WereratLycanthrope, Ogre, Shadow, TentacleWorm, Wight},
+  {/*Level 4-5*/	CaveBear, GiantCaecilia, Cockatrice, Doppleganger, GrayOoze, Hellhound, Lycanthrope, Werewolf, Minotaur, OchreJelly, Owlbear, RustMonster, Wraith},
+  {/*Level 6-7*/	Basilisk, BlackPudding, Caecilia, Displacer, Hydra, WeretigerLycanthrope, Mummy, Owlbear, RustMonster, GiantScorpion, Spectre, Troll},
+  {/*Level 8+*/		BlackPudding, Chimera, HillGiant, StoneGiant, Hydra, WereboarLycanthrope, PurpleWorm, FlameSalamander, FrostSalamander, Vampire},
+};
+
+EncounterMonster CityEncounters[][] = 
+{
+  //Roll 2d6
+  /*Day Encounter*/ 	{Doppleganger, Noble, Thief, Bully, CityWatch, Merchant, Beggar, Priest, Mercenary, Wizard, WereratLycanthrope,},
+  /*Night Encounter*/	{Doppleganger, Shadow, PressGang, Beggar, Thief, Bully, Merchant, GiantRat, CityWatch, Wizard, WereratLycanthrope,},
+
+};
+
+EncounterMonster WildernessEncounters[][] = 
+{
+  //Check about every four hours of game time (this translates nicely to three night checks and three daytime checks)
+  //* Roll 1d6; on a roll of 1, an encounter occurs.
+  //* Roll 2d8 on the appropriate table.
+  /*Desert or Barren*/		{BlueDragon, Hellhound, FireGiant, PurpleWorm, GiantFly, GiantScorpion, Camel, GiantTarantellaSpider, NPCPartyMerchant, NPCPartyMerchant, Hawk, NPCPartyBandit, Ogre, Griffon, Gnoll, RedDragon},
+  /*Grassland*/ 		{GreenDragon, Troll, GiantFly, GiantScorpion, NPCPartyBandit, Lion, WildBoar, NPCPartyPilgrim, Wolf, GiantBee, Gnoll, Goblin, BlinkDog, DireWolf, HillGiant},
+  /*Inhabited Territories*/ 	{GoldDragon, Ghoul, Bugbear, Goblin, Centaur, NPCPartyBandit, NPCPartyMerchant, NPCPartyNoble, Dog, Gargoyle, Gnoll, Ogre, Minotaur, Vampire},
+  /*Jungle*/			{GreenDragon, NPCPartyBandit, Goblin, Hobgoblin, GiantCentipede, GiantPythonSnake, Elephant, Antelope, Jaguar, Stirge, GiantTigerBeetle, GiantCaecilia, Shadow, NPCPartyMerchant, WeretigerLycanthrope},
+  /*Mountains or Hills*/	{WhiteDragon, Roc/* (1d6: 1-3 Large, 4-5 Huge, 6 Giant)*/, Displacer, WerewolfLycanthrope, MountainLion, Wolf, GiantCrabSpider, Hawk, Orc, GiantBat, GiantHawk, HillGiant, Chimera, DireWolf, RedDragon},
+  /*Ocean*/			{SeaDragon, Hydra, WhaleSperm, GiantCrocodile, GiantCrab, KillerWhale, GiantOctopus, MakoShark, NPCPartyMerchant, NPCPartyBuccaneer, BullShark, Roc /*(1d8: 1-5 Huge, 6-8 Giant)*/, GreatWhiteShark, Mermaid, SeaSerpent},
+  /*River or Riverside*/	{BlackDragon, GiantPiranhaFish, Stirge, GiantBassFish, NPCPartyMerchant, Lizardman, Crocodile, GiantFrog, GiantCatfish, NPCPartyBuccaneer, Troll, Jaguar, Nixie, GiantWaterTermite, GreenDragon},
+  /*Swamp*/			{BlackDragon, Shadow, Troll, GiantDracoLizard, GiantCentipede, GiantLeech, Lizardman, Crocodile, Stirge, Orc, GiantToad/* (see Frog, Giant)*/, Troglodyte, BloodRose, HangmanTree, Basilisk},
+  /*Woods or Forest */		{GreenDragon, Alicorn/* (see Unicorn)*/, Treant, Orc, WildBoar,BlackBear, GiantHawk, Antelope, Wolf, Ogre, BrownBear, DireWolf, HillGiant, Owlbear, Unicorn},
 };
 
 //Open Game License
