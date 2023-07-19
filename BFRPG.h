@@ -401,12 +401,14 @@ typedef enum
   Ability_SneakAttack,
 }SpecialAbility;
 
-struct{char Value[14];}SpecialAbilityName[13] = {"Null", "Turn Undead", "Cast Divine", "Read Magic", "Cast Arcane", "Open Lock", "Remove Trap", "Pick Pocket", "Move Silently", "Climb Wall", "Hide", "Listen", "Sneak Attack"};
-
-SpecialAbility SpecialAbilities_Cleric[2] = {Ability_TurnUndead, Ability_CastDivine};
-SpecialAbility SpecialAbilities_MagicUser[2] = {Ability_ReadMagic, Ability_CastArcane};
-SpecialAbility SpecialAbilities_Fighter[1] = {Ability_Null};
-SpecialAbility SpecialAbilities_Thief[8] = {Ability_OpenLock, Ability_RemoveTrap, Ability_PickPocket, Ability_MoveSilently, Ability_ClimbWall, Ability_Hide, Ability_Listen, Ability_SneakAttack};
+struct{char* Value;}SpecialAbilityName[] = {"No Ability", "Turn Undead", "Cast Divine", "Read Magic", "Cast Arcane", "Open Lock", "Remove Trap", "Pick Pocket", "Move Silently", "Climb Wall", "Hide", "Listen", "Sneak Attack"};
+SpecialAbility ClassAbilities[][8] = 
+{
+  {Ability_TurnUndead, Ability_CastDivine},
+  {Ability_ReadMagic, Ability_CastArcane},
+  {Ability_Null},
+  {Ability_OpenLock, Ability_RemoveTrap, Ability_PickPocket, Ability_MoveSilently, Ability_ClimbWall, Ability_Hide, Ability_Listen, Ability_SneakAttack}
+};
 
 //Saving Throws (SavingThrow[Class][Type][Level])
 //* Poison saving throws are always adjusted by the Constitution bonus of the character.
@@ -516,7 +518,7 @@ char *MagicUserSpellsName[][] =
   {"Charm Person", "Detect Magic", "Floating Disc", "Hold Portal", "Light", "Magic Missile", "Magic Mouth", "Protection from Evil", "Read Languages", "Shield", "Sleep", "Ventriloquism"},
   {"Continual Light", "Detect Evil", "Detect Invisible", "ESP", "Invisibility", "Knock", "Levitate", "Locate Object", "Mirror Image", "Phantasmal Force", "Web", "Wizard Lock"},
   {"Clairvoyance", "Darkvision", "Dispel Magic", "Fireball", "Fly", "Haste", "Hold Person", "Invisibility 10' radius", "Lightning Bolt", "Protection from Evil 10' radius", "Protection from Normal Missiles", "Water Breathing"},
-  {"Charm MonsterConfusionDimension DoorGrowth of Plants*Hallucinatory TerrainIce StormMassmorphPolymorph OtherPolymorph SelfRemove CurseWall of FireWizard Eye"},
+  {"Charm Monster", "Confusion", "Dimension Door", "Growth of Plants*", "Hallucinatory Terrain", "Ice Storm", "Massmorph", "Polymorph Other", "Polymorph Self", "Remove Curse", "Wall of Fire", "Wizard Eye"},
   {"Animate Dead", "Cloudkill", "Conjure Elemental", "Feeblemind", "Hold Monster", "Magic Jar", "Passwall", "Telekinesis", "Teleport", "Wall of Stone"},
   {"Anti-Magic Shell", "Death Spell", "Disintegrate", "Flesh to Stone", "Geas", "Invisible Stalker", "Lower Water", "Projected Image", "Reincarnate", "Wall of Iron"}
 };
@@ -530,151 +532,8 @@ char *ClericSpellsName[][] =
   {"Commune", "Create Food", "Dispel Evil", "Insect Plague", "Quest", "Raise Dead", "True Seeing", "Wall of Fire"},
   {"Animate Objects", "Blade Barrier", "Find the Path", "Heal", "Regenerate", "Restoration", "Speak with Monsters", "Word of Recall"}
 };
-/* Magic-User Spells
 
-First Level
-1 Charm Person
-2 Detect Magic
-3 Floating Disc
-4 Hold Portal
-5 Light*
-6 Magic Missile
-7 Magic Mouth
-8 Protection from Evil*
-9 Read Languages
-10 Shield
-11 Sleep
-12 Ventriloquism
-
-Second Level
-1 Continual Light*
-2 Detect Evil*
-3 Detect Invisible
-4 ESP
-5 Invisibility
-6 Knock
-7 Levitate
-8 Locate Object
-9 Mirror Image
-10 Phantasmal Force
-11 Web
-12 Wizard Lock
-
-Third Level
-1 Clairvoyance
-2 Darkvision
-3 Dispel Magic
-4 Fireball
-5 Fly
-6 Haste*
-7 Hold Person
-8 Invisibility 10‘ radius
-9 Lightning Bolt
-10 Protection from Evil 10’ radius*
-11 Protection from Normal Missiles
-12 Water Breathing
-
-Fourth Level
-1 Charm Monster
-2 Confusion
-3 Dimension Door
-4 Growth of Plants*
-5 Hallucinatory Terrain
-6 Ice Storm 7Massmorph
-8 Polymorph Other
-9 Polymorph Self
-10 Remove Curse*
-11 Wall of Fire
-12 Wizard Eye
-
-Fifth Level
-1 Animate Dead 
-2 Cloudkill 
-3 Conjure Elemental 
-4 Feeblemind 
-5 Hold Monster 
-6 Magic Jar 
-7 Passwall 
-8 Telekinesis 
-9 Teleport 
-10 Wall of Stone
-
-Sixth Level
-1 Anti-Magic Shell
-2 Death Spell
-3 Disintegrate
-4 Flesh to Stone*
-5 Geas*
-6 Invisible Stalker
-7 Lower Water
-8 Projected Image
-9 Reincarnate
-10 Wall of Iron
-
-Clerical Spells
-
-First Level
-1 Cure Light Wounds*
-2 Detect Evil*
-3 Detect Magic
-4 Light*
-5 Protection from Evil*
-6 Purify Food and Water
-7 Remove Fear*
-8 Resist Cold
-
-Second Level
-1 Bless*
-2 Charm Animal
-3 Find Traps
-4 Hold Person
-5 Resist Fire
-6 Silence 15' radius
-7 Speak with Animals
-8 Spiritual Hammer
-
-Third Level
-1 Continual Light*
-2 Cure Blindness
-3 Cure Disease*
-4 Growth of Animals
-5 Locate Object
-6 Remove Curse*
-7 Speak with Dead
-8 Striking
-
-Fourth Level
-1 Animate Dead
-2 Create Water
-3 Cure Serious Wounds*
-4 Dispel Magic
-5 Neutralize Poison*
-6 Protection from Evil 10' radius*
-7 Speak with Plants
-8 Sticks to Snakes
-
-Fifth Level
-1 Commune
-2 Create Food
-3 Dispel Evil
-4 Insect Plague
-5 Quest*
-6 Raise Dead*
-7 True Seeing
-8 Wall of Fire
-
-Sixth Level
-1 Animate Objects
-2 Blade Barrier
-3 Find the Path
-4 Heal*
-5 Regenerate
-6 Restoration
-7 Speak with Monsters
-8 Word of Recall
-
-* Some spells are reversible; such spells are shown with an asterisk after the name
-*/
+//Some spells are reversible; such spells are shown with an asterisk after the name
 
 //Page 7
 //Equipment, Weapons, and Movement
@@ -1253,7 +1112,7 @@ where a percentage chance is given, roll percentile dice to see if that sort of 
 If so, roll the indicated dice to determine how much. 
 
 Lair Treasures
-	100xC 		100xS 		100xE		100xG 		100xP		Gems		Jewelry		Magic Items 
+	100xCopper	100xSilver	100xElectrum	100xGold	100xPlatinum	Gems		Jewelry		Magic Items 
 A 	50% 5d6		60% 5d6		40% 5d4		70% 10d6	50% 1d10	50% 6d6 	50% 6d6		30% any 3 
 B	75% 5d10	50% 5d6		50% 5d4		50% 3d6		None		25% 1d6 	25% 1d6 	10% 1 weapon or armor 
 C	60% 6d6		60% 5d4		30% 2d6		None		None		25% 1d4 	25% 1d4		15% any 1d2 
@@ -1271,26 +1130,26 @@ N	None		None		None		None		None		None 		None		40% 2d4 potions
 O	None		None		None		None		None		None 		None		50% 1d4 scrolls 
 
 Individual Treasures
-	C		S		E		G		P		Gems	Jewelry		Magic Items
+	Copper		Silver		Electrum	Gold		Platinum	Gems	Jewelry		Magic Items
 P	3d8		None		None		None		None		None 	None		None 
 Q	None		3d6		None		None		None		None	None		None 
 R	None		None		2d6		None		None		None 	None		None 
 S	None		None		None		2d4		None		None 	None		None 
 T	None		None		None		None		1d6		None 	None		None 
-U	50% 1d20	50% 1d20	None		25% 1d20	None		5% 1d4 	5% 1d4		2%Any 1 
-V	None		25% 1d20	25% 1d20	50% 1d20	25% 1d20	10% 1d4 10% 1d4		5%Any 1
+U	50% 1d20	50% 1d20	None		25% 1d20	None		5% 1d4 	5% 1d4		2% Any 1 
+V	None		25% 1d20	25% 1d20	50% 1d20	25% 1d20	10% 1d4 10% 1d4		5% Any 1
 */
 
 //Page 13
 /*
 Unguarded Treasures
-Dungeon Level, 100's of Copper, 100's of Silver, 100's of Electrum, 100's of Gold, 100's of Platinum, Gems and Jewelry, Magic Items, 
-1 	75%1d850%1d625%1d47%1d41%1d47%1d4 3%1d4
-2	%Any 1 250%1d1050%1d825%1d620%1d62%1d410%1d6 7%1d45%Any 1 
-3	30%2d650%1d1025%1d850%1d64%1d415%1d6 7%1d68%Any 1 
-4	-520%3d650%2d625%1d1050%2d68%1d420%1d8 10%1d612%Any 1 
-6	-715%4d650%3d625%1d1270%2d815%1d430%1d8 15%1d616%Any 1 
-8	+10%5d650%5d625%2d875%4d630%1d440%1d8 30%1d820%Any 1 
+Dungeon Level	100xCopper	100xSilver	100xElectrum	100xGold	100xPlatinum	Gems		Jewelry		Magic Items 
+1 		75%1d8		50%1d6		25%1d4		7%1d4		1%1d4		7%1d4 		3%1d4		2% Any 1
+2		50%1d10		50%1d8		25%1d6		20%1d6		2%1d4		10%1d6 		7%1d4		5% Any 1 
+3		30%2d6		50%1d10		25%1d8		50%1d6		4%1d4		15%1d6 		7%1d6		8%Any 1 
+4-5		20%3d6		50%2d6		25%1d10		50%2d6		8%1d4		20%1d8 		10%1d6		12%Any 1 
+6-7		15%4d6		50%3d6		25%1d12		70%2d8		15%1d4		30%1d8 		15%1d6		16%Any 1 
+8+		10%5d6		50%5d6		25%2d8		75%4d6		30%1d4		40%1d8 		30%1d8		20%Any 1 
 
 Gems and Jewelry
 Use the tables below to determine the base value and number found when gems are indicated in a treasure hoard.  
