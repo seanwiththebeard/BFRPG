@@ -1,4 +1,4 @@
-#include "BFRPG.h"
+/*#include "BFRPG.h"
 #include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +17,7 @@ void PrintSavingThrows();
 void PrintSpellNames();
 void PrintItems();
 //byte x, y, z;
-void main(void) 
+*/void main(void) 
 {
   //PrintAbilityModifiers();
   //PrintRaceDescriptions();

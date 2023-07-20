@@ -1536,9 +1536,8 @@ const struct
   AttackNameC, AttackCountC, AttackDamageDiceSizeC, AttackDamageDiceCountC,
   MovementA, MovementType, MovementB,
   AppearDiceCountWild, AppearDiceSizeWild,
-  AppearDiceCountLair, AppearDiceSizeLair;
-  CharacterClass SaveAsClass;
-  byte SaveAsLevel, Morale, TreasureType;
+  AppearDiceCountLair, AppearDiceSizeLair,
+  SaveAsClass, SaveAsLevel, Morale, TreasureType;
   int XP;
 }MonsterData[] = 
 {
