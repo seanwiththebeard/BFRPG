@@ -23,9 +23,9 @@ void main(void)
   //PrintRaceDescriptions();
   //PrintClassDescriptions();
   //PrintSpells();
-  PrintSpecialAbilities();
+  //PrintSpecialAbilities();
   //PrintSavingThrows();
-  //PrintSpellNames();
+  PrintSpellNames();
   //PrintItems();
 }
 
@@ -48,7 +48,7 @@ void PrintSpellNames()
     printf("\nLevel %d\n", y + 1);
     for (x = 0; x < 12; ++x)
     {
-      printf("%s\n", MagicUserSpellsName[y][x]);
+      printf("%s\n", MagicUserSpellsName[y][x].Name);
     }
   }
   getchar();

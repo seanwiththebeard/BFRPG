@@ -37,8 +37,9 @@ typedef enum
     //•Reaction rolls
     //•Number of retainers a character may hire
   }Ability; //This can be used for passing an ability type in a function
-struct {char Value[4];}AbilityName[6] = {{"STR"}, {"DEX"}, {"CON"}, {"INT"}, {"WIS"}, {"CHA"}};
-struct 
+const struct {char Value[4];}AbilityName[6] = {{"STR"}, {"DEX"}, {"CON"}, {"INT"}, {"WIS"}, {"CHA"}};
+
+const struct 
 {
   sbyte Modifier[19];
 }AbilityBonus = 
@@ -81,7 +82,7 @@ NM or 1 	17
 Roll 1D20 + Ability Bonus/Penalty + Situational Bonus/Penalty >= Target number */
 
 //Page 2 - Race Notes
-struct{
+const struct{
   char Name[8];
   //Classes
   bool Cleric, MagicUser, Fighter, Thief, FighterMagicUser;
@@ -280,9 +281,9 @@ struct{
 //Page 4 - Class Notes, Saving Throws
 //Index = Level
 
-byte ExpMultiplier[19] = {1, 1, 2, 4, 8, 16, 28, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60};
-byte HitDiceQuantity[20] = { 1, 2,3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9};
-byte SpellsLevel[2][6][20] = 
+const byte ExpMultiplier[19] = {1, 1, 2, 4, 8, 16, 28, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60};
+const byte HitDiceQuantity[20] = { 1, 2,3, 4, 5, 6, 7, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9};
+const byte SpellsLevel[2][6][20] = 
 {
   //Cleric Spells
   0, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 6,	//Level 1
@@ -310,12 +311,12 @@ byte SpellsLevel[2][6][20] =
 #define SHIELD_PENALTY 1
 #define SHIELD_ANY 2
 
-struct {char Value[9];}ArmorTypeName[3] = {"None", "Leather", "Any"};
-struct {char Value[9];}ShieldTypeName[3] = {"None", "Penalty", "Any"};
+const struct {char Value[9];}ArmorTypeName[3] = {"None", "Leather", "Any"};
+const struct {char Value[9];}ShieldTypeName[3] = {"None", "Penalty", "Any"};
 
 typedef enum{Cleric, MagicUser, Fighter, Thief}CharacterClass;
 
-struct
+const struct
 {
   char Name[12];
   int ExpBase;
@@ -403,8 +404,8 @@ typedef enum
   Ability_SneakAttack,
 }SpecialAbility;
 
-struct{char* Value;}SpecialAbilityName[] = {"No Ability", "Turn Undead", "Cast Divine", "Read Magic", "Cast Arcane", "Open Lock", "Remove Trap", "Pick Pocket", "Move Silently", "Climb Wall", "Hide", "Listen", "Sneak Attack"};
-SpecialAbility ClassAbilities[][8] = 
+const struct{char* Value;}SpecialAbilityName[] = {"No Ability", "Turn Undead", "Cast Divine", "Read Magic", "Cast Arcane", "Open Lock", "Remove Trap", "Pick Pocket", "Move Silently", "Climb Wall", "Hide", "Listen", "Sneak Attack"};
+const SpecialAbility ClassAbilities[][8] = 
 {
   {Ability_TurnUndead, Ability_CastDivine},
   {Ability_ReadMagic, Ability_CastArcane},
@@ -415,7 +416,7 @@ SpecialAbility ClassAbilities[][8] =
 //Saving Throws (SavingThrow[Class][Type][Level])
 //* Poison saving throws are always adjusted by the Constitution bonus of the character.
 //* Saving throws against illusions (such as phantasmal force) are always adjusted by the character's Intelligence.
-byte SavingThrow[4][5][20]=
+const byte SavingThrow[4][5][20]=
 {
   {//Cleric
     {11, 10, 10, 9, 9, 9, 9, 8, 8, 8, 8, 7, 7, 7, 7, 6, 6, 6, 6, 5}, 				//Death Ray or Poison
@@ -449,7 +450,7 @@ byte SavingThrow[4][5][20]=
 
 //Page 5
 //Thief Special Abilities (ThiefSpecialAbilities[AbilityIndex][Level]
-byte ThiefSpecialAbilities[7][20] = 
+const byte ThiefSpecialAbilities[7][20] = 
 {
   {25, 30, 35, 40, 45, 50, 55, 60, 65, 68, 71, 74, 77, 80, 83, 84, 85, 86, 87, 88}, //Open Locks
   {20, 25, 30, 35, 40, 45, 50, 55, 60, 63, 66, 69, 72, 75, 78, 79, 80, 81, 82, 83}, //Remove Traps
@@ -470,7 +471,7 @@ byte ThiefSpecialAbilities[7][20] =
         damage is done.*/
 
 //Clerics vs. Undead (ClericVsUndead[Type - 1][Level]
-typedef enum
+const typedef enum
 {
   Undead_Skeleton, 
   Undead_Zombie, 
@@ -486,7 +487,7 @@ typedef enum
 #define No 21
 #define T 0
 #define D -1
-sbyte ClericVsUndead[9][20] = 
+const sbyte ClericVsUndead[9][20] = 
 {
   {13, 11, 9, 7, 5, 4, 3, T, T, T, D, D, D, D, D, D, D, D, D, D}, //Skeleton
   {17, 15, 13, 11, 9, 7, 5, 3, 2, T, T, T, D, D, D, D, D, D, D, D}, //Zombie
@@ -514,15 +515,15 @@ sbyte ClericVsUndead[9][20] =
 
 //Page 6
 
-struct
+/*const struct
 {
   int NameIndex;
   byte Level;
   bool Reversible;
 }
-MagicUserSpells;
+MagicUserSpells;*/
 
-char *MagicUserSpellsName[][] = 
+const struct {char* Name;}MagicUserSpellsName[][] = 
 {
   {"Charm Person", "Detect Magic", "Floating Disc", "Hold Portal", "Light", "Magic Missile", "Magic Mouth", "Protection from Evil", "Read Languages", "Shield", "Sleep", "Ventriloquism"},
   {"Continual Light", "Detect Evil", "Detect Invisible", "ESP", "Invisibility", "Knock", "Levitate", "Locate Object", "Mirror Image", "Phantasmal Force", "Web", "Wizard Lock"},
@@ -532,7 +533,7 @@ char *MagicUserSpellsName[][] =
   {"Anti-Magic Shell", "Death Spell", "Disintegrate", "Flesh to Stone", "Geas", "Invisible Stalker", "Lower Water", "Projected Image", "Reincarnate", "Wall of Iron"}
 };
 
-char *ClericSpellsName[][] = 
+const struct {char* Name;}ClericSpellsName[][] = 
 {
   {"Cure Light Wounds", "Detect Evil", "Detect Magic", "Light", "Protection from Evil", "Purify Food and Water", "Remove Fear", "Resist Cold"},
   {"Bless", "Charm Animal", "Find Traps", "Hold Person", "Resist Fire", "Silence 15' radius", "Speak with Animals", "Spiritual Hammer"},
@@ -547,12 +548,12 @@ char *ClericSpellsName[][] =
 //Page 7
 //Equipment, Weapons, and Movement
 //General Equipment
-struct 
+const struct 
 {
   char *Name;
   byte Cost;
   byte Weight;
-}Equipment[31] = 
+}Equipment[] = 
 {
   {"Backpack", 4, 0,},
   {"Candles, 12", 1, 0},
@@ -587,7 +588,7 @@ struct
   {"Writing ink (per vial)", 8, 0}
 };
 
-struct
+const struct
 {
   char *Name;
   byte Range[3];
@@ -610,7 +611,7 @@ struct
 
 typedef enum {S, M, L} weaponSize;
 
-struct
+const struct
 {
   char *Name;
   byte Cost;
@@ -666,7 +667,7 @@ struct
   //* Silver tip or blade, for use against lycanthropes. 
 };
 
-struct
+const struct
 {
   char* Name;
   byte Cost, Weight, AC;
@@ -681,7 +682,7 @@ struct
 
 
 //Page 8
-struct
+const struct
 {
   char* Name;
   byte VehicleLength, VehicleWidth, MovementA, MovementB, Hardness, HP, Cost;
@@ -694,7 +695,7 @@ struct
   //*Includes hitched horses or mules.
 };
 
-struct
+const struct
 {
   char* Name;
   //Cargo in tons
@@ -724,7 +725,7 @@ struct
    2000, 1}
 };
 
-struct
+const struct
 {
   char* Name;
     int Cost;
@@ -739,7 +740,7 @@ struct
   {"Trebuchet", 400, 10, 8, 3, 10, 300, 400} 
 };
 
-struct
+const struct
 {
 char* Name;
   byte Cost, Weight, Movement; 
@@ -776,7 +777,7 @@ Outdoors Yards*
 *Area of effect measurements (for spells, for instance) normally remain in feet
 */
 
-struct
+const struct
 {
   byte LightlyLoaded, HeavilyLoaded;
 }MovementEncumberance[] =
@@ -786,7 +787,7 @@ struct
   {20, 10}	//Metal Armor
 };
 
-struct
+const struct
 {
   byte NormalLight, NormalHeavy, HalflingLight, HalflingHeavy;
 }Load[] =
@@ -811,7 +812,7 @@ struct
 };
 
 //Page 9
-struct{byte FeetPerRound, MilesPerDay;}WildernessMovementRates[] = 
+const struct{byte FeetPerRound, MilesPerDay;}WildernessMovementRates[] = 
 {
   {10, 6},
   {20, 12},
@@ -832,7 +833,7 @@ struct{byte FeetPerRound, MilesPerDay;}WildernessMovementRates[] =
   //•Traveling by air: overland movement rates are doubled, and all terrain effects are ignored 
 };
 
-byte OverlandTravelAdjustment[] = 
+const byte OverlandTravelAdjustment[] = 
 { //Multuply by value and divide by 100
   33, //Jungle, Mountains, Swamp
   33, //Desert, Forest, Hills
@@ -840,7 +841,7 @@ byte OverlandTravelAdjustment[] =
   100 //Road (Paved)
 };
 
-char* WindDirection[] = 
+const struct{char* Direction;}WindDirection[] = 
 {
   "Northerly",
   "Northeasterly",
@@ -876,7 +877,7 @@ typedef enum
   AcceptLoyaltyBonus
 }RetainerResult;
 
-RetainerResult retainerResult[] = 
+const RetainerResult retainerResult[] = 
 { //Index = Roll 2d6 + character CHA bonus - 1
   RefusalPenalty,	//1
   RefusalPenalty,	//2
@@ -892,7 +893,7 @@ RetainerResult retainerResult[] =
   AcceptLoyaltyBonus  	//12
 };
 
-struct 
+const struct 
 {
   int XPValue;
   byte SpeciaAbilityBonus;
@@ -919,7 +920,7 @@ struct
   {4500, 175},
 };
 
-byte OpeningDoors[] =  //1 / (1+STRBonus) on 1dX
+const byte OpeningDoors[] =  //1 / (1+STRBonus) on 1dX
 {
   6,	//Stuck door
   10,	//Locked door
@@ -1068,7 +1069,7 @@ of the point of impact.
 //Page 11
 //Attack Bonus Tables
 //*On a hit roll a natural "1" is always a failure. A natural "20" is always a hit, if the opponent can be hit at all
-byte AttackBonusTable[][] = 
+const byte AttackBonusTable[][] = 
 {//Index = Level + 1
   {//Fighter
     1, 2, 2, 3, 4, 4, 5, 6, 6, 6, 7, 7, 8, 8, 8, 9, 9, 10, 10, 10},
@@ -1081,7 +1082,7 @@ byte AttackBonusTable[][] =
 };
 
 //0-32 and 32+
-byte MonsterAttackBonusTable[] = 
+const byte MonsterAttackBonusTable[] = 
 {//Index = Monster Hit Dice
     0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14, 15, 15, 15, 15, 16};
 
@@ -1485,7 +1486,7 @@ typedef enum
   /*Woods or Forest */		/*GreenDragon,*/ Alicorn/* (see Unicorn)*/, Treant, /*Orc, WildBoar,*/ BlackBear, /*GiantHawk, Antelope, Wolf, Ogre,*/ BrownBear, /*DireWolf, HillGiant, Owlbear,*/ Unicorn
 }EncounterMonster;
 
-EncounterMonster DungeonEncounters[][] = 
+const EncounterMonster DungeonEncounters[][] = 
 {
   //The Game Master should check once every 3 turns 
   //* Roll 1d6; on a roll of 1, an encounter occurs.  
@@ -1498,7 +1499,7 @@ EncounterMonster DungeonEncounters[][] =
   {/*Level 8+*/		BlackPudding, Chimera, HillGiant, StoneGiant, Hydra, WereboarLycanthrope, PurpleWorm, FlameSalamander, FrostSalamander, Vampire},
 };
 
-EncounterMonster CityEncounters[][] = 
+const EncounterMonster CityEncounters[][] = 
 {
   //Roll 2d6
   /*Day Encounter*/ 	{Doppleganger, Noble, NPCThief, Bully, CityWatch, Merchant, Beggar, Priest, Mercenary, Wizard, WereratLycanthrope,},
@@ -1506,7 +1507,7 @@ EncounterMonster CityEncounters[][] =
 
 };
 
-EncounterMonster WildernessEncounters[][] = 
+const EncounterMonster WildernessEncounters[][] = 
 {
   //Check about every four hours of game time (this translates nicely to three night checks and three daytime checks)
   //* Roll 1d6; on a roll of 1, an encounter occurs.
@@ -1526,7 +1527,7 @@ enum{NullAttack, Sting, }AttackNames;
 enum{NullMovement, Fly,}MovementNames;
 enum{NullTreasure, Special}TreasureTypeNames;
 
-struct
+const struct
 {
   char* Name;
   byte ArmorClass, HitDice, 
