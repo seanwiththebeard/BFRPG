@@ -1523,6 +1523,8 @@ const EncounterMonster WildernessEncounters[][] =
   /*Woods or Forest */		{GreenDragon, Alicorn/* (see Unicorn)*/, Treant, Orc, WildBoar,BlackBear, GiantHawk, Antelope, Wolf, Ogre, BrownBear, DireWolf, HillGiant, Owlbear, Unicorn},
 };
 
+//Monster Database - https://www.basicfantasy.org/srd/monsters.html
+
 typedef enum{NullAttack, Sting}AttackNames;
 typedef enum{NullMovement, Fly}MovementNames;
 typedef enum{NullTreasure, Special}TreasureTypeNames;
@@ -1531,27 +1533,26 @@ const struct
 {
   char* Name;
   byte ArmorClass, HitDice, 
-  AttackNameA, AttackCountA, AttackDamageDiceSizeA, AttackDamageDiceCountA, 
-  AttackNameB, AttackCountB, AttackDamageDiceSizeB, AttackDamageDiceCountB, 
-  AttackNameC, AttackCountC, AttackDamageDiceSizeC, AttackDamageDiceCountC,
+  AttackNameA, AttackCountA, AttackDamageDiceSizeA, AttackDamageDiceCountA, //Optimize this
+  //AttackNameB, AttackCountB, AttackDamageDiceSizeB, AttackDamageDiceCountB, 
+  //AttackNameC, AttackCountC, AttackDamageDiceSizeC, AttackDamageDiceCountC,
   MovementA, MovementType, MovementB,
   AppearDiceCountWild, AppearDiceSizeWild,
-  AppearDiceCountLair, AppearDiceSizeLair,
+  AppearDiceCountLair, AppearDiceSizeLair, //Really necessary?
   SaveAsClass, SaveAsLevel, Morale, TreasureType;
-  int XP;
+  //int XP; //Calculated by Hit Dice XP Value + SpecialAbilityBonus
 }MonsterData[] = 
 {
   {
     "Bee", 13, 0.25, 1, 
     Sting, 1, 4,
-    NullAttack, 0, 0,
-    NullAttack, 0, 0,
+    //NullAttack, 0, 0,
+    //NullAttack, 0, 0,
     10, Fly, 50,
     1, 6, 5, 6,
     Fighter, 1,
     9, //12 if queen is threatened
-    Special,
-    13},
+    Special},
 
     /*
     Bee, Giant
