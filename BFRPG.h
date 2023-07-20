@@ -5,7 +5,7 @@
 #endif
 typedef uint8_t byte;	// 8-bit unsigned
 typedef int8_t sbyte;	// 8-bit signed
-typedef uint16_t word;	// 16-bit unsigned
+//typedef uint16_t word;	// 16-bit unsigned
 typedef enum { false, true } bool; // boolean
 
 //https://basicfantasy.org/downloads/BFRPG-Charts-and-Tables-by-Simone-Felli-r3.pdf
@@ -484,11 +484,12 @@ const typedef enum
   Undead_Ghost,
 }UndeadType;
 
-#define No 21
-#define T 0
-#define D -1
+
 const sbyte ClericVsUndead[9][20] = 
 {
+  #define No 21
+  #define T 0
+  #define D -1
   {13, 11, 9, 7, 5, 4, 3, T, T, T, D, D, D, D, D, D, D, D, D, D}, //Skeleton
   {17, 15, 13, 11, 9, 7, 5, 3, 2, T, T, T, D, D, D, D, D, D, D, D}, //Zombie
   {19, 18, 17, 16, 15, 11, 9, 7, 5, 3, 2, T, T, T, D, D, D, D, D, D}, //Ghoul
@@ -498,10 +499,11 @@ const sbyte ClericVsUndead[9][20] =
   {No, No, No, No, No, No, No, 20, 19, 18, 17, 15, 13, 11, 9, 7, 5, 3, 2, T}, //Spectre
   {No, No, No, No, No, No, No, No, No, 20, 19, 18, 17, 15, 13, 11, 9, 7, 5, 3}, //Vampire
   {No, No, No, No, No, No, No, No, No, No, No, 20, 19, 18, 17, 15, 13, 11, 9, 7}  //Ghost
+  #undef No
+  #undef T
+  #undef D
 };
-#undef No
-#undef T
-#undef D
+
 
 /*Turn Undead 
 	•Roll 1d20 >= Target number.
@@ -1525,18 +1527,137 @@ const EncounterMonster WildernessEncounters[][] =
 
 //Monster Database - https://www.basicfantasy.org/srd/monsters.html
 
-typedef enum{NullAttack, Sting}AttackNames;
-typedef enum{NullMovement, Fly}MovementNames;
+typedef enum{
+  NullAttack,
+  beak,
+  bite,
+  blooddrain,
+  breath,
+  bump,
+  butt,
+  claw,
+  club,
+  cold,
+  constrict,
+  dagger,
+  diseasetouch,
+  dragonbite,
+  entangle,
+  fins,
+  fist,
+  gaze,
+  giantclub,
+  gore,
+  heat,
+  hold,
+  hooves,
+  horn,
+  hug,
+  hugeweapon,
+  kick,
+  lavasprays,
+  lightningbolt,
+  limbs,
+  pincers,
+  pseudopod,
+  same,
+  snakebite,
+  special,
+  spell,
+  spikes,
+  spit,
+  spray,
+  sting,
+  stone,
+  strangle,
+  swallow,
+  swarm,
+  tail,
+  talons,
+  tentacles,
+  tongue,
+  touch,
+  trample,
+  trunk,
+  tusk,
+  weapon,
+  whirlwind,
+}AttackType;
+
+const char* AttackNames[] =
+{
+  "NullAttack",
+  "beak",
+  "bite",
+  "blooddrain",
+  "breath",
+  "bump",
+  "butt",
+  "claw",
+  "club",
+  "cold",
+  "constrict",
+  "dagger",
+  "diseasetouch",
+  "dragonbite",
+  "entangle",
+  "fins",
+  "fist",
+  "gaze",
+  "giantclub",
+  "gore",
+  "heat",
+  "hold",
+  "hooves",
+  "horn",
+  "hug",
+  "hugeweapon",
+  "kick",
+  "lavasprays",
+  "lightningbolt",
+  "limbs",
+  "pincers",
+  "pseudopod",
+  "same",
+  "snakebite",
+  "special",
+  "spell",
+  "spikes",
+  "spit",
+  "spray",
+  "sting",
+  "stone",
+  "strangle",
+  "swallow",
+  "swarm",
+  "tail",
+  "talons",
+  "tentacles",
+  "tongue",
+  "touch",
+  "trample",
+  "trunk",
+  "tusk",
+  "weapon",
+  "whirlwind"
+};
+
+typedef enum{NullMovement, Fly}MovementTypes;
+const char* MovementNames[] =
+{
+  "NullMovement",
+  "Fly",
+};
 typedef enum{NullTreasure, Special}TreasureTypeNames;
 
 const struct
 {
   char* Name;
-  byte ArmorClass, HitDice, 
-  AttackNameA, AttackCountA, AttackDamageDiceSizeA, AttackDamageDiceCountA, //Optimize this
-  //AttackNameB, AttackCountB, AttackDamageDiceSizeB, AttackDamageDiceCountB, 
-  //AttackNameC, AttackCountC, AttackDamageDiceSizeC, AttackDamageDiceCountC,
-  MovementA, MovementType, MovementB,
+  byte ArmorClass, HitDice,
+  AttackCountA;
+  AttackType AttackNameA;
+  byte AttackDamageDiceCount, AttackDamageDiceSize, //Optimize this for multiple attacks
+  MovementA, MovementType, MovementB, //What is movement B?
   AppearDiceCountWild, AppearDiceSizeWild,
   AppearDiceCountLair, AppearDiceSizeLair, //Really necessary?
   SaveAsClass, SaveAsLevel, Morale, TreasureType;
@@ -1544,8 +1665,8 @@ const struct
 }MonsterData[] = 
 {
   {
-    "Bee", 13, 0.25, 1, 
-    Sting, 1, 4,
+    "Bee", 13, 0.25, 
+    1, sting, 1, 4,
     //NullAttack, 0, 0,
     //NullAttack, 0, 0,
     10, Fly, 50,
@@ -1701,6 +1822,7 @@ const struct
   {"BrownBear"},
   {"Unicorn"},
 };
+const byte MonsterCount = 134;
 
 //Open Game License
 /*

@@ -1,5 +1,5 @@
 #include "BFRPG.h"
-/*#include <conio.h>
+#include <conio.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <peekpoke.h>
@@ -16,8 +16,9 @@ void PrintSpecialAbilities();
 void PrintSavingThrows();
 void PrintSpellNames();
 void PrintItems();
-//byte x, y, z;
-*/
+void PrintMonsters();
+byte x, y, z;
+
 void main(void) 
 {
   //PrintAbilityModifiers();
@@ -28,8 +29,32 @@ void main(void)
   //PrintSavingThrows();
   //PrintSpellNames();
   //PrintItems();
+  PrintMonsters();
 }
-/*
+void PrintMonsters()
+{
+  clrscr();
+  //printf("Common Equipment:\n");
+    for (x = 0; x < MonsterCount; ++x)
+    {
+      printf("%s\n", MonsterData[x].Name);
+      printf("Armor Class:    %d\n", MonsterData[x].ArmorClass);
+      printf("Hit Dice:       %d\n", MonsterData[x].HitDice);
+      printf("Attack Type:    %dx %s\n", MonsterData[x].AttackCountA, AttackNames[MonsterData[x].AttackNameA]);
+      printf("Attack Damage:  %dd%d\n", MonsterData[x].AttackDamageDiceCount, MonsterData[x].AttackDamageDiceSize);
+      printf("Movement:       %s %dft\n", MovementNames[MonsterData[x].MovementType], MonsterData[x].MovementA);
+      
+      //MovementA, MovementType, MovementB,
+      //AppearDiceCountWild, AppearDiceSizeWild,
+      //AppearDiceCountLair, AppearDiceSizeLair, //Really necessary?
+      //SaveAsClass, SaveAsLevel, Morale, TreasureType;
+  //int XP; //Calculated by Hit Dice XP Value + SpecialAbilityBonus
+      getchar();
+    }
+  
+  getchar();
+}
+
 void PrintItems()
 {
   clrscr();
@@ -161,4 +186,4 @@ void PrintSavingThrows()
     }
   }
   getchar();
-}*/
+}
