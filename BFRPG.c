@@ -16,7 +16,7 @@ void PrintSpecialAbilities();
 void PrintSavingThrows();
 void PrintSpellNames();
 void PrintItems();
-byte x, y, z;
+//byte x, y, z;
 void main(void) 
 {
   //PrintAbilityModifiers();
@@ -25,10 +25,10 @@ void main(void)
   //PrintSpells();
   //PrintSpecialAbilities();
   //PrintSavingThrows();
-  PrintSpellNames();
+  //PrintSpellNames();
   //PrintItems();
 }
-
+/*
 void PrintItems()
 {
   clrscr();
@@ -160,4 +160,4 @@ void PrintSavingThrows()
     }
   }
   getchar();
-}
+}*/

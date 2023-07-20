@@ -1523,9 +1523,9 @@ const EncounterMonster WildernessEncounters[][] =
   /*Woods or Forest */		{GreenDragon, Alicorn/* (see Unicorn)*/, Treant, Orc, WildBoar,BlackBear, GiantHawk, Antelope, Wolf, Ogre, BrownBear, DireWolf, HillGiant, Owlbear, Unicorn},
 };
 
-enum{NullAttack, Sting, }AttackNames;
-enum{NullMovement, Fly,}MovementNames;
-enum{NullTreasure, Special}TreasureTypeNames;
+typedef enum{NullAttack, Sting}AttackNames;
+typedef enum{NullMovement, Fly}MovementNames;
+typedef enum{NullTreasure, Special}TreasureTypeNames;
 
 const struct
 {
