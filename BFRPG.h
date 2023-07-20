@@ -1462,10 +1462,10 @@ d%, General Type
 typedef enum
 {
   //Dungeon Encounters
-  /*Level 1*/	Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, Snake, Cobra, GiantCrabSpider, Stirge, Wolf,
+  /*Level 1*/	Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, CobraSnake, GiantCrabSpider, Stirge, Wolf,
   /*Level 2*/	GiantBombardierBeetle, GiantFly, Ghoul, Gnoll, GrayOoze, Hobgoblin, LizardMan, /*NPCPartyAdventurer,*/ PitViperSnake, GiantBlackWidowSpider, Troglodyte, Zombie,
   /*Level 3*/	GiantAnt, CarnivorousApe, GiantTigerBeetle, Bugbear, Doppleganger, Gargoyle, GelatinousCube, WereratLycanthrope, Ogre, Shadow, TentacleWorm, Wight,
-  /*Level 4-5*/	CaveBear, GiantCaecilia, Cockatrice, /*Doppleganger,*/ /*GrayOoze,*/ Hellhound, Lycanthrope, Werewolf, Minotaur, OchreJelly, Owlbear, RustMonster, Wraith,
+  /*Level 4-5*/	CaveBear, GiantCaecilia, Cockatrice, /*Doppleganger,*/ /*GrayOoze,*/ Hellhound, WerewolfLycanthrope, Minotaur, OchreJelly, Owlbear, RustMonster, Wraith,
   /*Level 6-7*/	Basilisk, BlackPudding, Caecilia, Displacer, Hydra, WeretigerLycanthrope, Mummy, /*Owlbear,*/ /*RustMonster,*/ GiantScorpion, Spectre, Troll,
   /*Level 8+*/	/*BlackPudding,*/ Chimera, HillGiant, StoneGiant, /*Hydra,*/ WereboarLycanthrope, PurpleWorm, FlameSalamander, FrostSalamander, Vampire,
 
@@ -1478,8 +1478,8 @@ typedef enum
   /*Grassland*/			GreenDragon, /*Troll, GiantFly, GiantScorpion, NPCPartyBandit,*/ Lion, WildBoar, NPCPartyPilgrim, /*Wolf,*/ GiantBee, /*Gnoll, Goblin,*/ BlinkDog, DireWolf, /*HillGiant,*/
   /*Inhabited Territories*/ 	GoldDragon, /*Ghoul, Bugbear, Goblin,*/ Centaur, /*NPCPartyBandit, NPCPartyMerchant,*/ NPCPartyNoble, Dog, /*Gargoyle, Gnoll, Ogre, Minotaur, Vampire*/
   /*Jungle*/			/*GreenDragon, NPCPartyBandit, Goblin, Hobgoblin,*/ GiantCentipede, GiantPythonSnake, Elephant, Antelope, Jaguar, /*Stirge, GiantTigerBeetle, GiantCaecilia, Shadow, NPCPartyMerchant, WeretigerLycanthrope,*/
-  /*Mountains or Hills*/	WhiteDragon, Roc/* (1d6: 1-3 Large, 4-5 Huge, 6 Giant)*/, /*Displacer,*/ WerewolfLycanthrope, MountainLion, /*Wolf, GiantCrabSpider, Hawk, Orc,*/ GiantBat, GiantHawk, /*HillGiant, Chimera, DireWolf, RedDragon,*/
-  /*Ocean*/			SeaDragon, /*Hydra,*/ WhaleSperm, GiantCrocodile, GiantCrab, KillerWhale, GiantOctopus, MakoShark, /*NPCPartyMerchant,*/ NPCPartyBuccaneer, BullShark, /*Roc (1d8: 1-5 Huge, 6-8 Giant),*/ GreatWhiteShark, Mermaid, SeaSerpent,
+  /*Mountains or Hills*/	WhiteDragon, Roc/* (1d6: 1-3 Large, 4-5 Huge, 6 Giant)*/, /*Displacer,*/ /*WerewolfLycanthrope,*/ MountainLion, /*Wolf, GiantCrabSpider, Hawk, Orc,*/ GiantBat, GiantHawk, /*HillGiant, Chimera, DireWolf, RedDragon,*/
+  /*Ocean*/			SeaDragon, /*Hydra,*/ SpermWhale, GiantCrocodile, GiantCrab, KillerWhale, GiantOctopus, MakoShark, /*NPCPartyMerchant,*/ NPCPartyBuccaneer, BullShark, /*Roc (1d8: 1-5 Huge, 6-8 Giant),*/ GreatWhiteShark, Mermaid, SeaSerpent,
   /*River or Riverside*/	BlackDragon, GiantPiranhaFish, /*Stirge,*/ GiantBassFish, /*NPCPartyMerchant,*/ Lizardman, Crocodile, GiantFrog, GiantCatfish, /*NPCPartyBuccaneer, Troll, Jaguar,*/ Nixie, GiantWaterTermite, /*GreenDragon,*/
   /*Swamp*/			/*BlackDragon, Shadow, Troll,*/ GiantDracoLizard, /*GiantCentipede,*/ GiantLeech, /*Lizardman, Crocodile, Stirge, Orc,*/ GiantToad/* (see Frog, Giant)*/, /*Troglodyte,*/ BloodRose, HangmanTree, /*Basilisk,*/
   /*Woods or Forest */		/*GreenDragon,*/ Alicorn/* (see Unicorn)*/, Treant, /*Orc, WildBoar,*/ BlackBear, /*GiantHawk, Antelope, Wolf, Ogre,*/ BrownBear, /*DireWolf, HillGiant, Owlbear,*/ Unicorn
@@ -1490,10 +1490,10 @@ EncounterMonster DungeonEncounters[][] =
   //The Game Master should check once every 3 turns 
   //* Roll 1d6; on a roll of 1, an encounter occurs.  
   //* Roll 1d12 on the appropriate table.
-  {/*Level 1*/		Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, Snake, Cobra, GiantCrabSpider, Stirge, Wolf},
+  {/*Level 1*/		Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, CobraSnake, GiantCrabSpider, Stirge, Wolf},
   {/*Level 2*/		GiantBombardierBeetle, GiantFly, Ghoul, Gnoll, GrayOoze, Hobgoblin, LizardMan, NPCPartyAdventurer, PitViperSnake, GiantBlackWidowSpider, Troglodyte, Zombie},
   {/*Level 3*/		GiantAnt, CarnivorousApe, GiantTigerBeetle, Bugbear, Doppleganger, Gargoyle, GelatinousCube, WereratLycanthrope, Ogre, Shadow, TentacleWorm, Wight},
-  {/*Level 4-5*/	CaveBear, GiantCaecilia, Cockatrice, Doppleganger, GrayOoze, Hellhound, Lycanthrope, Werewolf, Minotaur, OchreJelly, Owlbear, RustMonster, Wraith},
+  {/*Level 4-5*/	CaveBear, GiantCaecilia, Cockatrice, Doppleganger, GrayOoze, Hellhound, WerewolfLycanthrope, Minotaur, OchreJelly, Owlbear, RustMonster, Wraith},
   {/*Level 6-7*/	Basilisk, BlackPudding, Caecilia, Displacer, Hydra, WeretigerLycanthrope, Mummy, Owlbear, RustMonster, GiantScorpion, Spectre, Troll},
   {/*Level 8+*/		BlackPudding, Chimera, HillGiant, StoneGiant, Hydra, WereboarLycanthrope, PurpleWorm, FlameSalamander, FrostSalamander, Vampire},
 };
@@ -1516,7 +1516,7 @@ EncounterMonster WildernessEncounters[][] =
   /*Inhabited Territories*/ 	{GoldDragon, Ghoul, Bugbear, Goblin, Centaur, NPCPartyBandit, NPCPartyMerchant, NPCPartyNoble, Dog, Gargoyle, Gnoll, Ogre, Minotaur, Vampire},
   /*Jungle*/			{GreenDragon, NPCPartyBandit, Goblin, Hobgoblin, GiantCentipede, GiantPythonSnake, Elephant, Antelope, Jaguar, Stirge, GiantTigerBeetle, GiantCaecilia, Shadow, NPCPartyMerchant, WeretigerLycanthrope},
   /*Mountains or Hills*/	{WhiteDragon, Roc/* (1d6: 1-3 Large, 4-5 Huge, 6 Giant)*/, Displacer, WerewolfLycanthrope, MountainLion, Wolf, GiantCrabSpider, Hawk, Orc, GiantBat, GiantHawk, HillGiant, Chimera, DireWolf, RedDragon},
-  /*Ocean*/			{SeaDragon, Hydra, WhaleSperm, GiantCrocodile, GiantCrab, KillerWhale, GiantOctopus, MakoShark, NPCPartyMerchant, NPCPartyBuccaneer, BullShark, Roc /*(1d8: 1-5 Huge, 6-8 Giant)*/, GreatWhiteShark, Mermaid, SeaSerpent},
+  /*Ocean*/			{SeaDragon, Hydra, SpermWhale, GiantCrocodile, GiantCrab, KillerWhale, GiantOctopus, MakoShark, NPCPartyMerchant, NPCPartyBuccaneer, BullShark, Roc /*(1d8: 1-5 Huge, 6-8 Giant)*/, GreatWhiteShark, Mermaid, SeaSerpent},
   /*River or Riverside*/	{BlackDragon, GiantPiranhaFish, Stirge, GiantBassFish, NPCPartyMerchant, Lizardman, Crocodile, GiantFrog, GiantCatfish, NPCPartyBuccaneer, Troll, Jaguar, Nixie, GiantWaterTermite, GreenDragon},
   /*Swamp*/			{BlackDragon, Shadow, Troll, GiantDracoLizard, GiantCentipede, GiantLeech, Lizardman, Crocodile, Stirge, Orc, GiantToad/* (see Frog, Giant)*/, Troglodyte, BloodRose, HangmanTree, Basilisk},
   /*Woods or Forest */		{GreenDragon, Alicorn/* (see Unicorn)*/, Treant, Orc, WildBoar,BlackBear, GiantHawk, Antelope, Wolf, Ogre, BrownBear, DireWolf, HillGiant, Owlbear, Unicorn},
@@ -1537,8 +1537,9 @@ struct
   AppearDiceCountWild, AppearDiceSizeWild,
   AppearDiceCountLair, AppearDiceSizeLair;
   CharacterClass SaveAsClass;
-  byte SaveAsLevel, Morale, TreasureType, XP;
-}MonsterData[100] = 
+  byte SaveAsLevel, Morale, TreasureType;
+  int XP;
+}MonsterData[] = 
 {
   {
     "Bee", 13, 0.25, 1, 
@@ -1550,40 +1551,155 @@ struct
     Fighter, 1,
     9, //12 if queen is threatened
     Special,
-    13
-  },
-  
-  /*
-  Bee, Giant
-  Armor Class: 13
-  Hit Dice: ½* (1d4 hit points)
-  No. of Attacks: 1 sting
-  Damage: 1d4 + poison sting
-  Movement: 10' Fly 50'
-  No. Appearing: 1d6, Wild 1d6, Lair 5d6
-  Save As: Fighter: 1
-  Morale: 9 (12 if queen is threatened)
-  Treasure Type: Special
-  XP: 13
-  */
-};
+    13},
 
-char* MonsterNames[] =  {"Bee, Goblin, GreenSlime, Kobold, NPCPartyAdventurer, NPCPartyBandit, Orc, Skeleton, Snake, Cobra, GiantCrabSpider, Stirge, Wolf, GiantBombardierBeetle, GiantFly, Ghoul, Gnoll, GrayOoze, Hobgoblin, LizardMan, /*NPCPartyAdventurer,*/ PitViperSnake, GiantBlackWidowSpider, Troglodyte, Zombie,GiantAnt, CarnivorousApe, GiantTigerBeetle, Bugbear, Doppleganger, Gargoyle, GelatinousCube, WereratLycanthrope, Ogre, Shadow, TentacleWorm, Wight,",
-"CaveBear, GiantCaecilia, Cockatrice, /*Doppleganger,*/ /*GrayOoze,*/ Hellhound, Lycanthrope, Werewolf, Minotaur, OchreJelly, Owlbear, RustMonster, Wraith,",
-"Basilisk, BlackPudding, Caecilia, Displacer, Hydra, WeretigerLycanthrope, Mummy, /*Owlbear,*/ /*RustMonster,*/ GiantScorpion, Spectre, Troll,",
-"BlackPudding,*/ Chimera, HillGiant, StoneGiant, /*Hydra,*/ WereboarLycanthrope, PurpleWorm, FlameSalamander, FrostSalamander, Vampire,",
-"Doppleganger,*/ Noble, Thief, Bully, CityWatch, Merchant, Beggar, Priest, Mercenary, Wizard, /*WereratLycanthrope,*/",
-"/*Doppleganger,*/ /*Shadow,*/ PressGang, /*Beggar,*/ /*Thief,*/ /*Bully,*/ /*Merchant,*/ GiantRat, /*CityWatch,*/ /*Wizard,*/ /*WereratLycanthrope,*/",
-"BlueDragon, /*Hellhound,*/ FireGiant, /*PurpleWorm,*/ /*GiantFly,*/ /*GiantScorpion,*/ Camel, GiantTarantellaSpider, NPCPartyMerchant, /*NPCPartyMerchant,*/ Hawk, /*NPCPartyBandit,*/ /*Ogre,*/ Griffon, /*Gnoll,*/ RedDragon,",
-"GreenDragon, /*Troll, GiantFly, GiantScorpion, NPCPartyBandit,*/ Lion, WildBoar, NPCPartyPilgrim, /*Wolf,*/ GiantBee, /*Gnoll, Goblin,*/ BlinkDog, DireWolf, /*HillGiant,*/",
-"GoldDragon, /*Ghoul, Bugbear, Goblin,*/ Centaur, /*NPCPartyBandit, NPCPartyMerchant,*/ NPCPartyNoble, Dog, /*Gargoyle, Gnoll, Ogre, Minotaur, Vampire*/",
-"  /*Jungle*/			/*GreenDragon, NPCPartyBandit, Goblin, Hobgoblin,*/ GiantCentipede, GiantPythonSnake, Elephant, Antelope, Jaguar, /*Stirge, GiantTigerBeetle, GiantCaecilia, Shadow, NPCPartyMerchant, WeretigerLycanthrope,*/",
- " /*Mountains or Hills*/	WhiteDragon, Roc/* (1d6: 1-3 Large, 4-5 Huge, 6 Giant)*/, /*Displacer,*/ WerewolfLycanthrope, MountainLion, /*Wolf, GiantCrabSpider, Hawk, Orc,*/ GiantBat, GiantHawk, /*HillGiant, Chimera, DireWolf, RedDragon,*/",
-  "/*Ocean*/			SeaDragon, /*Hydra,*/ WhaleSperm, GiantCrocodile, GiantCrab, KillerWhale, GiantOctopus, MakoShark, /*NPCPartyMerchant,*/ NPCPartyBuccaneer, BullShark, /*Roc (1d8: 1-5 Huge, 6-8 Giant),*/ GreatWhiteShark, Mermaid, SeaSerpent,",
-  "/*River or Riverside*/	BlackDragon, GiantPiranhaFish, /*Stirge,*/ GiantBassFish, /*NPCPartyMerchant,*/ Lizardman, Crocodile, GiantFrog, GiantCatfish, /*NPCPartyBuccaneer, Troll, Jaguar,*/ Nixie, GiantWaterTermite, /*GreenDragon,*/",
-  "/*Swamp*/			/*BlackDragon, Shadow, Troll,*/ GiantDracoLizard, /*GiantCentipede,*/ GiantLeech, /*Lizardman, Crocodile, Stirge, Orc,*/ GiantToad/* (see Frog, Giant)*/, /*Troglodyte,*/ BloodRose, HangmanTree, /*Basilisk,*/",
-  "/*Woods or Forest */		/*GreenDragon,*/ Alicorn/* (see Unicorn)*/, Treant, /*Orc, WildBoar,*/ BlackBear, /*GiantHawk, Antelope, Wolf, Ogre,*/ BrownBear, /*DireWolf, HillGiant, Owlbear,*/ Unicorn",
-                        };
+    /*
+    Bee, Giant
+    Armor Class: 13
+    Hit Dice: ½* (1d4 hit points)
+    No. of Attacks: 1 sting
+    Damage: 1d4 + poison sting
+    Movement: 10' Fly 50'
+    No. Appearing: 1d6, Wild 1d6, Lair 5d6
+    Save As: Fighter: 1
+    Morale: 9 (12 if queen is threatened)
+    Treasure Type: Special
+    XP: 13
+    */
+  {"Goblin"},
+  {"GreenSlime"}, 
+  {"Kobold"},
+  {"NPCPartyAdventurer"},
+  {"NPCPartyBandit"}, 
+  {"Orc"},
+  {"Skeleton"}, 
+  {"CobraSnake"}, 
+  {"GiantCrabSpider"}, 
+  {"Stirge"}, 
+  {"Wolf"}, 
+  {"GiantBombardierBeetle"}, 
+  {"GiantFly"}, 
+  {"Ghoul"}, 
+  {"Gnoll"}, 
+  {"GrayOoze"}, 
+  {"Hobgoblin"}, 
+  {"LizardMan"},
+  {"NPCPartyAdventurer"},
+  {"PitViperSnake"},
+  {"GiantBlackWidowSpider"},
+  {"Troglodyte"}, 
+  {"Zombie"},
+  {"GiantAnt"},
+  {"CarnivorousApe"},
+  {"GiantTigerBeetle"},
+  {"Bugbear"}, 
+  {"Doppleganger"}, 
+  {"Gargoyle"}, 
+  {"GelatinousCube"}, 
+  {"WereratLycanthrope"},
+  {"Ogre"}, 
+  {"Shadow"}, 
+  {"TentacleWorm"},
+  {"Wight"},
+  {"CaveBear"},
+  {"GiantCaecilia"},
+  {"Cockatrice"}, 
+  {"Hellhound"},
+  {"WerewolfLycanthrope"},
+  {"Minotaur"},
+  {"OchreJelly"},
+  {"Owlbear"},
+  {"RustMonster"},
+  {"Wraith"},
+  {"Basilisk"},
+  {"BlackPudding"},
+  {"Caecilia"},
+  {"Displacer"},
+  {"Hydra"},
+  {"WeretigerLycanthrope"},
+  {"Mummy"},
+  {"GiantScorpion"},
+  {"Spectre"},
+  {"Troll"},
+  {"Chimera"},
+  {"HillGiant"},
+  {"StoneGiant"},
+  {"WereboarLycanthrope"},
+  {"PurpleWorm"},
+  {"FlameSalamander"},
+  {"FrostSalamander"},
+  {"Vampire"},
+  {"Noble"},
+  {"NPCThief"},
+  {"Bully"},
+  {"CityWatch"}, 
+  {"Merchant"},
+  {"Beggar"},
+  {"Priest"},
+  {"Mercenary"}, 
+  {"Wizard"},
+  {"PressGang"},
+  {"GiantRat"},
+  {"BlueDragon"},
+  {"FireGiant"},
+  {"Camel"},
+  {"GiantTarantellaSpider"},
+  {"NPCPartyMerchant"},
+  {"Hawk"},
+  {"RedDragon"},
+  {"GreenDragon"},
+  {"Lion"},
+  {"WildBoar"},
+  {"NPCPartyPilgrim"},
+  {"GiantBee"},
+  {"BlinkDog"},
+  {"DireWolf"},
+  {"GoldDragon"},
+  {"Centaur"},
+  {"NPCPartyNoble"},
+  {"Dog"},
+  {"GiantCentipede"},
+  {"GiantPythonSnake"},
+  {"Elephant"},
+  {"Antelope"},
+  {"Jaguar"},
+  {"WhiteDragon"},
+  {"Roc"}, /* (1d6: 1-3 Large, 4-5 Huge, 6 Giant)*/
+  {"MountainLion"},
+  {"GiantBat"},
+  {"GiantHawk"},
+  {"SeaDragon"},
+  {"SpermWhale"},
+  {"GiantCrocodile"},
+  {"GiantCrab"},
+  {"KillerWhale"},
+  {"GiantOctopus"},
+  {"MakoShark"},
+  {"NPCPartyBuccaneer"},
+  {"BullShark"},
+  {"GreatWhiteShark"},
+  {"Mermaid"},
+  {"SeaSerpent"},
+  {"BlackDragon"},
+  {"GiantPiranhaFish"},
+  {"GiantBassFish"},
+  {"Lizardman"},
+  {"Crocodile"},
+  {"GiantFrog"},
+  {"GiantCatfish"},
+  {"Nixie"},
+  {"GiantWaterTermite"},
+  {"GiantDracoLizard"},
+  {"GiantLeech"},
+  {"GiantToad"}, /* (see Frog, Giant)*/
+  {"BloodRose"},
+  {"HangmanTree"},
+  {"Alicorn"},/* (see Unicorn)*/
+  {"Treant"},
+  {"BlackBear"},
+  {"BrownBear"},
+  {"Unicorn"},
+};
 
 //Open Game License
 /*
