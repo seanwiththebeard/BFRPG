@@ -1527,7 +1527,8 @@ const EncounterMonster WildernessEncounters[][] =
 
 //Monster Database - https://www.basicfantasy.org/srd/monsters.html
 
-typedef enum{
+typedef enum
+{
   NullAttack,
   beak,
   bite,
@@ -1584,7 +1585,7 @@ typedef enum{
   whirlwind,
 }AttackType;
 
-const char* AttackNames[] =
+const struct{char* Name;}AttackNames[] =
 {
   "NullAttack",
   "beak",
@@ -1639,15 +1640,21 @@ const char* AttackNames[] =
   "trunk",
   "tusk",
   "weapon",
-  "whirlwind"
+  "whirlwind",
 };
 
-typedef enum{NullMovement, Fly}MovementTypes;
-const char* MovementNames[] =
+typedef enum
+{
+  NullMovement, 
+  Fly,
+}MovementType;
+
+const struct{char* Name;}MovementNames[] =
 {
   "NullMovement",
-  "Fly",
+  "Fly"
 };
+
 typedef enum{NullTreasure, Special}TreasureTypeNames;
 
 const struct
@@ -1657,7 +1664,9 @@ const struct
   AttackCountA;
   AttackType AttackNameA;
   byte AttackDamageDiceCount, AttackDamageDiceSize, //Optimize this for multiple attacks
-  MovementA, MovementType, MovementB, //What is movement B?
+  MovementA;
+  MovementType Movement;
+  byte MovementB, //What is movement B?
   AppearDiceCountWild, AppearDiceSizeWild,
   AppearDiceCountLair, AppearDiceSizeLair, //Really necessary?
   SaveAsClass, SaveAsLevel, Morale, TreasureType;

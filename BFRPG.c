@@ -31,6 +31,7 @@ void main(void)
   //PrintItems();
   PrintMonsters();
 }
+
 void PrintMonsters()
 {
   clrscr();
@@ -42,7 +43,7 @@ void PrintMonsters()
       printf("Hit Dice:       %d\n", MonsterData[x].HitDice);
       printf("Attack Type:    %dx %s\n", MonsterData[x].AttackCountA, AttackNames[MonsterData[x].AttackNameA]);
       printf("Attack Damage:  %dd%d\n", MonsterData[x].AttackDamageDiceCount, MonsterData[x].AttackDamageDiceSize);
-      printf("Movement:       %s %dft\n", MovementNames[MonsterData[x].MovementType], MonsterData[x].MovementA);
+      printf("Movement:       %s %dft\n", MovementNames[MonsterData[x].Movement], MonsterData[x].MovementA);
       
       //MovementA, MovementType, MovementB,
       //AppearDiceCountWild, AppearDiceSizeWild,
